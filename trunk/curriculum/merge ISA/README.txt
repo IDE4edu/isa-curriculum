@@ -1,0 +1,1 @@
+We give students the correct version and isOK, and have them find a bug in a hidden version of merged.
