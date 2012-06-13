@@ -1,6 +1,6 @@
 package src.test;
 
-import java.lang.annotation.RetentionPolicy.*;
+import java.lang.annotation.*;
 
 @Retention(RetentionPolicy.RUNTIME) 
 @Target(ElementType.METHOD)
