@@ -35,7 +35,7 @@ public class BinarySearchISA {
     }
     
     public static boolean isOK (int guess, int low, int high, ArrayList<Integer> previousGuesses) {
-    	if (high > 20 || low <= 0 || high < low) {
+    	if (high > 20 || low < 0 || high < low) {
     		return false;
     	}
     	if (previousGuesses.contains (guess)) {
