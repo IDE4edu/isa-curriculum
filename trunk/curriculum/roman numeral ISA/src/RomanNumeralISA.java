@@ -1,5 +1,6 @@
 public class RomanNumeralISA {
 	
+	// Return the decimal equivalent of the given Roman digit.
 	public static int toDecimal (char romanDigit) {
 		switch (romanDigit) {
 			case 'I': case 'i': return 1;
@@ -13,15 +14,18 @@ public class RomanNumeralISA {
 		}
 	}
 
+	// Return the decimal equivalent of the given Roman numeral.
 	public static int toDecimal (String romanNumeral) {
 		int rtn;
 		rtn = 0;
 		for (int k=0; k<romanNumeral.length ( ); ) {  // note: k is incremented in the loop body
 			if (k == romanNumeral.length ( ) - 1
 					|| toDecimal (romanNumeral.charAt(k)) >= toDecimal (romanNumeral.charAt (k+1))) {
+				// Handle a Roman digit that's not a prefix.
 				rtn = rtn + toDecimal (romanNumeral.charAt (k));
 				k++;
 			} else {
+				// Handle a prefix together with the prefixed Roman digit.
 				rtn = rtn - toDecimal (romanNumeral.charAt (k)) + toDecimal (romanNumeral.charAt (k+1));
 				k += 2;
 			}
@@ -45,7 +49,8 @@ public class RomanNumeralISA {
 		return true;
 	}
 	
-	
+	// Return the Roman numeral equivalent to the given decimal value.
+	// Precondition: 0 < n < 3950
 	public static String toRoman (int n) {
 		if (n >= 1000) {
 			return "m" + toRoman (n-1000);
