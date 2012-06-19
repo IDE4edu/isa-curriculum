@@ -1,6 +1,8 @@
 import junit.framework.TestCase;
 import java.util.*;
 
+import org.junit.runner.JUnitCore;
+
 public class MergerISATest extends TestCase {
 	
 	public void testOneElemMerge ( ) {
