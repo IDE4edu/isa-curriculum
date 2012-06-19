@@ -3,6 +3,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
-	<classpathentry kind="lib" path="C:/cygwin/home/nate/git/isa-curriculum/trunk/curriculum/date ISA/lib/dateISATest.jar"/>
+	<classpathentry kind="lib" path="lib/dateISATest.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
