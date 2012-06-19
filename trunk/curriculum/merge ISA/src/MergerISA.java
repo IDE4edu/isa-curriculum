@@ -1,17 +1,24 @@
 
 public class MergerISA {
 
+	// Combine arrays a and b, sorted in increasing order, 
+	// into an new array rtn that's also sorted in increasing order.
 	public static int [ ] merged (int [ ] a, int [ ] b) {
 		int [ ] rtn = new int[a.length+b.length];
+		// aIndex and bIndex keep track of values in a and b already added to rtn.
+		// Invariant: aIndex + bIndex == rIndex, that is, aIndex values from a
+		// and bIndex values from b have been added to rtn.
 		int aIndex = 0;
 		int bIndex = 0;
 		int rIndex = 0;
 		while (aIndex < a.length && bIndex < b.length) {
 			if (a[aIndex] < b[bIndex]) {
+				// The next element in a is to be added to rtn.
 				rtn[rIndex] = a[aIndex];
 				aIndex++;
 				rIndex++;
 			} else {
+				// The next element in b is to be added to rtn.
 				rtn[rIndex] = b[bIndex];
 				bIndex++;
 				rIndex++;
@@ -21,6 +28,8 @@ public class MergerISA {
 					+ "; bIndex = " + bIndex + "; rIndex = " + rIndex);
 			}
 		}
+		// One of arrays a and b has run out of values.
+		// Add the remaining values to rtn.
 		while (aIndex < a.length) {
 			rtn[rIndex] = a[aIndex];
 			aIndex++;
@@ -42,6 +51,7 @@ public class MergerISA {
 		return rtn;
 	}
 	
+	// Check the arrays and index variables for internal consistency.
 	public static boolean isOK (int [ ] a, int [ ] b, int [ ] r, int aIndex, int bIndex, int rIndex) {
 		if (aIndex<0 || bIndex<0 || rIndex<0) {
 			return false;
