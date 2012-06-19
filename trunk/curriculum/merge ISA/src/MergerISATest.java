@@ -1,22 +1,14 @@
 import junit.framework.TestCase;
+import java.util.*;
 
 public class MergerISATest extends TestCase {
 	
-	private static boolean equals (int [ ] a, int [ ] b) {
-		for (int k=0; k<a.length; k++) {
-			if (a[k] != b[k]) {
-				return false;
-			}
-		}
-		return true;
-	}
-
 	public void testOneElemMerge ( ) {
 		int [ ] a = {1};
 		int [ ] b = {2};
 		int [ ] desired = {1,2};
-		assertTrue (equals (MergerISA.merged (a, b), desired));
-		assertTrue (equals (MergerISA.merged (b, a), desired));
+		assertTrue (Arrays.equals (MergerISA.merged (a, b), desired));
+		assertTrue (Arrays.equals (MergerISA.merged (b, a), desired));
 	}
 	
 	public void testTwoElemsMerge ( ) {
@@ -24,7 +16,7 @@ public class MergerISATest extends TestCase {
 		int [ ] [ ]	bTests = {{3,4}, {2,4}, {2,3}, {1,4}, {1,3}, {1,2}};
 		int [ ] desired = {1,2,3,4};
 		for (int k=0; k<aTests.length; k++) {
-			assertTrue (equals (MergerISA.merged (aTests[k], bTests[k]), desired));
+			assertTrue (Arrays.equals (MergerISA.merged (aTests[k], bTests[k]), desired));
 		}
 	}
 }
