@@ -1,6 +1,7 @@
 public class RomanNumeralISA {
 	
-	// Return the decimal equivalent of the given Roman digit.
+	// Return the decimal equivalent of the given Roman "digit".
+	// Precondition: romanDigit is a legal Roman digit.
 	public static int toDecimal (char romanDigit) {
 		switch (romanDigit) {
 			case 'I': case 'i': return 1;
@@ -15,19 +16,20 @@ public class RomanNumeralISA {
 	}
 
 	// Return the decimal equivalent of the given Roman numeral.
+	// Precondition: romanNumeral represents a legal Roman numeral.
 	public static int toDecimal (String romanNumeral) {
 		int rtn;
 		rtn = 0;
 		for (int k=0; k<romanNumeral.length ( ); ) {  // note: k is incremented in the loop body
 			if (k == romanNumeral.length ( ) - 1
 					|| toDecimal (romanNumeral.charAt(k)) >= toDecimal (romanNumeral.charAt (k+1))) {
-				// Handle a Roman digit that's not a prefix.
+				// Handle a non-prefix.
 				rtn = rtn + toDecimal (romanNumeral.charAt (k));
-				k++;
+				k = k + 1;
 			} else {
-				// Handle a prefix together with the prefixed Roman digit.
+				// Handle a prefix and the prefixed digit.
 				rtn = rtn - toDecimal (romanNumeral.charAt (k)) + toDecimal (romanNumeral.charAt (k+1));
-				k += 2;
+				k = k + 2;
 			}
 			if (!isOK (romanNumeral, k, rtn)) {
 				System.out.println ("Inconsistency for " + romanNumeral + " at position " + k + ", rtn = " + rtn);
@@ -36,6 +38,9 @@ public class RomanNumeralISA {
 		return rtn;
 	}
 
+	// Return true if the state of the translation process
+	// is internally consistent.
+	// Precondition: romanNumeral is a legal Roman numeral.
 	public static boolean isOK (String romanNumeral, int k, int rtn) {
 		if (k <= 0 || k > romanNumeral.length ( )) {
 			return false;
@@ -49,8 +54,8 @@ public class RomanNumeralISA {
 		return true;
 	}
 	
-	// Return the Roman numeral equivalent to the given decimal value.
-	// Precondition: 0 < n < 3950
+	// Return the Roman numeral equivalent to the given positive integer.
+	// Precondition: 0 < n <= the decimal equivalent of the largest Roman numeral.
 	public static String toRoman (int n) {
 		if (n >= 1000) {
 			return "m" + toRoman (n-1000);
