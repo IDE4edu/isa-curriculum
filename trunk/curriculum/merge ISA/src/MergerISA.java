@@ -34,7 +34,8 @@ public class MergerISA {
 			if (!isOK (a, b, rtn, aIndex, bIndex, rIndex)) {
 				System.out.println ("inconsistency 1: aIndex = " + aIndex
 					+ "; bIndex = " + bIndex + "; rIndex = " + rIndex);
-				System.out.println ("rtn = " + toString (rtn));
+				System.out.println ("a = " + toString(a) + "; b = "
+						+ toString(b) + "; rtn = " + toString (rtn));
 			}
 		}
 		// One of arrays a and b has run out of values.
@@ -46,7 +47,8 @@ public class MergerISA {
 			if (!isOK (a, b, rtn, aIndex, bIndex, rIndex)) {
 				System.out.println ("inconsistency 2: aIndex = " + aIndex
 					+ "; bIndex = " + bIndex + "; rIndex = " + rIndex);
-				System.out.println ("rtn = " + toString (rtn));
+				System.out.println ("a = " + toString(a) + "; b = "
+						+ toString(b) + "; rtn = " + toString (rtn));
 			}
 		}
 		while (bIndex < b.length) {
@@ -56,7 +58,8 @@ public class MergerISA {
 			if (!isOK (a, b, rtn, aIndex, bIndex, rIndex)) {
 				System.out.println ("inconsistency 3: aIndex = " + aIndex
 					+ "; bIndex = " + bIndex + "; rIndex = " + rIndex);
-				System.out.println ("rtn = " + toString (rtn));
+				System.out.println ("a = " + toString(a) + "; b = "
+						+ toString(b) + "; rtn = " + toString (rtn));
 			}
 		}
 		return rtn;
