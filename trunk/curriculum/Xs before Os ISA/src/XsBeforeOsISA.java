@@ -1,6 +1,6 @@
 public class XsBeforeOsISA {
 
-	public static void rearrange (char [ ] values) {
+	public static void  rearrange (char [ ] values) {
 		int lastXpos = -1;
 		for (int k=0; k<values.length; k++) {
 			if (values[k]=='X') {
