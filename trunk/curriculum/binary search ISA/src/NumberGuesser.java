@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.ArrayList;
 
-public class BinarySearchISA {
+public class NumberGuesser {
 	
 	private static ArrayList<Integer> previousGuesses = new ArrayList<Integer> ( );
 
@@ -25,7 +25,7 @@ public class BinarySearchISA {
             }
             previousGuesses.add (guess);	// #6
             guess = (low+high)/2;			// #7
-            if (!BinarySearchISA.isOK (guess, low, high, previousGuesses)) {
+            if (!NumberGuesser.isOK (guess, low, high, previousGuesses)) {
             	System.out.println ("problem with guesses: "
             			+ "guess = " + guess + ", low = " + low + ", high = " + high);
             }

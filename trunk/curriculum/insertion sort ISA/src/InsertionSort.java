@@ -1,4 +1,4 @@
-public class InsertionSortISA {
+public class InsertionSort {
 	
 	// Precondition: elements 0 through k-1 of list are in increasing order.
 	// Postcondition: elements 0 through k of list are in increasing order.
@@ -39,7 +39,7 @@ public class InsertionSortISA {
 	
 	public static void main (String [ ] args) {
 		int [ ] list = {3, 1, 7, 4, 5, 9, 2, 8, 6};
-		insertionSort (list);
+		list = insertionSort (list);
 		for (int k=0; k<list.length; k++) {
 			System.out.print (list[k]);
 		}

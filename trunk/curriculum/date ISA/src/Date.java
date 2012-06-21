@@ -1,11 +1,11 @@
 
-public class DateISA {
+public class Date {
 	
 	private int myDateInMonth;	// dates-in-month range from 1 through the number of days in the month
 	private int myMonth;		// months range from 1 (January) through 12 (December)
 	private int myYear;			// years are between 1000 and 3000 (arbitrary decision)
 
-	public DateISA (int dateInMonth, int month, int year) {
+	public Date (int dateInMonth, int month, int year) {
 		myDateInMonth = dateInMonth;
 		myMonth = month;
 		myYear = year;
