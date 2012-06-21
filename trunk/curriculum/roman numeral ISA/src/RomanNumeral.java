@@ -1,4 +1,4 @@
-public class RomanNumeralISA {
+public class RomanNumeral {
 	
 	// Return the decimal equivalent of the given Roman "digit".
 	// Precondition: romanDigit is a legal Roman digit.
