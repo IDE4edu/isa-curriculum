@@ -1,5 +1,5 @@
 import junit.framework.TestCase;
-import java.util.Arrays;
+
 
 public class InsertionSortIsOKTest extends TestCase {
 	
@@ -43,12 +43,5 @@ public class InsertionSortIsOKTest extends TestCase {
 		assertTrue (!InsertionSort.isOK (array3, 5));
 	}
 	
-	// Return a printable form of the given array.
-	private static String toString (int [ ] values) {
-		String rtn = "{ ";
-		for (int k=0; k<values.length; k++) {
-			rtn = rtn + values[k] + " ";
-		}
-		return rtn + "}";
-	}
+
 }
