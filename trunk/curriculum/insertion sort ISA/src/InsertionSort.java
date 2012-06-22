@@ -11,6 +11,8 @@ public class InsertionSort {
 		list[k] = temp;
 	}
 	
+	// Return true if the first k elements of list are in increasing order;
+	// return false otherwise.
 	public static boolean isOK (int [ ] list, int k) {
 		if (k<0 || k>=list.length) {
 			return false;
@@ -23,6 +25,7 @@ public class InsertionSort {
 		return true;
 	}
 
+	// Return the result of applying the insertion sort algorithm to the list array.
 	public static int [ ] insertionSort (int [ ] list) {
 		int [ ] rtn = new int[list.length];
 		for (int k=0; k<list.length; k++) {
