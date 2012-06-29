@@ -1,0 +1,17 @@
+<isa>
+	<name>Testing</name>
+	<intro>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet augue a enim fringilla congue feugiat ut metus. Pellentesque ipsum purus, facilisis non semper eu, adipiscing nec dui. Pellentesque.</intro>
+	<exercise>
+		<name>Test HTML Page</name>
+		<type>html</type>
+		<intro>Read this thing.</intro>
+		<source>/src/edu/berkeley/bid/test/Hello.html</source>
+	</exercise>
+	<exercise>
+		<name>Sort Test</name>
+		<type>code</type>
+		<intro>Do thing 2.</intro>
+		<source>/src/edu/berkeley/bid/test/Testing.java</source>
+		<test>/TEST1.launch</test>
+	</exercise>
+</isa>

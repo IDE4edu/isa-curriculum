@@ -1,0 +1,18 @@
+<isa>
+	<name>Invariants</name>
+	<intro>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet augue a enim fringilla congue feugiat ut metus. Pellentesque ipsum purus, facilisis non semper eu, adipiscing nec dui. Pellentesque.</intro>
+	<exercise>
+		<name>isOK</name>
+		<type>code</type>
+		<intro>Do thing 1.</intro>
+		<source>/src/InsertionSort.java</source>
+		<test>/TEST.isort-1.launch</test>
+	</exercise>
+	<exercise>
+		<name>Sort Test</name>
+		<type>code</type>
+		<intro>Do thing 2.</intro>
+		<source>/src/InsertionSort.java</source>
+		<test>/TEST.isort-2.launch</test>
+	</exercise>
+</isa>
