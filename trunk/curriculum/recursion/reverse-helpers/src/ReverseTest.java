@@ -1,6 +1,5 @@
 import static org.junit.Assert.*;
 
-import java.util.Arrays;
 import java.util.Stack;
 import org.junit.Test;
 
@@ -9,10 +8,10 @@ public class ReverseTest {
 
 	// keeps track of reverse calls, to test whether reverse calls itself
 	class ReverseChild extends Reverse {
-		public Stack<String[]> calls = new Stack<String[]>();
-		public String[] reverse (String[] s) {
+		public Stack<String> calls = new Stack<String>();
+		public String reverse (String s) {
 			calls.push(s);
-			String[] ret = super.reverse(s);
+			String ret = super.reverse(s);
 			return ret;
 		}
 	}
@@ -21,85 +20,78 @@ public class ReverseTest {
 	// do we really need this?  It would be hard to write something that calls itself
 	// recursively but then doesn't use the result!
 	class ReverseBrokenChild extends Reverse {
-		public String[] initialParam;
+		public String initialParam;
 		// this class breaks reverse3, to make sure the student is using it.
-		public String[] reverse (String[] s) {
-			if (Arrays.equals(initialParam, s)) {
+		public String reverse (String s) {
+			if (s.equals(initialParam)) {
 				// we are in the initial call -- let it try once
 				return super.reverse(s);
 			} else {
 				// break it here by returning value unchanged
-				return Arrays.copyOf(s, s.length);
+				return s;
 			}
 		}
 	}
 
 	
-	private String[] real_reverse(String[] s) {
-		String[] ret = Arrays.copyOf(s, s.length);
-		// who would ever do this recursively!?!
-		for(int i = 0; i < (ret.length / 2); i++) {
-		    String temp = ret[i];
-		    ret[i] = ret[s.length - i - 1];
-		    ret[ret.length - i - 1] = temp;
-		}
-		return ret;
-	}
+	private String real_reverse(String s) {
+		return new StringBuffer(s).reverse().toString();
+	}	
 
 
 
-	String[] sa1 = {"a", "b", "c"};
-	String[] sa2 = {"the", "rain", "in", "Spain", "falls", "public static void main"};
-	String[] sa3 = {"omg"};
-	String[] sa4 = {"one", "two", "three", "four", "five", "six", "7", "8", "9", "10"};
+	String s1 = "abcde";
+	String s2 = "public static void pain";
+	String s3 = "Z";
+	String s4 = "Computing science is no more about computers than astronomy is about telescopes -- Edsger W. Dijkstra";
 	
 
 
 	@Test
 	public void correct1() {
-		correctHelper(sa1);
+		correctHelper(s1);
 	}
 	
-	public void correctHelper(String[] init) {
+	public void correctHelper(String init) {
 		Reverse r = new Reverse();
-		String[] out = r.reverse(Arrays.copyOf(init, init.length));
-		assertTrue("Your reverse method didn't correctly reverse the array " 
-				 	+ Arrays.toString(init)
-				 	+ ".  It returned " 
-				 	+ Arrays.toString(out)
-				 	+ " instead.",
-				 	Arrays.equals(out, real_reverse(init)));
+		String out = r.reverse(init);
+		assertTrue("Your reverse method didn't correctly reverse the string \"" 
+				 	+ init
+				 	+ "\".  It returned \"" 
+				 	+ out
+				 	+ "\" instead.",
+				 	out.equals(real_reverse(init)));
 	}
 
 	@Test
 	public void correct2() {
-		correctHelper(sa2);
+		correctHelper(s2);
 	}
 	
 	@Test
 	public void correct3() {
-		correctHelper(sa3);
+		correctHelper(s3);
 	}
 	
 	@Test
 	public void correct4() {
 		Reverse r = new Reverse();
-		String[] out = r.reverse(Arrays.copyOf(sa4, sa4.length));
-		assertTrue("Your reverse method didn't correctly reverse an array that we won't show you. " 
+		String out = r.reverse(s4);
+		assertTrue("Your reverse method didn't correctly reverse a string that we won't reveal to you. " 
 				 	+ "  There must still be a bug!",
-				 	Arrays.equals(out, real_reverse(sa4)));
+				 	out.equals(real_reverse(s4)));
 	}
 
 	@Test
 	public void correct_empty() {
 		Reverse r = new Reverse();
-		String[] empty = new String[0];
+		String empty = "";
 		try {
-			String[] out = r.reverse(empty);
-			assertNull("Your reverse method didn't correctly handle an empty array as input: it didn't return an empty array!",
-					out);
+			String out = r.reverse(empty);
+			assertEquals("Your reverse method didn't correctly handle an empty string as input: it didn't return an empty string!",
+					out, "");
 		} catch (Exception e) {
-			fail("Your reverse method broke when passed an empty array!");
+			fail("Your reverse method broke when passed an empty string!");
 		}
 
 	}
@@ -108,6 +100,10 @@ public class ReverseTest {
 	@Test
 	public void uses_recursion() {
 
+		ReverseChild rc = new ReverseChild();
+		rc.reverse(s4);
+		assertTrue("Your reverse method never calls itself.  It isn't recursive!",
+				(rc.calls.size() > 1));
 		//todo
 
 	}
