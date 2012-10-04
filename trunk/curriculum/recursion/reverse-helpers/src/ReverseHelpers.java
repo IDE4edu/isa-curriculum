@@ -33,7 +33,7 @@ public class ReverseHelpers {
 	public String reverse4 (String s) {
 
 		//return s.substring(3,4) + reverse3(allButLast(s));
-		
+		return "";
 	}
 	
 	

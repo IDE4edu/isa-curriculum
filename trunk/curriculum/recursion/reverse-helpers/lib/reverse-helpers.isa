@@ -1,0 +1,36 @@
+<isa>
+	<name>Reversing with Recursion</name>
+	<intro>In this activity, you will learn the basics of recursion as you work on a method to reverse a string.</intro>
+	<exercise>
+		<name>[HTML] Recursion: Using methods for strings of a specific length.</name>
+		<type>html</type>
+		<intro>Recursion using methods for strings of a specific length.</intro>
+		<source>/src/edu/berkeley/bid/test/Hello.html</source>
+	</exercise>
+	<exercise>
+		<name>Writing reverse with helpers</name>
+		<type>code</type>
+		<intro>Do thing 2.</intro>
+		<source>/src/edu/berkeley/bid/test/Testing.java</source>
+		<test>/TEST1.launch</test>
+		</exercise>
+	<exercise>
+		<name>[SELF-TEST] Generalizing recursion to a single method</name>
+		<type>html</type>
+		<intro>Understand the pattern from multiple methods to help write recursion.</intro>
+		<source>http://sage.cs.berkeley.edu/mod/resource/view.php?id=5213</source>
+	    </exercise>
+	<exercise>
+		<name>Writing reverse recursively</name>
+		<type>code</type>
+		<intro>Write reverse for any length string.</intro>
+		<source>/src/edu/berkeley/bid/test/Testing.java</source>
+		<test>/TEST2.launch</test>
+		</exercise>
+	<exercise>
+		<name>Debug palindrome?</name>
+		<type>code</type>
+		<intro>Fix this use of reverse to work with palindromes.</intro>
+		<source>/src/edu/berkeley/bid/test/Testing.java</source>
+		</exercise>	
+</isa>
