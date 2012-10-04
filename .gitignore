@@ -1,3 +1,4 @@
 #ignore all class files
+*.class
 trunk/curriculum/*/bin/*
 trunk/testing/*/bin/*
