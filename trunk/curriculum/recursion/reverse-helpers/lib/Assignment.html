@@ -1,20 +1,44 @@
 ORIGINAL SETUP
 Assignment text goes in here:
 
-1) Intro page briefly explaining the technique of writing a separate 
-method that take parameters of different lengths, maybe running through
-an example.
+0) Intro page (HTML: introduction.html)
+* We are going to use recursion to solve reverse -- so no for or while loops...  depends on understanding recursion.  
+  Check out "recrusion intro" if you need to.
+* What is reverse? (examples)
+* We are going to first look at writing separate methods for different length strings.  Give quick example. 
 
-2) write reverse4 (in ReverseHelpers), and test by running ReverseHelpersTest
-(note, we'll try to automate the running of junit tests, but for now they may 
-have to right-click on ReverseHelpersTest.java and select "Run as..." 
-and then "Junit test".
+1) This could get painful (JAVA: NaiveReverse.java)
+* Write reverse for a six length string, please.  Don't use loops (or the builtin reverse!).
+*  show them reverse1-5?
+* Test your solution
 
-3) page explaining how the helper solution will be veeeery similar 
+2) Johnny has an idea (MC: rev9helper.html)
+* Johnny thinks using a helper function will make writing reverse9 easier.  His teacher suggest using reverse8 as
+the helper.  Here is Johnny's solution, referring to a presumably working "reverse8" method:
+public static String reverse9(String input) {
+  
+
+   }
+
+
+3) Write reverse17 (JAVA: reverse17.java)
+* write reverse17 using an existing method reverse16.  
+  * We've provided you two helper functions: allbutfirst and allbutlast.  (explanation).  Try to use them.
+* Test it.  (note: we really should have them be able to use a working reverse16 in a main method.  Maybe import
+  another class with the method, in a jar?  But, will this screw up the testing where we check that they 
+  used reverse16 via a child class?  Might have to do tricky things in that included class...  callbacks, etc
+
+
+4) Notice the pattern! (MC: pattern.html)
+
+page explaining how the helper solution will be veeeery similar 
 across the various methods for specific lengths..  You can generalize this by 
 writing a proper recursion.
 
-4) write reverse recursively, in Reverse.java, and test with ReverseTest
+* Johnny writes reverse w/o a base case.  Predict via MC.
 
-5) One more step, I think, where they need to look at a recursive procedure 
-and predict its output, or something non-writing.  Maybe debugging.
+5) ?
+Notice reverse1 is different.  Base Cases...
+
+
+6) Writing reverse using recursion (JAVA: Reverse.java)
