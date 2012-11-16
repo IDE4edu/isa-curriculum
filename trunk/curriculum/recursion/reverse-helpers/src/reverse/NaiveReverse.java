@@ -6,6 +6,7 @@ package reverse;
  */
 public class NaiveReverse {
 
+	
 	// returns the reverse of a one-length string.  Easy!
 	public String reverse1 (String s) {
 		return s;
@@ -29,6 +30,7 @@ public class NaiveReverse {
 	
 	
 	// WRITE reverse6, which takes a String of length 6 and returns its reverse
+	// Don't use while or for loops!
 	public String reverse6 (String s) {
 		
 		
@@ -38,6 +40,18 @@ public class NaiveReverse {
 	
 	// ... and more could go here... reverse612 would be awfully long...
 
+
+
+	
+	// For testing
+	// will this make sense to them?
+	public static void main(String[] args) {
+		// test out your solution by running this class
+		NaiveReverse obj = new NaiveReverse();
+		System.out.println(obj.reverse6("hello!"));
+	}
+	
+	
 
 	
 

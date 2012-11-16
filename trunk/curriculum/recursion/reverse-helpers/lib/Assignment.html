@@ -3,7 +3,7 @@ Assignment text goes in here:
 
 0) Intro page (HTML: introduction.html)
 * We are going to use recursion to solve reverse -- so no for or while loops...  depends on understanding recursion.  
-  Check out "recrusion intro" if you need to.
+  Check out "recursion intro" if you need to.
 * What is reverse? (examples)
 * We are going to first look at writing separate methods for different length strings.  Give quick example. 
 
@@ -16,9 +16,19 @@ Assignment text goes in here:
 * Johnny thinks using a helper function will make writing reverse9 easier.  His teacher suggest using reverse8 as
 the helper.  Here is Johnny's solution, referring to a presumably working "reverse8" method:
 public static String reverse9(String input) {
-  
-
+   String partial = reverse8(s.substring(0,8));  
+   return (input + partial);
+   [or...]
+   String partial = reverse8(s.substring(1,9));
+   String firstLetter = s.substring(0,1);
+   return (firstLetter + partial);
    }
+
+Johnny tests his method with the string "sweetness"  "confident".  What will it return?
+  * tnedifnoc <correct rev>
+  * ctnedifno  <correct ans>
+  * tconfiden
+  * off by one?
 
 
 3) Write reverse17 (JAVA: reverse17.java)
@@ -31,14 +41,25 @@ public static String reverse9(String input) {
 
 4) Notice the pattern! (MC: pattern.html)
 
-page explaining how the helper solution will be veeeery similar 
-across the various methods for specific lengths..  You can generalize this by 
-writing a proper recursion.
+page explaining how the helper solution will be veeeery similar -- show rev5 in terms of rev4,
+rev932 in terms of rev931.
+Johnny tries to write a single method to handle all length strings using recrusion.
+What will happen when he runs this with the input "doesthiswork?" ?
 
-* Johnny writes reverse w/o a base case.  Predict via MC.
+public String reverse (String s) {
+   return ( reverse(allButLast(s)) + s.substring(0,1) );
+   }
 
-5) ?
-Notice reverse1 is different.  Base Cases...
+Choices:
+  * crash almost immediately
+  * enter into an infinite recursion (running forever, although eventually crashing the computer)
+  * return "?krowsihtseod" -- the correct reversal!
+  * return a string that isn't the correct reversal
+
+
+5) Recursion has a special case: the base case (HTML: basecase.html)
+notice that reverse1() has a different pattern.  It is a base case, which is always necessary 
+for recursive methods to work correctly.
 
 
 6) Writing reverse using recursion (JAVA: Reverse.java)
