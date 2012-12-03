@@ -12,7 +12,7 @@
 		<type>code</type>
 		<intro>Intro for writing reverse with helpers</intro>
 		<source>/src/reverse/NaiveReverse.java</source>
-		<testclass>/src/reverse/NaiveReverseTest</testclass>
+		<testclass>reverse/NaiveReverseTest</testclass>
 		</exercise>
 	<exercise>
 		<name>Generalizing recursion to a single method</name>
@@ -25,7 +25,7 @@
 		<type>code</type>
 		<intro>Write reverse for any length string.</intro>
 		<source>/src/reverse/Reverse.java</source>
-		<testclass>/src/reverse/ReverseTest</testclass>
+		<testclass>reverse/ReverseTest</testclass>
 		</exercise>
 	<exercise>
 		<name>Debug palindrome?</name>
