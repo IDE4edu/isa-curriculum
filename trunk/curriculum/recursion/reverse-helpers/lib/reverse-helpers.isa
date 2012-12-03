@@ -5,7 +5,7 @@
 		<name>Recursion: Using methods for strings of a specific length.</name>
 		<type>html</type>
 		<intro>Recursion using methods for strings of a specific length.</intro>
-		<source>/lib/Intro.html</source>
+		<source>/lib/content/Intro.html</source>
 	</exercise>
 	<exercise>
 		<name>Writing reverse with helpers</name>
@@ -18,7 +18,7 @@
 		<name>Generalizing recursion to a single method</name>
 		<type>selftest</type>
 		<intro>Understand the pattern from multiple methods to help write recursion.</intro>
-		<source>/lib/Assignment.html</source>
+		<source>/lib/content/Assignment.html</source>
 	    </exercise>
 	<exercise>
 		<name>Writing reverse recursively</name>
