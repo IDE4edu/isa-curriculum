@@ -1,38 +1,64 @@
 <html>
-    <head>
-        <script type="text/javascript" src="../MVLE/jquery-1.8.2.min.js"></script>
-        <script type="text/javascript" src="../MVLE/multiplechoice.js"></script>
-        <link rel="stylesheet" type="text/css" href="../MVLE/mvle.css">
-        <!-- loader will splice in the content specific js, which will then operate on the content -->
-        <!-- Also insert appropriate css files -->
-    </head>
-    <body>
-        <!-- Edit below here to change content -->
-        <div class="title">How Fast Does a Computer Go?</div>
-        <div class="MultipleChoice" identifier="how fast is a computer">
-            <div id="interaction" hasinlinefeedback="true" maxchoices="1" responseIdentifier="mc" shuffle="false">
-                <div class="prompt">Select the single best answer to the question.  <b>How long does it take a typical home computer to add two big numbers together?</b></div>
-                <div class="choice"  identifier="c1">
-                    <div class="text">It can add them together about once a second.</div>
-                    <div class="feedback"> Computers are much, much faster than this! Almost everything a computer does involves adding numbers together.  Even drawing a simple shape can make a computer add hundreds or thousands of numbers together.</div>
-                </div>
-                <div class="choice"  identifier="c2">
-                    <div class="feedback">Computers are faster than this!  The UNIVAC, first made in 1951, could add 100,000 ten-digit numbers together each second.</div>
-                    <div class="text">It can add them together about 1,000 times a second.</div>
-                </div>
-                <div class="choice" identifier="c3">
-                    <div class="feedback">his answer is closest to correct.  However, different computers can vary widely in their computational power.  An iPhone may be cool but its processor gets owned by a Sun workstation. And, even being able to add 100,000,000 numbers a second is <b>not</b> instantly; many problems require much, much more adding than that.</div>
-                    <div class="text">It can add them together about 100,000,000 times a second.</div>
-                </div>
-                <div class="choice" identifier="c4">
-                    <div class="feedback">All computers have limits, and this will never change.  It's easy to think up problems that are simple to describe but would take a modern computer a century to calculate!</div>
-                    <div class="text">It adds numbers instantly.</div>
-                </div>
-            </div>
-            <div class="responseDeclaration" identifier="mc">
-                <div class="correctResponse" identifier="c3"></div>     //might have several of these...
-            </div>
-        </div>
-    </body>
+<head>
+<script type="text/javascript" src="../MVLE/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="../MVLE/multiplechoice.js"></script>
+<link rel="stylesheet" type="text/css" href="../MVLE/mvle.css">
+
+<!--  include if you will have java code to syntax highlight -->
+<script type="text/javascript" src="../MVLE/rainbow-custom.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../MVLE/java-code.css">
+
+<!-- loader will splice in the content specific js, which will then operate on the content -->
+<!-- Also insert appropriate css files -->
+</head>
+<body>
+	<!-- Edit below here to change content -->
+	<div class="title">How Fast Does a Computer Go?</div>
+	<div class="MultipleChoice" identifier="how fast is a computer">
+		<div id="interaction" hasinlinefeedback="true" maxchoices="1"
+			responseIdentifier="mc" shuffle="false">
+			<div class="prompt">
+				Select the single best answer to the question. <b>How long does
+					it take a typical home computer to add two big numbers together?</b>
+			</div>
+			<div class="choice" identifier="c1">
+				<div class="text">It can add them together about once a
+					second.</div>
+				<div class="feedback">Computers are much, much faster than
+					this! Almost everything a computer does involves adding numbers
+					together. Even drawing a simple shape can make a computer add
+					hundreds or thousands of numbers together.</div>
+			</div>
+			<div class="choice" identifier="c2">
+				<div class="feedback">Computers are faster than this! The
+					UNIVAC, first made in 1951, could add 100,000 ten-digit numbers
+					together each second.</div>
+				<div class="text">It can add them together about 1,000 times a
+					second.</div>
+			</div>
+			<div class="choice" identifier="c3">
+				<div class="feedback">
+					his answer is closest to correct. However, different computers can
+					vary widely in their computational power. An iPhone may be cool but
+					its processor gets owned by a Sun workstation. And, even being able
+					to add 100,000,000 numbers a second is <b>not</b> instantly; many
+					problems require much, much more adding than that.
+				</div>
+				<div class="text">It can add them together about 100,000,000
+					times a second.</div>
+			</div>
+			<div class="choice" identifier="c4">
+				<div class="feedback">All computers have limits, and this will
+					never change. It's easy to think up problems that are simple to
+					describe but would take a modern computer a century to calculate!</div>
+				<div class="text">It adds numbers instantly.</div>
+			</div>
+		</div>
+		<div class="responseDeclaration" identifier="mc">
+			<div class="correctResponse" identifier="c3"></div>
+			//might have several of these...
+		</div>
+	</div>
+</body>
 
 </html>

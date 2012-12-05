@@ -1,0 +1,77 @@
+<html>
+<head>
+<script type="text/javascript" src="../MVLE/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="../MVLE/multiplechoice.js"></script>
+<link rel="stylesheet" type="text/css" href="../MVLE/mvle.css">
+
+<!--  include if you will have java code to syntax highlight -->
+<script type="text/javascript" src="../MVLE/rainbow-custom.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../MVLE/java-code.css">
+
+<!-- loader will splice in the content specific js, which will then operate on the content -->
+<!-- Also insert appropriate css files -->
+</head>
+<body>
+	<!-- Edit below here to change content -->
+	<div class="title">Writing reverse9 with a helper method</div>
+	<div class="MultipleChoice" identifier="rev9helper">
+		<div id="interaction" hasinlinefeedback="true" maxchoices="1"
+			responseIdentifier="mc" shuffle="false">
+			<div class="prompt">
+				<p>
+					A fellow student thinks that using a helper method will make it
+					easier to write
+					<tt>reverse9</tt>
+					, a method to reverse Strings of length 9. Your instructor suggests
+					using
+					<tt>reverse8</tt>
+					as the helper (you can assume that reverse8 works correctly; that
+					is, it reverses a String of length 8 correctly). Here is the
+					solution he came up with:
+				</p>
+				<pre><code data-language="java">public static String reverse9 (String input) {
+   String partial = reverse8(s.substring(1,9));
+   String firstLetter = s.substring(0,1);
+   return (firstLetter + partial);
+   }</code></pre>
+				<p>
+					<b>The student tests his <tt>reverse9</tt> on the String <tt>"confident"</tt>.
+						What will it return?
+					</b>
+				</p>
+			</div>
+			<div class="choice" identifier="c1">
+				<div class="text"><tt>tnedifnoc</tt></div>
+				<div class="feedback">No.  This <i>is</i> the correct reversal of the string "confident", but 
+				the student's method doesn't work correctly.  His code isn't using the value returned from <tt>reverse8</tt>
+				correctly.</div>
+			</div>
+			<div class="choice" identifier="c2">
+				<div class="text"><tt>ctnedifno</tt></div>
+				<div class="feedback">Right!  The student's method isn't working correctly, since the first letter ("c")
+				doesn't come at the end of its answer.</div>
+			</div>
+			<div class="choice" identifier="c3">
+				<div class="text"><tt>tconfiden</tt></div>
+				<div class="feedback">
+					Incorrect.  Remember, the method <tt>substring(1,9)</tt> will return letters 2-9 of a string.  
+					For the string "confident", this is the substring "onfident".
+				</div>
+
+			</div>
+			<div class="choice" identifier="c4">
+				<div class="text"><tt>onfidentc</tt></div>
+				<div class="feedback">No.  While it seems like you've determined what the substring calls in his
+				method are doing, but remember that <tt>reverse8</tt> will reverse the string it is given.  And 
+				pay attention to the way that the student is combining <tt>firstLetter</tt> and <tt>partial</tt>. </div>
+				<div class="text">onfidentc</div>
+			</div>
+		</div>
+		<div class="responseDeclaration" identifier="mc">
+			<div class="correctResponse" identifier="c3"></div>
+			//might have several of these...
+		</div>
+	</div>
+</body>
+
+</html>
