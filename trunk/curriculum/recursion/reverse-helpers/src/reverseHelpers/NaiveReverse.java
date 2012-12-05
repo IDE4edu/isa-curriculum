@@ -1,4 +1,4 @@
-package reverse;
+package reverseHelpers;
 
 /* 
  * Some naive solutions to reverse a string.
