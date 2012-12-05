@@ -1,0 +1,3 @@
+[submodule "trunk/curriculum/recursion/intro/lib/MVLE"]
+	path = trunk/curriculum/recursion/intro/lib/MVLE
+	url = https://github.com/IDE4edu/MVLE.git
