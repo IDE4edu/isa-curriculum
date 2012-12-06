@@ -420,6 +420,10 @@ function clearFeedbackDiv() {
 
 MC.prototype.postRender = function() {
 
+    // add utf-8 character encoding, why not. Firebug complains otherwise.
+    //  This should happen for all html pages, not just MC though.
+    $('head').prepend('<meta http-equiv="content-type" content="text/html; charset=UTF-8">');
+
 	var thetitle = document.title;
     $("#questionType").html(thetitle);
 

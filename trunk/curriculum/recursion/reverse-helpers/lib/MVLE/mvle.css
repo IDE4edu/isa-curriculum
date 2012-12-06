@@ -110,6 +110,12 @@ p {
 	padding: 5px 15px;
 }
 
+#questionType tt {
+	/* looks OK in IE, too small in firefox, ug.  Firefox at 150% is about right, 130% in IE is right */
+	font-size: 135%;
+	font-weight: 500;
+}
+
 #helpIcon {
 	width: 16px;
 	height: 16px;
@@ -431,8 +437,9 @@ p {
 }
 
 #promptdiv tt {
-	font-size: 150%;
-	font-weight: 700;
+	/* looks OK in IE, too small in firefox, ug.  Firefox at 150% is about right, 130% in IE is right */
+	font-size: 135%;
+	font-weight: 500;
 }
 
 #promptdiv ol {
