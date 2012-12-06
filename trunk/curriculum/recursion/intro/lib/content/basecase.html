@@ -12,21 +12,27 @@
 </head>
 <body>
 	<div class="title">A base case is used to stop a recursion</div>
-	<div id="promptDiv"><p>As we noted in the previous activities, we
-		need a way to get the method to stop calling itself. This involves
-		some kind of conditional, where the method will choose one of two (or
-		more) different cases each time it is called: </p>
-		
+	<div id="promptDiv">
+		<p>As we noted in the previous activities, we need a way to get
+			the method to stop calling itself. This involves some kind of
+			conditional, where the method will choose one of two (or more)
+			different cases each time it is called:</p>
+
 		<pre>
-		if (we shouldn’t make a recursive call) {
-			…  
+		if (<i>we shouldn’t make a recursive call</i>) {
+			... <i>do some things</i> ...  
 		} else { 
-			… 
-			make a recursive call; 
-			… 
+			... 
+			<i>make a recursive call</i>; 
+			...
 		}</pre>
-		<p> The
-		“shouldn’t make a recursive call” code is referred to as a base case;
-		code that includes a recursive call is a recursive case.</p></div>
+		<p>The &ldquo;<i>do some things</i>&rdquo; code is referred to as a
+			<u>base case</u>.  The other code run in the <tt>else</tt> condition is a <u>recursive case</u>. </p>
+			
+			 
+			<p>Depending on what your method needs to do, there may be more 
+			than one base case, and more than recursive case.  Remember, if there isn't at
+			least one base case, the method will never stop!</p>
+	</div>
 </body>
 </html>

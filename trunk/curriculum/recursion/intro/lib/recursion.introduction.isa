@@ -30,7 +30,7 @@
 		<source>/lib/content/basecase.html</source>
 		</exercise>
 	<exercise>
-		<name>Name this recursion</name>
+		<name>Name this recursion...</name>
 		<type>selftest</type>
 		<source>/lib/content/namethis.html</source>
 	    </exercise>
