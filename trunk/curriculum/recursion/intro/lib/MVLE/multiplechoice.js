@@ -3,6 +3,7 @@ $(document).ready(function() {
     mc = new MC();
     mc.loadContent();
     mc.render();
+    mc.postRender();
 
 
 });
@@ -48,6 +49,7 @@ MC.prototype.loadContent = function() {
     }
 
     // set the page title and dispose the div
+    // also used in postRender()
     document.title = $(".title").html();
     $(".title").remove();
 
@@ -415,6 +417,12 @@ function clearFeedbackDiv() {
 		feedbacks[z].innerHTML = "";
 	};
 };
+
+MC.prototype.postRender = function() {
+
+    $("#questionType").html() = document.title;
+
+}
 
 var pageTemplate =
 '<div id="centeredDiv" class="bg7"> <div id="questionCountBox" class="bg8"> <div id="questionTable"> <div class="color1" id="questionType"> Multiple Choice </div> </div> </div> <!-- end of questionCountBox --> <div id="currentQuestionBox"> <div id="leftColumn" class="bg8"> <div id="promptDiv"> Prompt goes here. This text will automatically be replaced by actual prompt.  </div> <div id="radiobuttondiv"> </div> <div id="feedbackdiv"> </div> </div> <div id="rightColumn" class="bg2"> <img src="../MVLE/images/multi_choice.png" alt="Robot Art Open Response"  border="0" /> </div> </div> <div id="clearBoth"> </div> <div id="interactionBox"> <div id="statusMessages"> <div id="numberAttemptsDiv"> </div> <div id="scoreDiv"> </div> <div id="resultMessageDiv" style="font-size:16px"> </div> </div> <!-- Anchor-Based Button Layout using TABLE --> <div id="buttonDiv"> <table id="buttonTable"> <tr> <td> <div class="buttonDiv ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"> <a class="disabledLink" id="checkAnswerButton" href="#" onclick="mc.checkAnswer();">Check Answer</a> </div> </td> <td> <div class="buttonDiv ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"> <a id="tryAgainButton" class="disabledLink" href="#" onclick="mc.tryAgain();">Try Again</a> </div> </td> </tr> </table> </div> </div> </div> ';
