@@ -5,9 +5,18 @@ body {
 	font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana,
 		"Gill Sans", sans-serif;
 	font-size: 100%;
-	text-align: center;
+	/* text-align: center;
+	NATE REMOVED THis */
 	background-color: #FFF;
 	margin: 4px 5px;
+}
+
+.title {
+	text-align: center;
+	font-size: 1.4em;
+	/* text-transform: uppercase; */
+	padding: 5px 15px;
+	background-color: #FFE6C6;
 }
 
 img {
@@ -96,8 +105,8 @@ p {
 
 #questionTable #questionType {
 	text-align: left;
-	font-size: .8em;
-	text-transform: uppercase;
+	font-size: 1em;
+	/* text-transform: uppercase; */
 	padding: 5px 15px;
 }
 

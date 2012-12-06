@@ -1,0 +1,49 @@
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="../MVLE/mvle.css">
+
+<!--  include if you will have java code to syntax highlight -->
+<script type="text/javascript" src="../MVLE/rainbow-custom.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../MVLE/java-code.css">
+
+<!-- loader will splice in the content specific js, which will then operate on the content -->
+<!-- Also insert appropriate css files -->
+</head>
+<body>
+	<div class="title">What is recursion?</div>
+	<div id="promptDiv">
+		<p>What is recursion? It’s a programming technique in which a
+			method calls itself. For example:</p>
+		<pre><code data-language="java">public static void recur ( ) {
+	System.out.println (“This is recursion!”);
+	recur ( );
+}</code></pre>
+		,
+
+		<p>
+			In the method
+			<tt>recur</tt>, notice the second line: there is a call to the
+			<tt>recur</tt>
+			method from within the
+			<tt>recur</tt>
+			method itself. We refer to the call as a <i>recursive call</i>.
+		</p>
+
+		<p>
+			In this case, a call to
+			<tt>recur</tt>
+			produces fairly useless results, however. It will produce the output:
+
+		
+		<pre>This is recursion!
+This is recursion!
+This is recursion!
+This is recursion!
+This is recursion!
+This is recursion!</pre>
+
+		<p>on and on and on and on...</p>
+	</div>
+</body>
+</html>

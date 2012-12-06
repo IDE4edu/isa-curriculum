@@ -1,0 +1,37 @@
+<isa>
+	<name>An introduction to recursion</name>
+	<intro>In this assignment, you will be introduced to the concept of recursion, where
+	methods call themselves to help solve complicated problems.</intro>
+	<exercise>
+		<name>What is recursion?</name>
+		<type>html</type>
+		<intro>Recursion is a programming technique where a method calls itself.</intro>
+		<source>/lib/content/introduction.html</source>
+	</exercise>
+	<exercise>
+		<name>Writing reverse with helpers</name>
+		<type>code</type>
+		<intro>Intro for writing reverse with helpers</intro>
+		<source>/src/reverse/NaiveReverse.java</source>
+		<testclass>reverse.NaiveReverseTest</testclass>
+		</exercise>
+	<exercise>
+		<name>Generalizing recursion to a single method</name>
+		<type>selftest</type>
+		<intro>Understand the pattern from multiple methods to help write recursion.</intro>
+		<source>/lib/content/Assignment.html</source>
+	    </exercise>
+	<exercise>
+		<name>Writing reverse recursively</name>
+		<type>code</type>
+		<intro>Write reverse for any length string.</intro>
+		<source>/src/reverse/Reverse.java</source>
+		<testclass>reverse.ReverseTest</testclass>
+		</exercise>
+	<exercise>
+		<name>Debug palindrome?</name>
+		<type>code</type>
+		<intro>Fix this use of reverse to work with palindromes.</intro>
+		<source>/src/reverse/Reverse17.java</source>
+		</exercise>	
+</isa>
