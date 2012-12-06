@@ -1,0 +1,32 @@
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="../MVLE/mvle.css">
+
+<!--  include if you will have java code to syntax highlight -->
+<script type="text/javascript" src="../MVLE/rainbow-custom.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../MVLE/java-code.css">
+
+<!-- loader will splice in the content specific js, which will then operate on the content -->
+<!-- Also insert appropriate css files -->
+</head>
+<body>
+	<div class="title">A base case is used to stop a recursion</div>
+	<div id="promptDiv"><p>As we noted in the previous activities, we
+		need a way to get the method to stop calling itself. This involves
+		some kind of conditional, where the method will choose one of two (or
+		more) different cases each time it is called: </p>
+		
+		<pre>
+		if (we shouldn’t make a recursive call) {
+			…  
+		} else { 
+			… 
+			make a recursive call; 
+			… 
+		}</pre>
+		<p> The
+		“shouldn’t make a recursive call” code is referred to as a base case;
+		code that includes a recursive call is a recursive case.</p></div>
+</body>
+</html>

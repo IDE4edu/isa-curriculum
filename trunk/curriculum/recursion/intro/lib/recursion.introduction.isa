@@ -5,33 +5,33 @@
 	<exercise>
 		<name>What is recursion?</name>
 		<type>html</type>
-		<intro>Recursion is a programming technique where a method calls itself.</intro>
 		<source>/lib/content/introduction.html</source>
 	</exercise>
 	<exercise>
-		<name>Writing reverse with helpers</name>
+		<name>Predicting a recursive program</name>
 		<type>code</type>
-		<intro>Intro for writing reverse with helpers</intro>
-		<source>/src/reverse/NaiveReverse.java</source>
-		<testclass>reverse.NaiveReverseTest</testclass>
+		<intro>This recursive method is a slightly augmented 
+		version of the program in the last step: it only makes a recursive
+		call under certain conditions.   There are three calls that print to the 
+		console.  See if you can predict what will get printed and in what order.
+		</intro>
+		<source>/src/recursionIntroduction/SimpleRecursionTest.java</source>
+		<launch>/lib/simpleRecursionTest.launch</launch>
+		<launchbuttonname>Run</launchbuttonname>
 		</exercise>
 	<exercise>
-		<name>Generalizing recursion to a single method</name>
+		<name>Which recursion made this output?</name>
 		<type>selftest</type>
-		<intro>Understand the pattern from multiple methods to help write recursion.</intro>
-		<source>/lib/content/Assignment.html</source>
+		<source>/lib/content/whichrecursion.html</source>
 	    </exercise>
 	<exercise>
-		<name>Writing reverse recursively</name>
-		<type>code</type>
-		<intro>Write reverse for any length string.</intro>
-		<source>/src/reverse/Reverse.java</source>
-		<testclass>reverse.ReverseTest</testclass>
+		<name>Using base cases</name>
+		<type>html</type>
+		<source>/lib/content/basecase.html</source>
 		</exercise>
 	<exercise>
-		<name>Debug palindrome?</name>
-		<type>code</type>
-		<intro>Fix this use of reverse to work with palindromes.</intro>
-		<source>/src/reverse/Reverse17.java</source>
-		</exercise>	
+		<name>Name this recursion</name>
+		<type>selftest</type>
+		<source>/lib/content/namethis.html</source>
+	    </exercise>
 </isa>

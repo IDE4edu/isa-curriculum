@@ -1,0 +1,59 @@
+<html>
+<head>
+<script type="text/javascript" src="../MVLE/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="../MVLE/multiplechoice.js"></script>
+<link rel="stylesheet" type="text/css" href="../MVLE/mvle.css">
+
+<!--  include if you will have java code to syntax highlight -->
+<script type="text/javascript" src="../MVLE/rainbow-custom.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../MVLE/java-code.css">
+
+<!-- loader will splice in the content specific js, which will then operate on the content -->
+<!-- Also insert appropriate css files -->
+</head>
+<body>
+	<!-- Edit below here to change content -->
+	<div class="title">Name this recursive method.</div>
+	<div class="MultipleChoice" identifier="rev9helper">
+		<div id="interaction" hasinlinefeedback="true" maxchoices="1"
+			responseIdentifier="mc" shuffle="false">
+			<div class="prompt">
+				<p>
+					What is a good name for the following recursive method?  (Hint: "mystery" isn't a good name)
+				</p>
+				<pre><code data-language="java">public static int mystery (String s) {
+    if (!s.isEmpty ( )) {
+        return 1 + mystery (s.substring(1));
+    }
+}</code></pre>
+			</div>
+			<div class="choice" identifier="c1">
+				<div class="text"><tt>lengthOfString</tt> (<i>it returns an int equal to the lenght of the input string</i>)</div>
+				<div class="feedback">Right!</div>
+			</div>
+			<div class="choice" identifier="c2">
+				<div class="text"><i>It doesn't matter what you name it; the method doesn't work,
+				and will crash if you run it.</i></div>
+				<div class="feedback">No, this method will run without crashing.</div>
+			</div>
+			<div class="choice" identifier="c3">
+				<div class="text"><tt>countForever</tt> (<i>because it never ends</i>)</div>
+				<div class="feedback">
+					No, the conditional in this method will eventually evaluate in such a way
+					that the recursive call won't be made -- that is, eventually the method will
+					be called with an empty string.
+				</div>
+
+			</div>
+			<div class="choice" identifier="c4">
+				<div class="text"><tt>return1</tt> (</i>because it will always return the int 1</i>)</div>
+				<div class="feedback">Nope</div>
+			</div>
+		</div>
+		<div class="responseDeclaration" identifier="mc">
+			<div class="correctResponse" identifier="c1"></div>
+		</div>
+	</div>
+</body>
+
+</html>

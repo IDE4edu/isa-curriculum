@@ -1,0 +1,95 @@
+<html>
+<head>
+<script type="text/javascript" src="../MVLE/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="../MVLE/multiplechoice.js"></script>
+<link rel="stylesheet" type="text/css" href="../MVLE/mvle.css">
+
+<!--  include if you will have java code to syntax highlight -->
+<script type="text/javascript" src="../MVLE/rainbow-custom.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../MVLE/java-code.css">
+
+<!-- loader will splice in the content specific js, which will then operate on the content -->
+<!-- Also insert appropriate css files -->
+</head>
+<body>
+	<!-- Edit below here to change content -->
+	<div class="title">Which recursion will make this output?</div>
+	<div class="MultipleChoice" identifier="rev9helper">
+		<div id="interaction" hasinlinefeedback="true" maxchoices="1"
+			responseIdentifier="mc" shuffle="false">
+			<div class="prompt">
+				<p>Below are several variations on the simple recursive method
+					you saw earlier. Without running any of the code, identify which
+					version produces the output when called initially as <tt>recur(0)</tt>:
+				<pre>count = 0
+count = 1
+count = 2
+count = 3
+count = 4
+count = 5</pre>
+
+			</div>
+			<div class="choice" identifier="c1">
+				<div class="text">
+					<pre>public static void recur (int k) {
+   	System.out.println ("count = " + k);
+   	if (k == 5) {
+   		recur (k+1);
+   	}
+}</pre>
+				</div>
+				<div class="feedback"></div>
+			</div>
+			<div class="choice" identifier="c2">
+				<div class="text">
+					<pre>public static void recur (int k) {
+   	 if (k == 5) {
+   		 System.out.println ("count = " + k);
+   		 recur (k+1);
+   	 }
+}</pre>
+				</div>
+				<div class="feedback"></div>
+			</div>
+			<div class="choice" identifier="c3">
+				<div class="text">
+					<pre>public static void recur (int k) {
+   	 System.out.println ("count = " + k);
+   	 if (k != 5) {
+   		 recur (k+1);
+   	 }
+}</pre>
+				</div>
+				<div class="feedback"></div>
+
+			</div>
+			<div class="choice" identifier="c4">
+				<div class="text">
+					<pre>public static void recur (int k) {
+   	 if (k != 5) {
+   		 System.out.println ("count = " + k);
+   		 recur (k+1);
+   	 }
+}</pre>
+				</div>
+				<div class="feedback"></div>
+			</div>
+			<div class="choice" identifier="c5">
+				<div class="text">
+					<pre>public static void recur (int k) {
+   	 if (k <= 5) {
+   		 System.out.println ("count = " + k);
+   		 recur (k+1);
+   	 }
+}</pre>
+				</div>
+				<div class="feedback"></div>
+			</div>
+		</div>
+		<div class="responseDeclaration" identifier="mc">
+			<div class="correctResponse" identifier="c3"></div>
+		</div>
+	</div>
+</body>
+
+</html>
