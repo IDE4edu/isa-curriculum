@@ -1,7 +1,6 @@
 <isa>
 	<name>An introduction to recursion</name>
-	<intro>In this assignment, you will be introduced to the concept of recursion, where
-	methods call themselves to help solve complicated problems.</intro>
+	<intro>In this assignment, you will be introduced to the concept of recursion, where methods call themselves to help solve complicated problems.</intro>
 	<exercise>
 		<name>What is recursion?</name>
 		<type>html</type>
@@ -10,11 +9,7 @@
 	<exercise>
 		<name>Predicting a recursive program</name>
 		<type>code</type>
-		<intro>This recursive method is a slightly augmented 
-		version of the program in the last step: it only makes a recursive
-		call under certain conditions.   There are three calls that print to the 
-		console.  See if you can predict what will get printed and in what order.
-		</intro>
+		<intro>This recursive method is a slightly augmented version of the program in the last step: it only makes a recursive call under certain conditions.   There are three calls that print to the console.  See if you can predict what will get printed and in what order.</intro>
 		<source>/src/recursionIntroduction/SimpleRecursionTest.java</source>
 		<launch>/lib/simpleRecursionTest.launch</launch>
 		<launchbuttonname>Run</launchbuttonname>
