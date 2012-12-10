@@ -1,0 +1,59 @@
+<html>
+<head>
+<script type="text/javascript" src="../MVLE/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="../MVLE/multiplechoice.js"></script>
+<link rel="stylesheet" type="text/css" href="../MVLE/mvle.css">
+
+<!--  include if you will have java code to syntax highlight -->
+<script type="text/javascript" src="../MVLE/rainbow-custom.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../MVLE/java-code.css">
+
+<!-- loader will splice in the content specific js, which will then operate on the content -->
+<!-- Also insert appropriate css files -->
+</head>
+<body>
+	<!-- Edit below here to change content -->
+	<div class="title">Notice the pattern...</div>
+	<div class="MultipleChoice" identifier="rev9helper">
+		<div id="interaction" hasinlinefeedback="true" maxchoices="1"
+			responseIdentifier="mc" shuffle="false">
+			<div class="prompt">
+				<p>
+
+
+				</p>
+				<pre><code data-language="java">public String reverse (String s) {
+   return ( reverse(allButLast(s)) + s.substring(0,1) );
+   }
+				</code></pre>
+				<p><b>
+					
+					
+					</b></p>
+			</div>
+			<div class="choice" identifier="c1">
+				<div class="text"><tt>crash almost immediately</tt></div>
+				<div class="feedback"></div>
+			</div>
+			<div class="choice" identifier="c2">
+				<div class="text"><tt>entering an infinite recursion (running forever)</tt></div>
+				<div class="feedback"></div>
+			</div>
+			<div class="choice" identifier="c3">
+				<div class="text"><tt>return <tt>?krowsihtseod</tt>, the correct reversal!</tt></div>
+				<div class="feedback"></div>
+
+			</div>
+			<div class="choice" identifier="c4">
+				<div class="text"><tt>return a string that isn't the correct reversal</tt></div>
+				<div class="feedback"></div>
+			</div>
+		</div>
+		<div class="responseDeclaration" identifier="mc">
+			<div class="correctResponse" identifier="c2"></div>
+			//might have several of these...
+		</div>
+	</div>
+</body>
+
+</html>

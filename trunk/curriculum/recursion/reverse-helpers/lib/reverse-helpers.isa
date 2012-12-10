@@ -4,7 +4,7 @@
 	<exercise>
 		<name>Understanding recursion through helper methods</name>
 		<type>html</type>
-		<source>/lib/content/Intro.html</source>
+		<source>/lib/content/intro.html</source>
 	</exercise>
 	<exercise>
 		<name>Writing reverse with helpers</name>
