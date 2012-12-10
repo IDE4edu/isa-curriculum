@@ -1,0 +1,51 @@
+<html>
+<head>
+<script type="text/javascript" src="../MVLE/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="../MVLE/multiplechoice.js"></script>
+<link rel="stylesheet" type="text/css" href="../MVLE/mvle.css">
+
+<!--  include if you will have java code to syntax highlight -->
+<script type="text/javascript" src="../MVLE/rainbow-custom.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../MVLE/java-code.css">
+
+<!-- loader will splice in the content specific js, which will then operate on the content -->
+<!-- Also insert appropriate css files -->
+</head>
+<body>
+	<!-- Edit below here to change content -->
+	<div class="title">Analyze a call to <tt>digitCount</tt></div>
+	<div class="MultipleChoice" identifier="return_correctly">
+		<div id="interaction" hasinlinefeedback="true" maxchoices="1"
+			responseIdentifier="mc" shuffle="false">
+			<div class="prompt">
+				<p>
+					The <tt>digitCount</tt> method doesn't work correctly. 
+					For which arguments does <tt>digitCount</tt> return the <i>correct</i> digit count? 
+				</p>
+			</div>
+			<div class="choice" identifier="c1">
+				<div class="text">any positive value, but not 0</div>
+				<div class="feedback">No. Think about your answer to the preceding exercise.</div>
+			</div>
+			<div class="choice" identifier="c2">
+				<div class="text">0 and no other value</div>
+				<div class="feedback">Correct!</div>
+			</div>
+			<div class="choice" identifier="c3">
+				<div class="text">any one-digit value, but no other</div>
+				<div class="feedback">
+					No. Trace through the method on a one-digit value like 7.
+				</div>
+			</div>
+			<div class="choice" identifier="c4">
+				<div class="text">any values that <i>contain</i> a zero digit, but no other values</div>
+				<div class="feedback">No.  Try tracing the method on a value like 40.</div>
+			</div>
+		</div>
+		<div class="responseDeclaration" identifier="mc">
+			<div class="correctResponse" identifier="c2"></div>
+		</div>
+	</div>
+</body>
+
+</html>

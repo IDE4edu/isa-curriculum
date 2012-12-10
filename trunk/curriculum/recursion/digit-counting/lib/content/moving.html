@@ -1,0 +1,32 @@
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="../MVLE/mvle.css">
+
+<!--  include if you will have java code to syntax highlight -->
+<script type="text/javascript" src="../MVLE/rainbow-custom.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../MVLE/java-code.css">
+
+<!-- loader will splice in the content specific js, which will then operate on the content -->
+<!-- Also insert appropriate css files -->
+</head>
+<body>
+	<div class="title">Recursive cases must get closer to a base case</div>
+	<div id="promptDiv">
+		<p>A proper recursive method needs to "make progress" as it calls
+		itself again and again -- otherwise, it will run forever.</p>
+		
+		<p>  A way to understand 
+		"making progress" is in the way the method's arguments change across successive 
+		recursive calls.
+		On each successive call, the argument(s) should move closer to a value (or values) 
+		that will trigger a base case, and thus stop the recursive process.</p>
+		<p>  For example,
+			consider the <tt>halved</tt> method in the preceding activity. 
+			Its argument <tt>n</tt>,
+			if large enough, results in a recursive call whose argument is closer
+			to 0, which should trigger a base case.  In this way the recursion
+			is "making progress" as it calls itself with a new argument.</p>
+	</div>
+</body>
+</html>

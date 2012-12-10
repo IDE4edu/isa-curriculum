@@ -1,0 +1,36 @@
+<isa>
+	<name>Counting digits with recursion</name>
+	<intro>In this assignment, you'll explore recursive solutions to numeric problems.</intro>
+	<exercise>
+		<name>Half a number is a number...</name>
+		<type>code</type>
+		<intro>Fill in the conditional such that this method returns the result of dividing n by 2 (while ignoring anything fractions).</intro>
+		<source>/src/countingDigits/Halved.java</source>
+		<launch>/lib/HalvedTest.launch</launch>
+		<launchbuttonname>Test</launchbuttonname>
+		</exercise>
+	<exercise>
+		<name>Recursive cases must move towards a base case</name>
+		<type>html</type>
+		<source>/lib/content/moving.html</source>
+		</exercise>
+	<exercise>
+		<name>What will digit count return?</name>
+		<type>selftest</type>
+		<source>/lib/content/what_returned.html</source>
+	    </exercise>
+	
+	<exercise>
+		<name>For which arguments will it return the correct amount?</name>
+		<type>selftest</type>
+		<source>/lib/content/return_correctly.html</source>
+	    </exercise>
+	<exercise>
+		<name>Fix digitCount</name>
+		<type>code</type>
+		<intro>Fix the bug in digitCount, changing only one line of code.</intro>
+		<source>/src/countingDigits/DigitCount.java</source>
+		<launch>/lib/DigitCount.launch</launch>
+		
+		</exercise>
+</isa>

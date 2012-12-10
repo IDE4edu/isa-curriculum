@@ -1,0 +1,65 @@
+<html>
+<head>
+<script type="text/javascript" src="../MVLE/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="../MVLE/multiplechoice.js"></script>
+<link rel="stylesheet" type="text/css" href="../MVLE/mvle.css">
+
+<!--  include if you will have java code to syntax highlight -->
+<script type="text/javascript" src="../MVLE/rainbow-custom.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../MVLE/java-code.css">
+
+<!-- loader will splice in the content specific js, which will then operate on the content -->
+<!-- Also insert appropriate css files -->
+</head>
+<body>
+	<!-- Edit below here to change content -->
+	<div class="title">Analyze a call to <tt>digitCount</tt></div>
+	<div class="MultipleChoice" identifier="what_returned">
+		<div id="interaction" hasinlinefeedback="true" maxchoices="1"
+			responseIdentifier="mc" shuffle="false">
+			<div class="prompt">
+				<p>
+					What is returned from the call <tt>digitCount(314159)</tt>, 
+					using the <tt>digitCount</tt> code just presented:
+				</p>
+				<pre><code data-language="java">public static int digitCount (int value) {
+	if (value == 0) {
+		return 1;
+	} else {
+		return 1 + digitCount(value/10);
+	}
+}</code></pre>
+			</div>
+			<div class="choice" identifier="c1">
+				<div class="text">1</div>
+				<div class="feedback">No, it definitely recurses more than one time!</div>
+			</div>
+			<div class="choice" identifier="c2">
+				<div class="text">5</div>
+				<div class="feedback">No, it will recurse more times that this.</div>
+			</div>
+			<div class="choice" identifier="c3">
+				<div class="text">6</div>
+				<div class="feedback">
+					No.  Although this is the proper value (that is, the actual number of digits in "314159"),
+					the <tt>digitCount</tt> method has a bug!
+				</div>
+			</div>
+			<div class="choice" identifier="c4">
+				<div class="text">7</div>
+				<div class="feedback">Right!  <tt>digitCount</tt> does return 7, which isn't what 
+				properly functioning <tt>digitCount</tt> should return.  It has a bug!</div>
+			</div>
+			<div class="choice" identifier="c5">
+				<div class="text"><i>Nothing is returned: it recurses infinitely</i></div>
+				<div class="feedback">No, the recursive case is "gettin closer" to the base case.  
+				Look at the argument that passed in the recursive call: <tt>value/10</tt>.</div>
+			</div>
+		</div>
+		<div class="responseDeclaration" identifier="mc">
+			<div class="correctResponse" identifier="c4"></div>
+		</div>
+	</div>
+</body>
+
+</html>
