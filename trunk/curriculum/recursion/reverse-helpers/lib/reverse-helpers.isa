@@ -2,9 +2,8 @@
 	<name>Reversing with Recursion</name>
 	<intro>In this activity, you will learn the basics of recursion as you work on a method to reverse a string.</intro>
 	<exercise>
-		<name>Recursion: Using methods for strings of a specific length.</name>
+		<name>Understanding recursion through helper methods</name>
 		<type>html</type>
-		<intro>Recursion using methods for strings of a specific length.</intro>
 		<source>/lib/content/Intro.html</source>
 	</exercise>
 	<exercise>
@@ -15,22 +14,32 @@
 		<testclass>reverse.NaiveReverseTest</testclass>
 		</exercise>
 	<exercise>
-		<name>Generalizing recursion to a single method</name>
+		<name>Will this reverse9 work?</name>
 		<type>selftest</type>
-		<intro>Understand the pattern from multiple methods to help write recursion.</intro>
-		<source>/lib/content/Assignment.html</source>
+		<source>/lib/content/rev9helper.html</source>
+	    </exercise>	
+	<exercise>
+		<name>Write reverse17</name>
+		<type>code</type>
+		<intro>Write reverse17, which reverses a String of length 17, using the reverse16 method</intro>
+		<source>/src/reverse/Reverse17.java</source>
+		<launch>/lib/Reverse17Test.launch</launch>
+		</exercise>
+	<exercise>
+		<name>Notice the pattern</name>
+		<type>selftest</type>
+		<source>/lib/content/notice_pattern.html</source>
+	    </exercise>
+   	<exercise>
+		<name>The base case is different</name>
+		<type>html</type>
+		<source>/lib/content/basecase_different.html</source>
 	    </exercise>
 	<exercise>
 		<name>Writing reverse recursively</name>
 		<type>code</type>
 		<intro>Write reverse for any length string.</intro>
 		<source>/src/reverse/Reverse.java</source>
-		<testclass>reverse.ReverseTest</testclass>
+		<launch>/lib/ReverseTest.launch</launch>
 		</exercise>
-	<exercise>
-		<name>Debug palindrome?</name>
-		<type>code</type>
-		<intro>Fix this use of reverse to work with palindromes.</intro>
-		<source>/src/reverse/Reverse17.java</source>
-		</exercise>	
 </isa>

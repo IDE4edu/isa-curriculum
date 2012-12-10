@@ -2,16 +2,14 @@ package reverseHelpers;
 
 public class Reverse17 extends Reverse16 {
 
-	
-	//public String reverse16 (String s) {
-		// this is written in the hidden parent class, don't fret 
-	//}
-	
+	// assume there is a correct reverse16 method...
+
 	
 	// WRITE reverse17 by using reverse16
 	public String reverse17 (String s) {
+
 		
-		
+
 	}
 	
 	

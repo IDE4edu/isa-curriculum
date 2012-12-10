@@ -1,6 +1,4 @@
 package reverseHelpers;
-import java.util.Arrays;
-
 
 public class Reverse {
 
@@ -12,32 +10,16 @@ public class Reverse {
 	
 	public String reverse (String s) {
 
-		// first test for the base case
-		if (    ) {
-			// solve the base case without using recursion
+		if (     ) {
+			// base case
 			
 			
 		} else {
-			// ah, the recursive case!  Use recursion here
+			// the recursive case! 
 			
 			
 		}
-		
 	}
-	
-	
-	
-	
-	// include this, or have them just use junit?
-	public static void main(String args) {
-		// you might do some testing in here
-		Reverse obj = new Reverse();
-		
-		String test1 = "abracadabra";
-		System.out.println(test1 + " --> " + obj.reverse(test1));
-	}
-	
-	
 	
 	
 	//////// HELPER METHODS YOU MIGHT FIND USEFUL
@@ -50,6 +32,5 @@ public class Reverse {
 	// returns a string  containing all the characters except the last
 	public static String allButLast(String s) {
 		return s.substring(0, s.length());
-	}
-	
+	}	
 }
