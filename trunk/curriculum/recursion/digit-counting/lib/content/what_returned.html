@@ -47,13 +47,14 @@
 			</div>
 			<div class="choice" identifier="c4">
 				<div class="text">7</div>
-				<div class="feedback">Right!  <tt>digitCount</tt> does return 7, which isn't what 
-				properly functioning <tt>digitCount</tt> should return.  It has a bug!</div>
+				<div class="feedback">Right!  (<tt>digitCount</tt> does return 7, which isn't what a 
+				properly functioning <tt>digitCount</tt> should return.  It has a bug!)</div>
 			</div>
 			<div class="choice" identifier="c5">
-				<div class="text"><i>Nothing is returned: it recurses infinitely</i></div>
-				<div class="feedback">No, the recursive case is "gettin closer" to the base case.  
-				Look at the argument that passed in the recursive call: <tt>value/10</tt>.</div>
+				<div class="text"><i>Nothing is returned: it recurses infinitely.</i></div>
+				<div class="feedback">No, the recursive case is "getting closer" to the base case.  
+				Look at the argument that is passed in the recursive call: <tt>value/10</tt>.  It 
+				will always have one fewer digits than the supplied argument.</div>
 			</div>
 		</div>
 		<div class="responseDeclaration" identifier="mc">
