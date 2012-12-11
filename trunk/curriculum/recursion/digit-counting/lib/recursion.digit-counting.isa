@@ -1,6 +1,9 @@
 <isa>
 	<name>Counting digits with recursion</name>
 	<intro>In this assignment, you'll explore recursive solutions to numeric problems.</intro>
+	<category>Recursion</category>
+	<subcategory>Introduction</subcategory>
+	<sortorder>5</sortorder>
 	<exercise>
 		<name>Half a number is a number...</name>
 		<type>code</type>

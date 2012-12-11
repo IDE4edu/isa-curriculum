@@ -1,6 +1,9 @@
 <isa>
 	<name>An introduction to recursion</name>
 	<intro>In this assignment, you will be introduced to the concept of recursion, where methods call themselves to help solve complicated problems.</intro>
+	<category>Recursion</category>
+	<subcategory>Introduction</subcategory>
+	<sortorder>1</sortorder>
 	<exercise>
 		<name>What is recursion?</name>
 		<type>html</type>

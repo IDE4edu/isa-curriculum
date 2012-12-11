@@ -1,6 +1,9 @@
 <isa>
 	<name>Reversing with Recursion</name>
 	<intro>In this activity, you will learn the basics of recursion as you work on a method to reverse a string.</intro>
+	<category>Recursion</category>
+	<subcategory>Introduction</subcategory>
+	<sortorder>3</sortorder>
 	<exercise>
 		<name>Understanding recursion through helper methods</name>
 		<type>html</type>
@@ -10,7 +13,8 @@
 		<name>Writing reverse with helpers</name>
 		<type>code</type>
 		<intro>Intro for writing reverse with helpers</intro>
-		<source>/src/reverse/NaiveReverse.java</source>
+		<source>/src/reverseHelpers/NaiveReverse.java</source>
+		<launch>/lib/NaiveReverseTest.launch</launch>
 		<testclass>reverse.NaiveReverseTest</testclass>
 		</exercise>
 	<exercise>
@@ -22,8 +26,9 @@
 		<name>Write reverse17</name>
 		<type>code</type>
 		<intro>Write reverse17, which reverses a String of length 17, using the reverse16 method</intro>
-		<source>/src/reverse/Reverse17.java</source>
+		<source>/src/reverseHelpers/Reverse17.java</source>
 		<launch>/lib/Reverse17Test.launch</launch>
+		<testclass>reverse.Reverse17Test</testclass>
 		</exercise>
 	<exercise>
 		<name>Notice the pattern</name>
@@ -39,7 +44,7 @@
 		<name>Writing reverse recursively</name>
 		<type>code</type>
 		<intro>Write reverse for any length string.</intro>
-		<source>/src/reverse/Reverse.java</source>
+		<source>/src/reverseHelpers/Reverse.java</source>
 		<launch>/lib/ReverseTest.launch</launch>
 		</exercise>
 </isa>
