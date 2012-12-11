@@ -25,7 +25,7 @@
 	<exercise>
 		<name>Write reverse17</name>
 		<type>code</type>
-		<intro>Write reverse17, which reverses a String of length 17, using the reverse16 method</intro>
+		<intro>Write reverse17 using the reverse16 method</intro>
 		<source>/src/reverseHelpers/Reverse17.java</source>
 		<launch>/lib/Reverse17Test.launch</launch>
 		<testclass>reverse.Reverse17Test</testclass>

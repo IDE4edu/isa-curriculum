@@ -7,7 +7,7 @@
 	<exercise>
 		<name>Half a number is a number...</name>
 		<type>code</type>
-		<intro>Fill in the conditional such that this method returns the result of dividing n by 2 (while ignoring anything fractions).</intro>
+		<intro>Fill in the conditional to correct the method.</intro>
 		<source>/src/countingDigits/Halved.java</source>
 		<launch>/lib/HalvedTest.launch</launch>
 		<launchbuttonname>Test</launchbuttonname>
@@ -34,6 +34,10 @@
 		<intro>Fix the bug in digitCount, changing only one line of code.</intro>
 		<source>/src/countingDigits/DigitCount.java</source>
 		<launch>/lib/DigitCount.launch</launch>
-		
+		</exercise>
+	<exercise>
+		<name>Take a survey (before you leave for the day)</name>
+		<type>url</type>
+		<source>http://www.surveymonkey.com/s/7DCW2T8</source>
 		</exercise>
 </isa>
