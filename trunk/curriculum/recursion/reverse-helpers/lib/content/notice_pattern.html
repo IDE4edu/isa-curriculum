@@ -13,24 +13,31 @@
 </head>
 <body>
 	<!-- Edit below here to change content -->
-	<div class="title">Notice the pattern...</div>
+	<div class="title">Notice the pattern ...</div>
 	<div class="MultipleChoice" identifier="rev9helper">
 		<div id="interaction" hasinlinefeedback="true" maxchoices="1"
 			responseIdentifier="mc" shuffle="false">
 			<div class="prompt">
 				<p>
-
-
-				</p>
-				<pre><code data-language="java">public String reverse (String s) {
-   return ( reverse(allButLast(s)) + s.substring(0,1) );
-   }
-				</code></pre>
-				<p><b>
+				We can take advantage of similarities in consecutive definitions, as follows:
 					
-					
-					</b></p>
-			</div>
+<pre>public String reverse<u>932</u> (String s) {
+   return reverse<u>931</u> (allButFirst(s)) + s.substring (0, 1); 
+}
+
+public String reverse<u>931</u> (String s) {
+   return reverse<u>930</u> (allButFirst(s)) + s.substring (0, 1); 
+}</pre>
+					<p>Those two methods are specialized&mdash;each only works on a string of a given length.
+					But by removing the underlined digits, we can produce a <i>general</i> reversal method
+					that almost works on <i>all</i>
+					 strings.  Here's the code.
+					</p>
+				<pre>public String reverse (String s) {
+   return ( reverse(allButFirst(s)) + s.substring(0,1) );
+}</pre>
+<p><b>
+What will happen when we call <tt>reverse</tt> with the argument <tt>"doesthiswork?"</tt>?</b>			</div>
 			<div class="choice" identifier="c1">
 				<div class="text"><tt>crash almost immediately</tt></div>
 				<div class="feedback"></div>
@@ -40,7 +47,7 @@
 				<div class="feedback"></div>
 			</div>
 			<div class="choice" identifier="c3">
-				<div class="text"><tt>return <tt>?krowsihtseod</tt>, the correct reversal!</tt></div>
+				<div class="text"><tt>return <tt>"?krowsihtseod"</tt>, the correct reversal!</tt></div>
 				<div class="feedback"></div>
 
 			</div>

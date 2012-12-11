@@ -14,9 +14,25 @@
 	<div class="title">Writing reverse with helpers</div>
 	<div id="promptDiv">
 		<p>
-		
-		
-		
+		We are now going to design a recursive version of a <tt>reverse</tt> method
+		that returns a copy of the argument string with its characters reversed.
+		Here are some examples:
+		</p>
+<table border="1">
+<tr><td>call to <tt>reverse</tt></td><td>returned value</td></tr>
+<tr><td><tt>reverse("ABC")</tt></td><td><tt>"CBA"</tt></td></tr>
+<tr><td><tt>reverse("ZYX177")</tt></td><td><tt>"771XYZ"</tt></td></tr>
+</table>
+<p>
+One can easily write <tt>reverse</tt> iteratively, with a loop instead of recursion.
+In many problems, however, this is not so simple.
+Our intent here is to help you add another tool to your toolbox,
+so that when a problem shows up that requires recursion, you'll be ready.
+</p>
+<p>
+We first will explore writing <i>separate</i> methods for different string lengths&mdash;<tt>reverse1</tt>,
+<tt>reverse2</tt>, <tt>reverse3</tt>, and so on.  For some programmers, this is a useful
+intermediate design step toward the goal of coding a general recursive <tt>reverse</tt>.
 		</p>
 	</div>
 </body>
