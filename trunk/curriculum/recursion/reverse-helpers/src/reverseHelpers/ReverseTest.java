@@ -46,7 +46,7 @@ public class ReverseTest {
 	public void correctly_reversed_abcde() {
 		String s = "abcde";
 		Reverse r = new Reverse();
-		assertEquals("failed with call reverse(\""+s+"\") ", s, r.reverse(s));
+		assertEquals("failed with call reverse(\""+s+"\") ", real_reverse(s), r.reverse(s));
 	}
 
 
@@ -54,14 +54,14 @@ public class ReverseTest {
 	public void correctly_reverses_public_static_void_pain() {
 		String s = "public static void pain";
 		Reverse r = new Reverse();
-		assertEquals("failed with call reverse(\""+s+"\") ", s, r.reverse(s));
+		assertEquals("failed with call reverse(\""+s+"\") ", real_reverse(s), r.reverse(s));
 	}
 
 	@Test
 	public void correctly_reverses_Z() {
 		String s = "Z";
 		Reverse r = new Reverse();
-		assertEquals("failed with call reverse(\""+s+"\") ", s, r.reverse(s));
+		assertEquals("failed with call reverse(\""+s+"\") ", real_reverse(s), r.reverse(s));
 	}
 
 	@Test

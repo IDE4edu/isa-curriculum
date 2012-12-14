@@ -33,7 +33,7 @@
 		<type>code</type>
 		<intro>Fix the bug in digitCount, changing only one line of code.</intro>
 		<source>/src/countingDigits/DigitCount.java</source>
-		<launch>/lib/DigitCount.launch</launch>
+		<launch>/lib/DigitCountTest.launch</launch>
 		</exercise>
 	<exercise>
 		<name>Take a survey (before you leave for the day)</name>

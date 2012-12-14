@@ -29,7 +29,7 @@
 					is, it reverses a String of length 8 correctly). Here is the
 					solution he came up with:
 				</p>
-				<pre><code data-language="java">public static String reverse9 (String input) {
+				<pre><code data-language="java">public String reverse9 (String s) {
    String partial = reverse8(s.substring(1,9));
    String firstLetter = s.substring(0,1);
    return (firstLetter + partial);
