@@ -18,17 +18,22 @@
 		<div id="interaction" hasinlinefeedback="true" maxchoices="1"
 			responseIdentifier="mc" shuffle="false">
 			<div class="prompt">
-				<p>
-					What is returned from the call <tt>digitCount(314159)</tt>, 
-					using the <tt>digitCount</tt> code just presented:
-				</p>
-				<pre><code data-language="java">public static int digitCount (int value) {
+			<p>Here’s another example. The digitCount method is intended to return the number 
+			of digits in its nonnegative integer argument; for example, given 314159 or 700000 as argument,
+			 it should return 6. Leading zeroes aren’t counted except in the case where the argument is 0.
+	</p>
+			<pre><code data-language="java">public static int digitCount (int value) {
 	if (value == 0) {
 		return 1;
 	} else {
 		return 1 + digitCount(value/10);
 	}
 }</code></pre>
+				<p>
+					<b>What is returned from the call <tt>digitCount(314159)</tt>, 
+					using the <tt>digitCount</tt> method?
+			</b>	</p>
+				
 			</div>
 			<div class="choice" identifier="c1">
 				<div class="text">1</div>
