@@ -96,9 +96,8 @@ public class SystemOutTest {
 	}
 	
 	
-	public void setUserInput(File input) {
-		setUserInput(file2StringArray(input));
-	}
+	///////
+	
 	
 	public void setUserInput(String[] input) {
 		StringBuffer tempSB = new StringBuffer();
@@ -117,6 +116,12 @@ public class SystemOutTest {
 		setUserInput(input.toArray(temp));
 	}
 	
+	public void setUserInput(File input) {
+		setUserInput(file2StringArray(input));
+	}
+	
+	
+	////
 	
 	public void collectUserOutput(String[] input) {
 		setUserInput(input);
