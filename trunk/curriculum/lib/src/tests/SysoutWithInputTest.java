@@ -19,8 +19,7 @@ public class SysoutWithInputTest extends SystemOutTest {
 	}
 	
 	@Test
-	@Ignore
-	public void test1() {
+	public void whatever_test1() {
 		String[] in = {"45"};
 		collectUserOutput(in);
 		assertSOContainsLine("You didn't handle 45 as input correctly",
@@ -32,16 +31,15 @@ public class SysoutWithInputTest extends SystemOutTest {
 	@Test
 	public void test2() {
 		List<String> in = new ArrayList<String>();
-		in.add("299");
 		in.add("300");
+		in.add("400");
 		setUserInput(in);
 		collectUserOutput();
-		assertSOContainsLine("You didn't handle 45 as input correctly",
+		assertSOContainsLine("You didn't handle 300 as input correctly",
 				"Adding 1 to your number gives us 301");
 	}
 	
 	@Test
-	@Ignore
 	public void test3() {
 		List<String> in = new ArrayList<String>();
 		in.add("0");

@@ -15,5 +15,7 @@ public class SysoutWithInput {
 		int u = input.nextInt();
 		System.out.println("Adding 1 to your number gives us " + (u+1));
 //		System.out.println ("foo");
+		System.out.println("hello\n" +
+				"everyone");
 	}
 }

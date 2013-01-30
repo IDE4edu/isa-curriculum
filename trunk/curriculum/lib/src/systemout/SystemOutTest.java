@@ -1,8 +1,11 @@
 package systemout;
 import static org.junit.Assert.*;
 
+import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintStream;
@@ -59,12 +62,16 @@ public class SystemOutTest {
 		fail("unimplemented");
 	}
 	
-	public void assertSOEquals (String message, String[] lines) {
-		assertArrayEquals(message, userOutput.toArray(), lines); 
+	public void assertSOEquals (String message, String[] output) {
+		assertArrayEquals(message, userOutput.toArray(), output); 
 	}
 	
-	public void assertSOEquals (String message, List<String> lines) {
-		assertArrayEquals(message, userOutput.toArray(), lines.toArray());
+	public void assertSOEquals (String message, List<String> output) {
+		assertArrayEquals(message, userOutput.toArray(), output.toArray());
+	}
+	
+	public void assertSOEquals (String message, File output) {
+        assertSOEquals(message, file2StringArray(output));
 	}
 	
 	public void assertSONumLines(String message, int numLines) {
@@ -88,6 +95,10 @@ public class SystemOutTest {
 		// urk, keeping this in makes ugly throw declarations necessary
 	}
 	
+	
+	public void setUserInput(File input) {
+		setUserInput(file2StringArray(input));
+	}
 	
 	public void setUserInput(String[] input) {
 		StringBuffer tempSB = new StringBuffer();
@@ -117,6 +128,10 @@ public class SystemOutTest {
 		collectUserOutput();
 	}
 	
+	public void collectUserOutput(File input) {
+		setUserInput(input);
+		collectUserOutput();
+	}
 
 	public static String filenamePrefix = "tmpSysoutTest";
 	Scanner userOutputScanner;
@@ -163,6 +178,28 @@ public class SystemOutTest {
 		System.setOut(originalOut);
 		System.setIn(originalIn);
 		
+	}
+	
+	/// helpers
+	private List<String> file2StringArray(File f) {
+        List<String> lines = new ArrayList<String>();
+		try {
+			FileReader fr = new FileReader(f);
+			BufferedReader br = new BufferedReader(fr);
+	        String line = null;
+	        while ((line = br.readLine()) != null) {
+	            lines.add(line);
+	        }
+	        br.close();
+		} catch (FileNotFoundException e) {
+			// from the new FileReader()
+			// could throw a fail() here, but better to blow up probably
+			e.printStackTrace();
+		} catch (IOException e) {
+			// from the readLine()s -- lets blow up here as well
+			e.printStackTrace();
+		}
+        return lines;
 	}
 
 }
