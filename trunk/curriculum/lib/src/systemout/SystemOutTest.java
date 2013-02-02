@@ -63,11 +63,13 @@ public class SystemOutTest {
 	}
 	
 	public void assertSOEquals (String message, String[] output) {
-		assertArrayEquals(message, userOutput.toArray(), output); 
+		String[] temp = new String[output.length];
+		assertArrayEquals(message, userOutput.toArray(temp), output); 
 	}
 	
 	public void assertSOEquals (String message, List<String> output) {
-		assertArrayEquals(message, userOutput.toArray(), output.toArray());
+		String[] temp = new String[output.size()];
+		assertArrayEquals(message, userOutput.toArray(temp), output.toArray(temp));
 	}
 	
 	public void assertSOEquals (String message, File output) {
@@ -91,7 +93,7 @@ public class SystemOutTest {
 	
 	// override this
 	public void callUserCode() {
-		//throw new Exception("Method callUserCode should be overriden, and super should not be called.");
+		//throw new Exception("Method callUserCode should be overridden, and super should not be called.");
 		// urk, keeping this in makes ugly throw declarations necessary
 	}
 	
@@ -100,6 +102,7 @@ public class SystemOutTest {
 	
 	
 	public void setUserInput(String[] input) {
+		System.setIn(originalIn);
 		StringBuffer tempSB = new StringBuffer();
 		String separator = System.getProperty("line.separator");
 		for (int i = 0; i < input.length; i++) {
@@ -107,7 +110,14 @@ public class SystemOutTest {
 		   tempSB.append( separator );
 		}
 		InputStream is = new ByteArrayInputStream(tempSB.toString().getBytes());
-		System.setIn(is);
+		//Note: if the old inputstream hasn't been 'used up', it will continue
+		// to provide input even after the call to setIn().  Dunno why.
+		try {
+			System.setIn(is);
+		} catch (SecurityException e) {
+			//eh.
+			e.printStackTrace();
+		}
 	}
 	
 	public void setUserInput(List<String> input) {
@@ -117,6 +127,7 @@ public class SystemOutTest {
 	}
 	
 	public void setUserInput(File input) {
+		// how about a FileInputStream, yo!
 		setUserInput(file2StringArray(input));
 	}
 	

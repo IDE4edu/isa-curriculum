@@ -5,9 +5,10 @@ import java.util.Scanner;
 public class SysoutWithInput {
 	
 	public static int num = 5;
-	static Scanner input = new Scanner(System.in);
+
 
 	public static void main (String [ ] args) {
+		Scanner input = new Scanner(System.in);
 		System.out.println ("orig = " + num);
 		num++;
 		System.out.println ("new = " + num);

@@ -32,7 +32,6 @@ public class SysoutWithInputTest extends SystemOutTest {
 	public void test2() {
 		List<String> in = new ArrayList<String>();
 		in.add("300");
-		in.add("400");
 		setUserInput(in);
 		collectUserOutput();
 		assertSOContainsLine("You didn't handle 300 as input correctly",
@@ -42,9 +41,9 @@ public class SysoutWithInputTest extends SystemOutTest {
 	@Test
 	public void test3() {
 		List<String> in = new ArrayList<String>();
-		in.add("0");
+		in.add("1");
 		collectUserOutput(in);
 		assertSOContainsLine("Doesn't have the first line yo", "orig = 5");
-		assertSOContainsLine("yo", "Adding 1 to your number gives us 1");
+		assertSOContainsLine("yo", "Adding 1 to your number gives us 2");
 	}
 }
