@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -45,23 +46,42 @@ public class SystemOutTest {
 	
 	////// SysOut asserts
 
+	// user output contains a line somewhere in it
 	public void assertSOContainsLine(String message, String line) {
 		assertTrue(message, userOutput.contains(line));
 	}
 	
+	//user output has a line at a specific index
 	public void assertSOHasLine(String message, int index, String line) {
 		assertTrue(message, userOutput.get(index).equals(line));
 	}
 	
-	
+	// user output contains a set of lines somewhere in it
 	public void assertSOContainsLines(String message, String[] lines) {
-		fail("unimplemented");
+		fail("assertSOContainsLines unimplemented");
 	}
-	
 	public void assertSOContainsLines (String message, List<String> lines) {
-		fail("unimplemented");
+		String[] tmp = {""};
+		assertSOContainsLines(message, lines.toArray(tmp));
 	}
 	
+	// user output contains a set of lines starting at a specific index
+	public void assertSOHasLines(String message, int start, String[] lines) {
+		assertTrue(message, userOutput.size() >= lines.length + start);
+		String[] tmp = {""};
+		String[] user_output_subset = Arrays.copyOfRange(userOutput.toArray(tmp), start, start + lines.length);
+		debug("------");
+		debug(user_output_subset);
+		debug(lines);
+		assertArrayEquals(message, user_output_subset, lines);
+	}
+	public void assertSOHasLines(String message, int start, List<String> lines) {
+		String[] tmp = {""};
+		assertSOHasLines(message, start, lines.toArray(tmp));
+	}
+		
+	
+	// checks whether the user output is equal to the argument
 	public void assertSOEquals (String message, String[] output) {
 		String[] temp = new String[output.length];
 		assertArrayEquals(message, userOutput.toArray(temp), output); 
@@ -76,6 +96,7 @@ public class SystemOutTest {
         assertSOEquals(message, file2StringArray(output));
 	}
 	
+	// checks whether the user output has a certain number of lines
 	public void assertSONumLines(String message, int numLines) {
 		assertTrue(message, userOutput.size() == numLines);
 	}
@@ -101,6 +122,8 @@ public class SystemOutTest {
 	///////
 	
 	
+	// NOTE: this will, of course, not do anything to Scanner objects 
+	// that have already been created with a previous System.in.   
 	public void setUserInput(String[] input) {
 		System.setIn(originalIn);
 		StringBuffer tempSB = new StringBuffer();
@@ -110,8 +133,6 @@ public class SystemOutTest {
 		   tempSB.append( separator );
 		}
 		InputStream is = new ByteArrayInputStream(tempSB.toString().getBytes());
-		//Note: if the old inputstream hasn't been 'used up', it will continue
-		// to provide input even after the call to setIn().  Dunno why.
 		try {
 			System.setIn(is);
 		} catch (SecurityException e) {
@@ -218,4 +239,21 @@ public class SystemOutTest {
         return lines;
 	}
 
+	
+	// prints to the original System.out
+	public void debug(String msg) {
+		originalOut.println(msg);
+	}
+	
+	public void debug(String[] msgs) {
+		for (int i=0; i < msgs.length; i++) {
+			originalOut.print("["+i+"] ");
+			debug(msgs[i]);
+		}
+	}
+	
+	public void debug(List<String> msgs) {
+		String[] tmp = {""};
+		debug(msgs.toArray(tmp));
+	}
 }

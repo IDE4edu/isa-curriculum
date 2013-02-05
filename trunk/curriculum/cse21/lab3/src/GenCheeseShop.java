@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class GenCheeseShop {
 
 	public static int MAXCHEESE = 4;
-
 	public static Random ranGen = new Random(100);
 	
 	public static void main(String[] args) {
@@ -48,7 +47,7 @@ public class GenCheeseShop {
 		}
 
 		for (int i = 0; i < MAXCHEESE; i++) {
-			System.out.print("Enter the amount of " + names[i] + ":");
+			System.out.println("Enter the amount of " + names[i] + ":");
 
 			amounts[i] = input.nextInt();
 
@@ -66,17 +65,19 @@ public class GenCheeseShop {
 		}
 		total = subtotal - discount;
 
-		System.out.print("Display the itemized list? (1 for yes) ");
-		int list = input.nextInt();
-
-		if (list == 1) {
+//		System.out.print("Display the itemized list? (1 for yes) ");
+//		int list = input.nextInt();
+//
+//		if (list == 1) {
 			for (int i = 0; i < MAXCHEESE; i++) {
 				if (amounts[i] > 0)
+					// will students use ">0"?  "==0" will still work, and will have
+					// different printouts...
 					System.out.println(amounts[i] + " lbs of " + names[i]
-							+ " @ " + prices[i] + " = " + prices[i]
+							+ " @ " + prices[i] + " = $" + prices[i]
 							* amounts[i]);
 			}
-		}
+//		}
 		System.out.println("Sub Total: $" + subtotal);
 
 		System.out.println("-Discount: $" + discount);
