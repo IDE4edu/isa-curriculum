@@ -2,3 +2,5 @@
 *.class
 trunk/curriculum/*/bin/*
 trunk/testing/*/bin/*
+.metadata
+.DS_Store
