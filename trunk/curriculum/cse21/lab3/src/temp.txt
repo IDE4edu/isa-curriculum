@@ -1,0 +1,6 @@
+[0] We sell 4 kinds of Cheese
+[1] Dalaran Sharp: $1.25 per pound
+[2] Stormwind Brie: $10.0 per pound
+[3] Alterac Swiss: $40.0 per pound
+[4] Cheese Type D: $9.15 per pound
+
