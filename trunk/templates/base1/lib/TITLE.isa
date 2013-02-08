@@ -1,0 +1,32 @@
+<isa>
+	<name>NAME</name>
+	<intro>INTRO</intro>
+	<category>CAT</category>
+	<subcategory>SUBCAT</subcategory>
+	<sortorder>5</sortorder>
+	<exercise>
+		<name>NAME</name>
+		<type>code</type>
+		<intro>INTRO</intro>
+		<source>PATH-WITH-PACKAGE</source>
+		<launch>LAUNCH CONFIG PATH IN LIB USUALLY</launch>
+		<launchbuttonname>Test</launchbuttonname>
+		</exercise>
+	<exercise>
+		<name>NAME</name>
+		<type>html</type>
+		<source>/lib/content/intro.html</source>
+		</exercise>
+	<exercise>
+		<name>NAME</name>
+		<type>selftest</type>
+		<source>/lib/content/mc.html</source>
+	    </exercise>
+	
+
+	<exercise>
+		<name>Take a survey (before you leave for the day)</name>
+		<type>url</type>
+		<source>http://www.surveymonkey.com/SOMETHING</source>
+		</exercise>
+</isa>
