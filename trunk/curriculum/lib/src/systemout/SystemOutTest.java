@@ -18,7 +18,11 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
 
-
+/*
+ * 
+ * @Version 0.8.2
+ * 
+ */
 public class SystemOutTest {
 
 	
@@ -45,6 +49,8 @@ public class SystemOutTest {
 	
 	
 	////// SysOut asserts
+	//TODO utility method to 'ease' strings to make them compare more forgivingly
+	//      e.g., trim, lowercase, etc.  Make is so asserts can ease strings or not
 
 	// user output contains a line somewhere in it
 	public void assertSOContainsLine(String message, String line) {
