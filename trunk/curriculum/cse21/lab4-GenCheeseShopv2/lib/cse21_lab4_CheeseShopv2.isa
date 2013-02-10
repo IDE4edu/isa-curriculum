@@ -21,7 +21,7 @@
 			method headers.
 		</intro>
 		<source>/src/CheeseShopv2.java</source>
-		<launch>/src/TEST_for_CheeseShopv2.java</launch>
+		<launch>/lib/TEST_for_CheeseShopv2.launch</launch>
 		<launchbuttonname>Test</launchbuttonname>
 	</exercise>
 
