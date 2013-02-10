@@ -1,0 +1,147 @@
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="../MVLE/mvle.css">
+
+<!--  include if you will have java code to syntax highlight -->
+<script type="text/javascript" src="../MVLE/rainbow-custom.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../MVLE/java-code.css">
+
+<!-- loader will splice in the content specific js, which will then operate on the content -->
+<!-- Also insert appropriate css files -->
+</head>
+<body>
+	<div class="title">Fix CheeseShopv2.java</div>
+	<div>
+
+
+
+
+		<p>
+			Only fill-in the parts as indicated in
+			<var>CheeseShopv2.java</var>
+			, which you'll see in the next step. We expect that you know what
+			code belongs in these methods that are called by main, by matching
+			the specification to the names of the methods. Do <b>not</b> change
+			<var>main</var>
+			or the method declarations. Fix the code where the comments indicate
+			you should fix it. Right now it will compile and run, but is will
+			always return 0.
+		</p>
+
+		<p>Your program will do the following (A-F):</p>
+		<ol type="A">
+			<li>List all the cheese types available and the prices</li>
+			<li>Asks the user how many pounds of each type of cheese to
+				purchase</li>
+			<li>Calculate Sub Total (price*amount of each cheese added
+				together)</li>
+			<li>Discount of Sub Total</li>
+			<ol type="a">
+				<li>for a $10 discount if their purchase is $50 or over</li>
+				<li>an additional $15 discount ($25 total) if $100 or over</</li>
+			</ol>
+			<li>Ask the user if they would like to see a list of what they
+				purchased</li>
+			<ol type="a">
+				<li>If yes, a list comes up showing how much of each type of
+					cheese they bought and the cost of each cheese</li>
+				<li>Display only the cheese they actually bought</li>
+				<li>If no then no itemized information is displayed</li>
+			</ol>
+			<li>Display Sub Total, Discount and Total Price</li>
+		</ol>
+
+
+
+		<h4>Sample Output: (Also the same as Lab 2)</h4>
+
+
+		<pre>
+We sell 3 kinds of Cheese
+Dalaran Sharp: $1.25 per pound
+Stormwind Brie: $10.00 per pound
+Alterac Swiss: $40.00 per pound
+Enter the amount of Sharp: 1
+Enter the amount of Brie: 1
+Enter the amount of Swiss: 1
+Display the itemized list? (1 for yes) 1
+1 lbs of Sharp @ $1.25 = $1.25
+1 lbs of Brie @ $10.00 = $10.0
+1 lbs of Swiss @ $40.00 = $40.0
+Sub Total: $51.25
+-Discount: $10.0
+Total : $41.25
+<hr />
+We sell 3 kinds of Cheese
+Dalaran Sharp: $1.25 per pound
+Stormwind Brie: $10.00 per pound
+Alterac Swiss: $40.00 per pound
+Enter the amount of Sharp: 1
+Enter the amount of Brie: 2
+Enter the amount of Swiss: 3
+Display the itemized list? (1 for yes) 1
+1 lbs of Sharp @ $1.25 = $1.25
+2 lbs of Brie @ $10.00 = $20.0
+3 lbs of Swiss @ $40.00 = $120.0
+Sub Total: $141.25
+-Discount: $25.0
+Total : $116.25
+<hr />
+We sell 3 kinds of Cheese
+Dalaran Sharp: $1.25 per pound
+Stormwind Brie: $10.00 per pound
+Alterac Swiss: $40.00 per pound
+Enter the amount of Sharp: 1
+Enter the amount of Brie: 0
+Enter the amount of Swiss: 0
+Display the itemized list? (1 for yes) 1
+1 lbs of Sharp @ $1.25 = $1.25
+Sub Total: $1.25
+-Discount: $0.0
+Total : $1.25
+<hr />
+We sell 3 kinds of Cheese
+Dalaran Sharp: $1.25 per pound
+Stormwind Brie: $10.00 per pound
+Alterac Swiss: $40.00 per pound
+Enter the amount of Sharp: 0
+Enter the amount of Brie: 1
+Enter the amount of Swiss: 0
+Display the itemized list? (1 for yes) 1
+1 lbs of Brie @ $10.00 = $10.0
+Sub Total: $10.0
+-Discount: $0.0
+Total : $10.0
+<hr />
+We sell 3 kinds of Cheese
+Dalaran Sharp: $1.25 per pound
+Stormwind Brie: $10.00 per pound
+Alterac Swiss: $40.00 per pound
+Enter the amount of Sharp: 1
+Enter the amount of Brie: 1
+Enter the amount of Swiss: 1
+Display the itemized list? (1 for yes) 0
+Sub Total: $51.25
+-Discount: $10.0
+Total : $41.25
+<hr />
+We sell 3 kinds of Cheese
+Dalaran Sharp: $1.25 per pound
+Stormwind Brie: $10.00 per pound
+Alterac Swiss: $40.00 per pound
+Enter the amount of Sharp: 0
+Enter the amount of Brie: 0
+Enter the amount of Swiss: 0
+Display the itemized list? (1 for yes) 1
+Sub Total: $0.0
+-Discount: $0.0
+Total : $0.0
+</pre>
+
+
+
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<isa>
+	<name>Fix CheeseShopv2.java</name>
+	<intro>In CheeseShopv2.java, we will simplify main() quite a bit using helper methods.</intro>
+	<category>Methods</category>
+	<subcategory>UCM CSE21</subcategory>
+	<sortorder>5</sortorder>
+	<exercise>
+		
+	<exercise>
+		<name>Introduction</name>
+		<type>html</type>
+		<source>/lib/content/intro.html</source>
+		</exercise>
+<!--  
+	<exercise>
+		<name>NAME</name>
+		<type>selftest</type>
+		<source>/lib/content/mc.html</source>
+	    </exercise>
+-->
+	<name>CheeseShopv2.java</name>
+		<type>code</type>
+		<intro>Fill in or fix the 6 methods called by main, where 
+		the comments indicate you should.  Don't change main or the 
+		method headers.</intro>
+		<source>/src/CheeseShopv2.java</source>
+		<launch>/src/TEST_for_CheeseShopv2.java</launch>
+		<launchbuttonname>Test</launchbuttonname>
+		</exercise>
+
+	<exercise>
+		<name>Logic Check</name>
+		<type>html</type>
+		<source>/lib/content/what-to-turn-in.html</source>
+		</exercise>
+
+
+</isa>
