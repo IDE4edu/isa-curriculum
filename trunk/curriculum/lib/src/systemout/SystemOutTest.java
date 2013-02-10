@@ -67,14 +67,14 @@ public class SystemOutTest {
 		fail("assertSOContainsLines unimplemented");
 	}
 	public void assertSOContainsLines (String message, List<String> lines) {
-		String[] tmp = {""};
+		String[] tmp = {};
 		assertSOContainsLines(message, lines.toArray(tmp));
 	}
 	
 	// user output contains a set of lines starting at a specific index
 	public void assertSOHasLines(String message, int start, String[] lines) {
 		assertTrue(message, userOutput.size() >= lines.length + start);
-		String[] tmp = {""};
+		String[] tmp = {};
 		String[] user_output_subset = Arrays.copyOfRange(userOutput.toArray(tmp), start, start + lines.length);
 		debug("------");
 		debug(user_output_subset);
@@ -82,20 +82,26 @@ public class SystemOutTest {
 		assertArrayEquals(message, user_output_subset, lines);
 	}
 	public void assertSOHasLines(String message, int start, List<String> lines) {
-		String[] tmp = {""};
+		String[] tmp = {};
 		assertSOHasLines(message, start, lines.toArray(tmp));
 	}
 		
 	
 	// checks whether the user output is equal to the argument
 	public void assertSOEquals (String message, String[] output) {
-		String[] temp = new String[output.length];
+		String[] temp = {};
 		assertArrayEquals(message, userOutput.toArray(temp), output); 
 	}
 	
 	public void assertSOEquals (String message, List<String> output) {
-		String[] temp = new String[output.size()];
-		assertArrayEquals(message, userOutput.toArray(temp), output.toArray(temp));
+		// arg.
+		String[] temp1 = {};
+		String[] temp2 = {};
+		String[] o1 = userOutput.toArray(temp1);
+		//debug(o1);
+		String[] o2 = output.toArray(temp2);
+		//debug(o2);
+		assertArrayEquals(message, o1 , o2);
 	}
 	
 	public void assertSOEquals (String message, File output) {
