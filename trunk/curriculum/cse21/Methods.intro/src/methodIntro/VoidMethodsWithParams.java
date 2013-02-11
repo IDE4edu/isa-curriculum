@@ -9,7 +9,7 @@ public class VoidMethodsWithParams {
 	}
 
 	public static void m2 (int lineCount) {
-		for (int k=0; k<lineCount; k++) {
+		for (int k=0; k<lineCount/2; k++) {
 			System.out.println ("B");
 			m1 ( 1 );
 		}
