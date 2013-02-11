@@ -18,18 +18,18 @@ package methodIntro;
 
 public class VoidMethodsWithParams {
 
-	public static void m1 (int lineCount) {
-		System.out.println ("A");
+	public static void m1(int lineCount) {
+		System.out.println("A");
 	}
 
-	public static void m2 (int lineCount) {
-		System.out.println ("B");
-		m1 ( 5 );
+	public static void m2(int lineCount) {
+		System.out.println("B");
+		m1(1);
 	}
 
-	public static void main (String [ ] args) {
+	public static void main(String[] args) {
 		// change these lines to test your solutions manually
-		m1 ( 5 );
-		m2 ( 5 );
+		m1(5);
+		m2(5);
 	}
 }
