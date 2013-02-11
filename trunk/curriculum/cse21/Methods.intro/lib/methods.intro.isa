@@ -6,11 +6,13 @@
 	<category>Methods</category>
 	<subcategory>Introduction</subcategory>
 	<sortorder>5</sortorder>
+	
 	<exercise>
 		<name>What are methods?</name>
 		<type>html</type>
 		<source>/lib/content/method-intro.html</source>
 	</exercise>
+	
 	<exercise>
 		<name>An example of methods</name>
 		<type>html</type>
@@ -95,7 +97,6 @@
 		<launch>/lib/TEST2_for_TypedMethods_2.launch</launch>
 	</exercise>
 
-</exercise>
 
 
 </isa>
