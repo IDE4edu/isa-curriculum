@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-public class VoidMethodsNoParamsTest extends systemout.SystemOutTest {
+public class TEST_for_VoidMethodsNoParams extends systemout.SystemOutTest {
 	
 	int todo;
 	

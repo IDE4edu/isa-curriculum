@@ -1,0 +1,49 @@
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="../MVLE/mvle.css">
+
+<!--  include if you will have java code to syntax highlight -->
+<script type="text/javascript" src="../MVLE/rainbow-custom.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../MVLE/java-code.css">
+
+<!-- loader will splice in the content specific js, which will then operate on the content -->
+<!-- Also insert appropriate css files -->
+</head>
+<body>
+	<div class="title">Parameters and arguments</div>
+	<div>
+
+<p>
+Here’s an example. It contains three methods, each with a single parameter. 
+Currently <code>m1</code> and <code>m2</code> make no use of the <code>lineCount</code> parameter; that’s the first thing we’ll fix.
+</p>
+<pre>
+public class VoidMethodsWithParams {
+
+	public static void m1 (int lineCount) {
+		System.out.println (“A”);
+	}
+
+	public static void m2 (int lineCount) {
+		System.out.println (“B”);
+		m1 ( 5 );
+	}
+
+	public static void main (String [ ] args) {
+		m1 ( 5 );
+		m2 ( 5 );
+	}
+}
+</pre>
+<p>
+As noted above, <code>m1</code> makes no use of its parameter <code>lineCount</code>. 
+As a result, <code>m1</code> produces just one line of output regardless of what argument is passed to it. 
+</p>
+<p>It is also important to realize that Java requires that the invocations of methods
+follow what is stated in the method header.  So, even though <code>m1</code> ignores
+the <code>lineCount</code> value, that value <b>must</b> be included when <code>m1</code> 
+is called in the <code>main</code> method.
+	</div>
+</body>
+</html>

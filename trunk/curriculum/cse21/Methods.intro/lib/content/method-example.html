@@ -1,0 +1,58 @@
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="../MVLE/mvle.css">
+
+<!--  include if you will have java code to syntax highlight -->
+<script type="text/javascript" src="../MVLE/rainbow-custom.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../MVLE/java-code.css">
+
+<!-- loader will splice in the content specific js, which will then operate on the content -->
+<!-- Also insert appropriate css files -->
+</head>
+<body>
+	<div class="title">And example of methods</div>
+	<div>
+
+<p>
+Consider the following program.
+</p>
+<pre>
+public class VoidMethodsNoParams {
+
+public static void m1 ( ) {
+	System.out.println (“A”);
+}
+
+public static void m2 ( ) {
+	System.out.println (“B”);
+}
+
+public static void m3 ( ) {
+	System.out.println (“C”);
+	m2 ( );
+}
+
+public static void main (String [ ] args) {
+	m1 ( );
+	m3 ( );
+}
+}
+</pre>
+<p>
+The program has four methods. All are <code>public</code>, meaning anyone can access them. 
+All <code>are</code> static, specific to a class rather than to the instances of the class 
+(i.e. the objects described by the class). 
+All have type <code>void</code>, so they don’t directly return any information to their callers. 
+The parentheses indicate an empty parameter list.
+</p>
+<p>
+When the program is run, the <code>main</code> method is called. 
+It starts with a call to <code>m1</code> that prints a line and returns. 
+Next <code>m3</code> is called; it prints a line, then calls <code>m2</code>. 
+The latter method prints a line, then returns to <code>m3</code>, which returns to <code>main</code>. 
+Finally, the program exits.
+</p>
+	</div>
+</body>
+</html>

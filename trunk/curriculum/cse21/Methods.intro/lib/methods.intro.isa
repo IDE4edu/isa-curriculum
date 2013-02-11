@@ -1,32 +1,112 @@
 <isa>
-	<name>NAME</name>
-	<intro>INTRO</intro>
-	<category>CAT</category>
-	<subcategory>SUBCAT</subcategory>
+	<name>Introduction to Methods</name>
+	<intro>In this assignment, we'll take a first look at how methods can
+		simply larger programs.
+	</intro>
+	<category>Methods</category>
+	<subcategory>Introduction</subcategory>
 	<sortorder>5</sortorder>
 	<exercise>
-		<name>NAME</name>
-		<type>code</type>
-		<intro>INTRO</intro>
-		<source>PATH-WITH-PACKAGE</source>
-		<launch>LAUNCH CONFIG PATH IN LIB USUALLY</launch>
-		<launchbuttonname>Test</launchbuttonname>
-		</exercise>
-	<exercise>
-		<name>NAME</name>
+		<name>What are methods?</name>
 		<type>html</type>
-		<source>/lib/content/intro.html</source>
-		</exercise>
+		<source>/lib/content/method-intro.html</source>
+	</exercise>
 	<exercise>
-		<name>NAME</name>
-		<type>selftest</type>
-		<source>/lib/content/mc.html</source>
-	    </exercise>
-	
+		<name>An example of methods</name>
+		<type>html</type>
+		<source>/lib/content/method-example.html</source>
+	</exercise>
 
 	<exercise>
-		<name>Take a survey (before you leave for the day)</name>
-		<type>url</type>
-		<source>http://www.surveymonkey.com/SOMETHING</source>
-		</exercise>
+		<name>What gets printed?</name>
+		<type>selftest</type>
+		<source>/lib/content/what-gets-printed.html</source>
+	</exercise>
+
+	<exercise>
+		<name>Make it say "CBB"</name>
+		<type>code</type>
+		<intro><![CDATA[ Change <code>main</code> so that it calls two of the other methods
+			and produces CBB as output.
+			Don't call <code>System.out.println</code>
+			in <code>main</code> directly! ]]>
+		</intro>
+		<source>/src/methodIntro/VoidMethodsNoParams.java</source>
+		<launch>/lib/TEST_for_VoidMethodsNoParams.launch</launch>
+	</exercise>
+
+	<exercise>
+		<name>Parameters and arguments</name>
+		<type>html</type>
+		<source>/lib/content/params-and-args.html</source>
+	</exercise>
+
+	<exercise>
+		<name>Put a loop in "m1"</name>
+		<type>code</type>
+		<intro><![CDATA[ Change <code>m1</code> with a loop so that it the number of "A"s printed
+			is equal to <code>lineCount</code>.	]]>
+		</intro>
+		<source>/src/methodIntro/VoidMethodsWithParams.java</source>
+		<launch>/lib/TEST_for_VoidMethodsWithParams.launch</launch>
+	</exercise>
+
+	<exercise>
+		<name>Now modify "m2"</name>
+		<type>code</type>
+		<intro><![CDATA[ Modify m2 so that it similarly uses linecount, with
+			half the lines printed contain a "A" and the other half contain an "B". 
+			If lineCount is odd, the number of B’s printed should be 1 less than the number of A’s	]]>
+		</intro>
+		<source>/src/methodIntro/VoidMethodsWithParams.java</source>
+		<launch>/lib/TEST2_for_VoidMethodsWithParams.launch</launch>
+	</exercise>
+
+	<exercise>
+		<name>Argument handling</name>
+		<type>html</type>
+		<source>/lib/content/argument-handling.html</source>
+	</exercise>
+
+	<exercise>
+		<name>Typed methods</name>
+		<type>html</type>
+		<source>/lib/content/typed-methods.html</source>
+	</exercise>
+
+
+	<exercise>
+		<name>What are the values?</name>
+		<type>selftest</type>
+		<source>/lib/content/what-are-the-values.html</source>
+	</exercise>
+
+
+	<exercise>
+		<name>What gets printed redux?</name>
+		<type>selftest</type>
+		<source>/lib/content/what-gets-printed-redux.html</source>
+	</exercise>
+
+	<exercise>
+		<name>Fill in the blank</name>
+		<type>code</type>
+		<intro><![CDATA[ Fill in the blank in the <code>main</code> method below so that the program prints 1. ]]>
+		</intro>
+		<source>/src/methodIntro/TypedMethods_1.java</source>
+		<launch>/lib/TEST2_for_TypedMethods_1.launch</launch>
+	</exercise>
+
+	<exercise>
+		<name>Fill in the blank, again</name>
+		<type>code</type>
+		<intro><![CDATA[ Fill in the blank in the <code>main</code> method below so that the program prints 1. ]]>
+		</intro>
+		<source>/src/methodIntro/TypedMethods_2.java</source>
+		<launch>/lib/TEST2_for_TypedMethods_2.launch</launch>
+	</exercise>
+
+</exercise>
+
+
 </isa>

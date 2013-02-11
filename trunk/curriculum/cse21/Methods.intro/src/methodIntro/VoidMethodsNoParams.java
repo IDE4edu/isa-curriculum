@@ -1,5 +1,9 @@
 package methodIntro;
 
+// Change main() so that it calls two of the other methods and 
+// produces "CBB" as output.
+// Click "Test" in your navigator below to see if you got it right.
+
 public class VoidMethodsNoParams {
 
 	public static void m1 ( ) {
@@ -16,9 +20,8 @@ public class VoidMethodsNoParams {
 	}
 
 	public static void main (String [ ] args) {
-//		m1 ( );
-//		m3 ( );
+		// change these calls here.  Don't put System.out.println calls in here!
+		m1 ( );
 		m3 ( );
-		m2 ( );
 	}
 }

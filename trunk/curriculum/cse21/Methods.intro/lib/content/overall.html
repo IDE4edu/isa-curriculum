@@ -7,7 +7,7 @@
 </head>
 <body>
 <h3>
-Methods
+1-Methods
 </h3>
 <p>
 <i>Methods</i> are Java’s mechanism for breaking down a computation into smaller 
@@ -28,6 +28,9 @@ to be communicated to the method when it runs or sent back to the caller when it
 (Together, the name, type, and parameter list constitute the method’s <i>header</i>.) 
 We’ll start with methods of type <code>void</code> that have empty parameter lists.
 </p>
+<h3>
+2-Consider
+</h3>
 <p>
 Consider the following program.
 </p>
@@ -67,15 +70,21 @@ Next <code>m3</code> is called; it prints a line, then calls <code>m2</code>.
 The latter method prints a line, then returns to <code>m3</code>, which returns to <code>main</code>. 
 Finally, the program exits.
 </p>
+<h3>
+3-What gets printed
+</h3>
 <p>
 Exercise: What gets printed as a result of running the program above? choices: AC, ABC, ACB, no output
 </p>
+<h3>
+4-Make it say "CBB"
+</h3>
 <p>
 Exercise: Change <code>main</code> so that it calls two of the other methods 
 (while still not calling <code>System.out.println</code>) and produces CBB as output. *** code is provided
 </p>
 <h3>
-Parameters and arguments
+5- Parameters and arguments
 </h3>
 <p>
 <i>Parameters</i> describe information that's communicated to the method when it executes. 
@@ -97,6 +106,9 @@ which will be referred to by the names <code>subTotal</code> and <code>discount<
 Calling a method with parameters requires that values be associated with the parameters prior to executing the method. 
 These values are referred to as <i>arguments</i>.
 </p>
+<h3>
+6- An example
+</h3>
 <p>
 Here’s an example. It contains three methods, each with a single parameter. 
 Currently <code>m1</code> and <code>m2</code> make no use of the <code>lineCount</code> parameter; that’s the first thing we’ll fix.
@@ -123,6 +135,9 @@ public class VoidMethodsWithParams {
 As noted above, <code>m1</code> makes no use of its parameter <code>lineCount</code>. 
 As a result, <code>m1</code> produces just one line of output regardless of what argument is passed to it. 
 </p>
+<h3>
+7-Fix m1
+</h3>
 <p>
 Exercise: Insert a <code>for</code> loop in <code>m1</code> 
 so that the number of A’s printed in <code>m1</code> is <code>lineCount</code>. For example, the call
@@ -133,10 +148,16 @@ so that the number of A’s printed in <code>m1</code> is <code>lineCount</code>
 <p>
 should print 3 A’s. (You may wish to change the <code>main</code> method to make testing more convenient.)
 </p>
+<h3>
+8- Fix m2
+</h3>
 <p>
 Exercise: Now modify <code>m2</code> (using the copy of <code>m1</code> that you just created) 
 so that it prints <code>lineCount</code> B’s and <code>lineCount</code> A’s, in any order.
 </p>
+<h3>
+9- Another fix to m2
+</h3>
 <p>
 Now modify <code>m2</code> so that half the lines printed contain a B and the other half contain an A. 
 If <code>lineCount</code> is odd, the number of B’s printed should be 1 less than the number of A’s. Examples:
@@ -154,7 +175,7 @@ should print 2 B’s and 2 A’s, and
 should print 3 B’s and 4 A’s.
 </p>
 <h3>
-Argument handling
+10- Argument handling
 </h3>
 <p>
 We now examine how arguments are passed to a method in more detail. 
@@ -199,7 +220,7 @@ When <code>swap</code> is done executing, its temporary variables are discarded,
 The values in <code>n1</code> and <code>n2</code> are exactly as they were before the call to <code>swap</code>.
 </p>
 <h3>
-Typed methods
+11- Typed methods
 </h3>
 <p>
 <i>Typed</i> methods, also known as <i>functions</i>, return a value to the caller. This allows more convenient chaining of method calls. 
@@ -211,9 +232,11 @@ Second, the method body must contain at least one <code>return</code> statement 
 The caller of the typed method should provide a variable in which to store the returned value, 
 or alternatively supply the returned value as an argument for another typed method.
 </p>
-<p>
-Here’s an example.
-</p>
+
+<h3>
+12- What does this program print?
+</h3>
+
 <pre>
 public class TypedMethods {
 
@@ -229,9 +252,15 @@ public class TypedMethods {
 <p>
 Exercise: What does the program print? Choices: 8, 11, 13, 16
 </p>
+<h3>
+13- Modify the call
+</h3>
 <p>
 Exercise: Replace the 3 by an argument that causes 7 to be printed.
 </p>
+<h3>
+14- Fill in the blank 
+</h3>
 <p>
 Exercise: Fill in the blank in the <code>main</code> method below so that the program prints 1.
 </p>
@@ -240,6 +269,9 @@ Exercise: Fill in the blank in the <code>main</code> method below so that the pr
 		System.out.println (silly ( ___ , silly (4, 3));
 	}
 </pre>
+<h3>
+15- Again, fill in the blank
+</h3>
 <p>
 Exercise: Fill in the blank in the <code>main</code> method below so that the program prints 1.
 </p>

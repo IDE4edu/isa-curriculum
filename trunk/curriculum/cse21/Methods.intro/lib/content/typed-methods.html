@@ -1,0 +1,40 @@
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="../MVLE/mvle.css">
+
+<!--  include if you will have java code to syntax highlight -->
+<script type="text/javascript" src="../MVLE/rainbow-custom.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../MVLE/java-code.css">
+
+<!-- loader will splice in the content specific js, which will then operate on the content -->
+<!-- Also insert appropriate css files -->
+</head>
+<body>
+	<div class="title">Typed methods.</div>
+	<div>
+
+		<p>
+			<i>Typed</i> methods, also known as <i>functions</i>, return a value
+			to the caller. This allows more convenient chaining of method calls.
+		</p>
+		<p>
+			Defining a typed method differs from defining a void method in two
+			ways. First, the type name&mdash;say, <code>int</code> or <code>double</code>&mdash;replaces
+			<code>void</code> in the method header. Second, the method body must
+			contain at least one <code>return</code> statement that specifies
+			what value the method should return. The caller of the typed method
+			should provide a variable in which to store the returned value, or
+			alternatively supply the returned value as an argument for another
+			typed method.
+		</p>
+
+<p>The <code>getRandom</code> method below returns an int, chosen at random:
+
+<pre style="width:80%;align:center"><span style="color:firebrick">public static int</span> getRandom () {
+   <span style="color:firebrick">Random</span> ranGen = <span style="color:firebrick">new</span> Random(100);
+   return ( ranGen.nextInt() ); </pre>
+
+	</div>
+</body>
+</html>

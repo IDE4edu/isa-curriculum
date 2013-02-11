@@ -1,0 +1,61 @@
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="../MVLE/mvle.css">
+
+<!--  include if you will have java code to syntax highlight -->
+<script type="text/javascript" src="../MVLE/rainbow-custom.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../MVLE/java-code.css">
+
+<!-- loader will splice in the content specific js, which will then operate on the content -->
+<!-- Also insert appropriate css files -->
+</head>
+<body>
+	<div class="title">Argument handling</div>
+	<div>
+		<p>
+			We now examine how arguments are passed to a method in more detail.
+			The code that calls the method has some values--the arguments--that
+			are to be communicated to the method; the method has a place to put
+			each value, each with a name (the parameter name in the method
+			header). The calling code must provide exactly as many values as the
+			called method has parameters, and each argument type must match the
+			type of the corresponding parameter. The argument values are <i>copied</i>
+			to the places in the method, and the method is executed.
+		</p>
+		<p>
+			Here’s an example. On the left is a method named <code>swap</code>&mdash;misleadingly,
+			as it turns out. On the right is a program segment that initializes
+			two variables and then calls <code>swap</code>.
+		</p>
+		<table>
+			<tr>
+				<td><pre><span style="color:firebrick">public void swap</span> (int a, int b) {
+    int temp;
+    temp = a;
+    a = b;
+    b = temp;
+}</pre></td>
+				<td><pre>int n1;
+int n2;
+n1 = 27;
+n2 = 13;
+swap (n1, n2);
+<span style="color:green">//n1 still 27, n2 still 13</span></pre></td>
+			</tr>
+		</table>
+		<p>
+			The call to <code>swap</code> sets up two internal variables, one
+			named <code>a</code> and the other named <code>b</code>. <code>n1</code>’s
+			value is copied to <code>a</code> and <code>n2</code>’s value is
+			copied to <code>b</code>. The statements in <code>swap</code> are
+			executed, but only the variables <code>a</code> and <code>b</code>
+			are involved. When <code>swap</code> is done executing, its temporary
+			variables are discarded, and control returns to the caller. The
+			values in <code>n1</code> and <code>n2</code> are exactly as they
+			were before the call to <code>swap</code>.
+		</p>
+
+	</div>
+</body>
+</html>
