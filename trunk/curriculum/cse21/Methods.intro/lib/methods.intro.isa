@@ -85,7 +85,7 @@
 		<intro><![CDATA[ Fill in the blank in the <code>main</code> method below so that the program prints 1. ]]>
 		</intro>
 		<source>/src/methodIntro/TypedMethods_1.java</source>
-		<launch>/lib/TEST2_for_TypedMethods_1.launch</launch>
+		<launch>/lib/TEST_for_TypedMethods_1.launch</launch>
 	</exercise>
 
 	<exercise>
@@ -94,7 +94,7 @@
 		<intro><![CDATA[ Fill in the blank in the <code>main</code> method below so that the program prints 1. ]]>
 		</intro>
 		<source>/src/methodIntro/TypedMethods_2.java</source>
-		<launch>/lib/TEST2_for_TypedMethods_2.launch</launch>
+		<launch>/lib/TEST_for_TypedMethods_2.launch</launch>
 	</exercise>
 
 
