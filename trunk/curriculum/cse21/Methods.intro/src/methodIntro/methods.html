@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>lab4.html</title>
+	<meta name="generator" content="BBEdit 10.5" />
+</head>
+<body>
+<h3>
+Methods
+</h3>
+<p>
+<i>Methods</i> are Java’s mechanism for breaking down a computation into smaller 
+(and, we hope, more manageable) pieces. (Methods are also known as <i>subprograms</i>.) 
+This kind of <i>decomposition</i> is analogous to splitting a book into chapters 
+or sorting documents into folders in a file cabinet.
+</p>
+<p>
+Every method has a <i>name</i> by which the method is accessed, 
+and a <i>body</i> of statements that perform the computation associated with the method. 
+When a program is run and encounters a <i>call</i> to or an <i>invocation</i> of a method, 
+it executes the statements in the method body 
+and then resumes execution at the statement immediately following the call.
+</p>
+<p>
+A method also has a <i>type</i> and a list of <i>parameters</i> that describe information 
+to be communicated to the method when it runs or sent back to the caller when it’s finished. 
+(Together, the name, type, and parameter list constitute the method’s <i>header</i>.) 
+We’ll start with methods of type <code>void</code> that have empty parameter lists.
+</p>
+<p>
+Consider the following program.
+</p>
+<pre>
+public class VoidMethodsNoParams {
+
+public static void m1 ( ) {
+	System.out.println (“A”);
+}
+
+public static void m2 ( ) {
+	System.out.println (“B”);
+}
+
+public static void m3 ( ) {
+	System.out.println (“C”);
+	m2 ( );
+}
+
+public static void main (String [ ] args) {
+	m1 ( );
+	m3 ( );
+}
+}
+</pre>
+<p>
+The program has four methods. All are <code>public</code>, meaning anyone can access them. 
+All <code>are</code> static, specific to a class rather than to the instances of the class 
+(i.e. the objects described by the class). 
+All have type <code>void</code>, so they don’t directly return any information to their callers. 
+The parentheses indicate an empty parameter list.
+</p>
+<p>
+When the program is run, the <code>main</code> method is called. 
+It starts with a call to <code>m1</code> that prints a line and returns. 
+Next <code>m3</code> is called; it prints a line, then calls <code>m2</code>. 
+The latter method prints a line, then returns to <code>m3</code>, which returns to <code>main</code>. 
+Finally, the program exits.
+</p>
+<p>
+Exercise: What gets printed as a result of running the program above? choices: AC, ABC, ACB, no output
+</p>
+<p>
+Exercise: Change <code>main</code> so that it calls two of the other methods 
+(while still not calling <code>System.out.println</code>) and produces CBB as output. *** code is provided
+</p>
+<h3>
+Parameters and arguments
+</h3>
+<p>
+<i>Parameters</i> describe information that's communicated to the method when it executes. 
+A real-world example is the set of selector buttons on a vending machine: 
+buttons on a coffee machine tell the “make coffee” method how much cream to use and how strong a brew to generate; 
+buttons on a snack vending machine indicate which snack to output.
+</p>
+<p>
+The parameters are separated by commas. Each parameter consists of a type and a name. Here’s an example method header:
+</p>
+<pre>
+public static void printTotal (double subTotal, int discount)
+</pre>
+<p>
+<code>printTotal</code>’s two parameters describe a <code>double</code> and an <code>int</code>, 
+which will be referred to by the names <code>subTotal</code> and <code>discount</code> (respectively) within the <code>printTotal</code> method.
+</p>
+<p>
+Calling a method with parameters requires that values be associated with the parameters prior to executing the method. 
+These values are referred to as <i>arguments</i>.
+</p>
+<p>
+Here’s an example. It contains three methods, each with a single parameter. 
+Currently <code>m1</code> and <code>m2</code> make no use of the <code>lineCount</code> parameter; that’s the first thing we’ll fix.
+</p>
+<pre>
+public class VoidMethodsWithParams {
+
+	public static void m1 (int lineCount) {
+		System.out.println (“A”);
+	}
+
+	public static void m2 (int lineCount) {
+		System.out.println (“B”);
+		m1 ( 100 );	// will be changed
+	}
+
+	public static void main (String [ ] args) {
+		m1 ( 100 );	// should be changed
+		m2 ( 100 );	// should be changed
+	}
+}
+</pre>
+<p>
+As noted above, <code>m1</code> makes no use of its parameter <code>lineCount</code>. 
+As a result, <code>m1</code> produces just one line of output regardless of what argument is passed to it. 
+</p>
+<p>
+Exercise: Insert a <code>for</code> loop in <code>m1</code> 
+so that the number of A’s printed in <code>m1</code> is <code>lineCount</code>. For example, the call
+</p>
+<pre>
+	m1(3)
+</pre>
+<p>
+should print 3 A’s. (You may wish to change the <code>main</code> method to make testing more convenient.)
+</p>
+<p>
+Exercise: Now modify <code>m2</code> (using the copy of <code>m1</code> that you just created) 
+so that it prints <code>lineCount</code> B’s and <code>lineCount</code> A’s, in any order.
+</p>
+<p>
+Now modify <code>m2</code> so that half the lines printed contain a B and the other half contain an A. 
+If <code>lineCount</code> is odd, the number of B’s printed should be 1 less than the number of A’s. Examples:
+</p>
+<pre>
+	m2 (4)
+</pre>
+<p>
+should print 2 B’s and 2 A’s, and
+</p>
+<pre>
+	m2 (7)
+</pre>
+<p>
+should print 3 B’s and 4 A’s.
+</p>
+<h3>
+Argument handling
+</h3>
+<p>
+We now examine how arguments are passed to a method in more detail. 
+The code that calls the method has some values--the arguments--that are to be communicated to the method; 
+the method has a place to put each value, each with a name (the parameter name in the method header). 
+The calling code must provide exactly as many values as the called method has parameters, 
+and each argument type must match the type of the corresponding parameter. 
+The argument values are <i>copied</i> to the places in the method, and the method is executed.
+</p>
+<p>
+Here’s an example. On the left is a method named <code>swap</code>--misleadingly, as it turns out. 
+On the right is a program segment that initializes two variables and then calls <code>swap</code>.
+</p>
+<table>
+<tr>
+<td>
+<pre>
+public void swap (int a, int b) {
+    int temp;
+    temp = a;
+    a = b;
+    b = temp;
+}
+</pre>
+</td>
+<td>
+<pre>
+	int n1;
+	int n2;
+	n1 = 27;
+	n2 = 13;
+	swap (n1, n2);
+</pre>
+</td>
+</tr>
+</table>
+<p>
+The call to <code>swap</code> sets up two internal variables, one named <code>a</code> and the other named <code>b</code>. 
+<code>n1</code>’s value is copied to <code>a</code> and <code>n2</code>’s value is copied to <code>b</code>. 
+The statements in <code>swap</code> are executed, but only the variables <code>a</code> and <code>b</code> are involved. 
+When <code>swap</code> is done executing, its temporary variables are discarded, and control returns to the caller. 
+The values in <code>n1</code> and <code>n2</code> are exactly as they were before the call to <code>swap</code>.
+</p>
+<h3>
+Typed methods
+</h3>
+<p>
+<i>Typed</i> methods, also known as <i>functions</i>, return a value to the caller. This allows more convenient chaining of method calls. 
+</p>
+<p>
+Defining a typed method differs from defining a void method in two ways. 
+First, the type name--say, <code>int</code> or <code>double</code>--replaces <code>void</code> in the method header. 
+Second, the method body must contain at least one <code>return</code> statement that specifies what value the method should return. 
+The caller of the typed method should provide a variable in which to store the returned value, 
+or alternatively supply the returned value as an argument for another typed method.
+</p>
+<p>
+Here’s an example.
+</p>
+<pre>
+public class TypedMethods {
+
+	public static int silly (int n1, int n2) {
+		return 2 * n1 + n2;
+	}
+
+	public static void main (String [ ] args) {
+		System.out.println (silly (3, 5));
+	}
+}
+</pre>
+<p>
+Exercise: What does the program print? Choices: 8, 11, 13, 16
+</p>
+<p>
+Exercise: Replace the 3 by an argument that causes 7 to be printed.
+</p>
+<p>
+Exercise: Fill in the blank in the <code>main</code> method below so that the program prints 1.
+</p>
+<pre>
+	public static void main (String [ ] args) {
+		System.out.println (silly ( ___ , silly (4, 3));
+	}
+</pre>
+<p>
+Exercise: Fill in the blank in the <code>main</code> method below so that the program prints 1.
+</p>
+<pre>
+	public static void main (String [ ] args) {
+		System.out.println (silly ( 5 , silly ( ___ , 3));
+	}
+</pre>
+<h3>
+More exercises
+</h3>
+<p>
+1.	Consider the following method, which simulates the rolling of a six-sided die.
+</p>
+<pre>
+	public int dieRoll (Random ranGen) {
+		return ranGen.nextInt (6);
+	}
+</pre>
+<p>
+One would call it by supplying a random number generator:
+</p>
+<pre>
+	public static void main (String [ ] args) {
+		Random ranGen = new Random ( );
+		System.out.println (“I rolled a “ + dieRoll (ranGen));
+		System.out.println (“I rolled a “ + dieRoll (ranGen));
+		System.out.println (“I rolled a “ + dieRoll (ranGen));
+	}
+</pre>
+<p>
+Fill in the blank in the method <code>twoDiceRoll</code> so that it represents 
+the simultaneous rolling of two dice. Don’t call any method other than <code>nextInt</code>.
+</p>
+<pre>
+	public int twoDiceRoll (Random ranGen) {
+		return _____ ;
+	}
+</pre>
+<p>
+2.	Fill in the blanks in the program below so that the method named <code>digitsSwitched</code> 
+takes as argument an integer between 1 and 99, inclusive, 
+and returns the value obtained by interchanging the two digits of the argument. 
+Thus, given 35 as an argument, <code>digitSwitched</code> should return 53; 
+given 5 (i.e. 05), it should return 50; and given 60, it should return 6. 
+Reminder: the % operator lets you access the last digit in an integer.
+</p>
+<pre>
+	public int digitsSwitched (int twoDigitInt) {
+		_______ ;		// ok to have more than one line
+		return ______ ;
+	}
+
+	public static void main (String [ ] args) {
+		System.out.println (“switching of digits in 35 should give 53, gives “ + digitSwitched (35);
+		System.out.println (“switching of digits in 5 should give 50, gives “ + digitSwitched (5);
+		System.out.println (“switching of digits in 60 should give 6, gives “ + digitSwitched (60);
+	}
+</pre>
+<p>
+3.	Write an <code>int</code> method named <code>digitCount</code> that, 
+given a positive integer as argument, returns the number of digits in that number. 
+Don’t count leading zeroes. Some examples: <code>digitCount (4)</code> should return 1, 
+<code>digitCount (314159)</code> should return 6, and <code>digitCount (4006)</code> should return 4.
+</p>
+</body>
+</html>
