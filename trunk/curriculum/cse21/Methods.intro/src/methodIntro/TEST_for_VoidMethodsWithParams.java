@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-public class VoidMethodsWithParamsTest extends systemout.SystemOutTest {
+public class TEST_for_VoidMethodsWithParams extends systemout.SystemOutTest {
 	
 	int whichMethod;
 	final int testm1 = 1;
@@ -24,7 +24,7 @@ public class VoidMethodsWithParamsTest extends systemout.SystemOutTest {
 //	}
 
 	@Test
-	public void testm1gt0 ( ) {
+	public void test_m1 ( ) {
 		whichMethod = testm1;
 		methodArg = 7;
 		collectUserOutput ( );
@@ -34,7 +34,7 @@ public class VoidMethodsWithParamsTest extends systemout.SystemOutTest {
 	}
 
 	@Test
-	public void testm1eq0 ( ) {
+	public void test_m1_zero_lines ( ) {
 		whichMethod = testm1;
 		methodArg = 0;
 		collectUserOutput ( );
@@ -43,7 +43,7 @@ public class VoidMethodsWithParamsTest extends systemout.SystemOutTest {
 	}
 	
 	@Test
-	public void testm2gt0odd ( ) {
+	public void test_m2_odd_number_of_lines ( ) {
 		whichMethod = testm2;
 		methodArg = 15;
 		collectUserOutput ( );
@@ -65,7 +65,7 @@ public class VoidMethodsWithParamsTest extends systemout.SystemOutTest {
 	}
 
 	@Test
-	public void testm2gt0even ( ) {
+	public void test_m2_even_number_of_lines ( ) {
 		whichMethod = testm2;
 		methodArg = 10;
 		collectUserOutput ( );
@@ -87,7 +87,7 @@ public class VoidMethodsWithParamsTest extends systemout.SystemOutTest {
 	}
 
 	@Test
-	public void testm2eq0 ( ) {
+	public void test_m2_zero_lineseq0 ( ) {
 		whichMethod = testm2;
 		methodArg = 0;
 		collectUserOutput ( );
@@ -95,8 +95,9 @@ public class VoidMethodsWithParamsTest extends systemout.SystemOutTest {
 		assertSOEquals("When lineCount is 0, you shouldn't produce any output.", desiredOutput);
 	}
 
-	@Test
+
 	public void testMainContents ( ) {
+		// TODO
 		// Make sure that main contains a call to m1, m2, or m3,
 		// then another call to m1, m2, or m3, and no other statements.
 	}

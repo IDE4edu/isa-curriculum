@@ -42,25 +42,14 @@
 	</exercise>
 
 	<exercise>
-		<name>Put a loop in "m1"</name>
+		<name>Modify m1 and m2 to use lineCount</name>
 		<type>code</type>
-		<intro><![CDATA[ Change <code>m1</code> with a loop so that it the number of "A"s printed
-			is equal to <code>lineCount</code>.	]]>
+		<intro><![CDATA[ Modify m1 and m2 to make use of lineCount, per the requirements in the comments ]]>
 		</intro>
 		<source>/src/methodIntro/VoidMethodsWithParams.java</source>
 		<launch>/lib/TEST_for_VoidMethodsWithParams.launch</launch>
 	</exercise>
 
-	<exercise>
-		<name>Now modify "m2"</name>
-		<type>code</type>
-		<intro><![CDATA[ Modify m2 so that it similarly uses linecount, with
-			half the lines printed contain a "A" and the other half contain an "B". 
-			If lineCount is odd, the number of B’s printed should be 1 less than the number of A’s	]]>
-		</intro>
-		<source>/src/methodIntro/VoidMethodsWithParams.java</source>
-		<launch>/lib/TEST2_for_VoidMethodsWithParams.launch</launch>
-	</exercise>
 
 	<exercise>
 		<name>Argument handling</name>

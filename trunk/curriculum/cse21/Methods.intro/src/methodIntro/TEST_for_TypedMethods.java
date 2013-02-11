@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class TypedMethodsTest extends systemout.SystemOutTest {
+public class TEST_for_TypedMethods extends systemout.SystemOutTest {
 	
 	int todo;
 	
