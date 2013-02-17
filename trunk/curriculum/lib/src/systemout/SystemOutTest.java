@@ -74,10 +74,10 @@ public class SystemOutTest {
 		String[] tmp = {};
 		String[] user_output_subset = Arrays.copyOfRange(
 				userOutput.toArray(tmp), start, start + lines.length);
-		debug("------");
-		debug(user_output_subset);
-		debug(lines);
-		assertArrayEquals(message, user_output_subset, lines);
+		//debug("------");
+		//debug(user_output_subset);
+		//debug(lines);
+		assertArrayEquals(message, lines, user_output_subset);
 	}
 
 	public void assertSOHasLines(String message, int start, List<String> lines) {
@@ -88,7 +88,7 @@ public class SystemOutTest {
 	// checks whether the user output is equal to the argument
 	public void assertSOEquals(String message, String[] output) {
 		String[] temp = {};
-		assertArrayEquals(message, userOutput.toArray(temp), output);
+		assertArrayEquals(message, output, userOutput.toArray(temp));
 	}
 
 	public void assertSOEquals(String message, List<String> output) {
@@ -99,7 +99,7 @@ public class SystemOutTest {
 		// debug(o1);
 		String[] o2 = output.toArray(temp2);
 		// debug(o2);
-		assertArrayEquals(message, o1, o2);
+		assertArrayEquals(message,  o2, o1);
 	}
 
 	public void assertSOEquals(String message, File output) {
@@ -111,10 +111,15 @@ public class SystemOutTest {
 		assertTrue(message, userOutput.size() == numLines);
 	}
 
+	
+	
+	
 	// pattern match stuff would be nice
 
 	// assert helpers
 
+	
+	
 	private static class Ease {
 
 		private boolean ignoreSpaces;
@@ -167,11 +172,14 @@ public class SystemOutTest {
 				out = out.replaceAll("\\p{Punct}", "");
 			}
 
-
+			//resetDefaults();
 			return out;
 		}
 
 	} // close Ease class
+	
+	
+	
 	
 	
 
