@@ -19,43 +19,61 @@
 			responseIdentifier="mc" shuffle="false">
 			<div class="prompt">
 				<p>
-					What will the values of <code>var1</code> and <code>var2</code> be at 
-					the end of this code snippet?
+					What will the values of <code>var1</code> and <code>var2</code> be
+					at the end of this code snippet?
 				</p>
-				<pre><span style="color:firebrick">public static int</span> swap (<span style="color:firebrick">int</span> a, <span style="color:firebrick">int</span> b ) {
+				<pre>
+					<span style="color: firebrick">public static int</span> swap (<span
+						style="color: firebrick">int</span> a, <span
+						style="color: firebrick">int</span> b ) {
    a = b + a;
    b = b * b;
    return a;
 }
 
-<span style="color:firebrick">public static void</span> main (<span style="color:firebrick">String [ ]</span> args) {
-   <span style="color:firebrick">int</span> var1 = 2;
-   <span style="color:firebrick">int</span> var2 = 3
+<span style="color: firebrick">public static void</span> main (<span
+						style="color: firebrick">String [ ]</span> args) {
+   <span style="color: firebrick">int</span> var1 = 2;
+   <span style="color: firebrick">int</span> var2 = 3
    var1 = swap ( var1, var2 );
-   <span style="color:green">// what are the values of var1 and var2 here?</span>
+   <span style="color: green">// what are the values of var1 and var2 here?</span>
    }
 }
 </pre>
 			</div>
 			<div class="choice" identifier="c1">
-				<div class="text"><code>var1</code> is 5, <code>var2</code> is 9</div>
-				<div class="feedback">No. Remember, the values of <code>a</code> and <code>b</code>
-				are forgotten once the method <code>swap</code> exits.  However, <code>swap</code>
-				does pass a value back through its <code>return</code> statement.</div>
+				<div class="text">
+					<code>var1</code> is 5, <code>var2</code> is 9
+				</div>
+				<div class="feedback">
+					No. Remember, the values of <code>a</code> and <code>b</code> are
+					forgotten once the method <code>swap</code> exits. However, <code>swap</code>
+					does pass a value back through its <code>return</code> statement.
+				</div>
+			</div>
+			<div class="choice" identifier="c2">
+				<div class="text">
+					<code>var1</code> is 5, <code>var2</code> is 3
+				</div>
 				<div class="feedback">Correct!</div>
 			</div>
 			<div class="choice" identifier="c3">
-				<div class="text"><code>var1</code> is 2, <code>var2</code> is 3</div>
-				<div class="feedback">No, look at what main is doing with the value that 
-				swap returns.</div>
+				<div class="text">
+					<code>var1</code> is 2, <code>var2</code> is 3
+				</div>
+				<div class="feedback">No, look at what main is doing with the
+					value that swap returns.</div>
 			</div>
 			<div class="choice" identifier="c4">
-				<div class="text"><code>var1</code> is 2, <code>var2</code> is 9</div>
+				<div class="text">
+					<code>var1</code> is 2, <code>var2</code> is 9
+				</div>
 				<div class="feedback">No.</div>
 			</div>
 			<div class="choice" identifier="c5">
 				<div class="text">The code causes an error and won't run</div>
-				<div class="feedback">No, this code will definitely run as it is written.</div>
+				<div class="feedback">No, this code will definitely run as it
+					is written.</div>
 			</div>
 		</div>
 		<div class="responseDeclaration" identifier="mc">
