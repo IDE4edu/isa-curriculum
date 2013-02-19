@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class MethodsTest {
+public class TEST_for_Methods {
 	
 	static final int VALUE_COUNT = 20;
 

@@ -1,0 +1,29 @@
+<isa>
+	<name>Lab 6: More Methods</name>
+	<intro>In this assignment, you write methods and learn about 'overloading', where different methods with the same name help make your code more understandable.  </intro>
+	<category>Methods</category>
+	<subcategory>Introduction</subcategory>
+	<sortorder>5</sortorder>
+	<exercise>
+		<name>Overview</name>
+		<type>html</type>
+		<source>/lib/content/overview.html</source>
+		</exercise>
+	<exercise>
+		<name>NAME</name>
+		<type>html</type>
+		<source>/lib/content/intro.html</source>
+		</exercise>
+	<exercise>
+		<name>NAME</name>
+		<type>selftest</type>
+		<source>/lib/content/mc.html</source>
+	    </exercise>
+	
+
+	<exercise>
+		<name>Take a survey (before you leave for the day)</name>
+		<type>url</type>
+		<source>http://www.surveymonkey.com/SOMETHING</source>
+		</exercise>
+</isa>
