@@ -1,4 +1,4 @@
-package junitview.tests;
+package edu.berkeley.eduride.testing.tests;
 import static org.junit.Assert.*;
 
 import java.lang.annotation.*;

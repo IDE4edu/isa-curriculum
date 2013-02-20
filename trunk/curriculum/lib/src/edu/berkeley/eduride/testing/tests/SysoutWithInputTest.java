@@ -1,4 +1,4 @@
-package tests;
+package edu.berkeley.eduride.testing.tests;
 
 import static org.junit.Assert.*;
 

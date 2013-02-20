@@ -1,4 +1,4 @@
-package junitview.tests;
+package edu.berkeley.eduride.testing.tests;
 public class Square {
 	
 	int height;

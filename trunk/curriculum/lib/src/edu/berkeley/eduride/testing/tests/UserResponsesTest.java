@@ -1,4 +1,4 @@
-package tests;
+package edu.berkeley.eduride.testing.tests;
 import java.io.*;
 
 public class UserResponsesTest {

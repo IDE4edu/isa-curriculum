@@ -1,4 +1,4 @@
-package junitview.model;
+package edu.berkeley.eduride.testing;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.InvocationTargetException;
