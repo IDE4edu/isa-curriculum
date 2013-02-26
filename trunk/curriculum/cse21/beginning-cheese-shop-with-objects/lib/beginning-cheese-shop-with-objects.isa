@@ -1,0 +1,39 @@
+<isa>
+	<name>A shop with Cheese objects</name>
+	<intro>In this assignment, you will work with a shop class that
+		contains objects from a Cheese class.
+	</intro>
+	<category>OOP</category>
+	<subcategory>Intro</subcategory>
+	<sortorder>5</sortorder>
+	<exercise>
+		<name>Containment in programming</name>
+		<type>html</type>
+		<source>/lib/content/containment_intro.html</source>
+	</exercise>
+	<exercise>
+		<name>The Cheese class</name>
+		<type>html</type>
+		<source>/lib/content/cheese_class.html</source>
+	</exercise>
+	<exercise>
+		<name>NAME</name>
+		<type>code</type>
+		<intro>INTRO</intro>
+		<source>PATH-WITH-PACKAGE</source>
+		<launch>LAUNCH CONFIG PATH IN LIB USUALLY</launch>
+		<launchbuttonname>Test</launchbuttonname>
+	</exercise>
+	<exercise>
+		<name>NAME</name>
+		<type>html</type>
+		<source>/lib/content/intro.html</source>
+	</exercise>
+	<exercise>
+		<name>NAME</name>
+		<type>selftest</type>
+		<source>/lib/content/mc.html</source>
+	</exercise>
+
+
+</isa>
