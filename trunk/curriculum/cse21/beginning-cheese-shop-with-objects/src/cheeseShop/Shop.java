@@ -1,11 +1,9 @@
 package cheeseShop;
 
-import java.util.*;
-
 public class Shop {
 
 	private String name;
-	private Cheese[] cheeses = new Cheese[10];
+	private Cheese[] inventory = new Cheese[10];   // Students don't know about ArrayLists, do they...
 	private int numCheese = 0;
 
 	
@@ -19,6 +17,7 @@ public class Shop {
 		this.name = name;
 	}
 
+	// maybe the students write some constructor stuff here?
 	
 	public void addCheese() {
 		addCheese("some random cheese");
@@ -29,16 +28,17 @@ public class Shop {
 	}
 	
 	public void addCheese(String cheeseName, int amount) {
-		if (numCheese < cheeses.length) {
+		if (numCheese < inventory.length) {
 			Cheese cheese = new Cheese(cheeseName, amount);
-			cheeses[numCheese] = cheese;
+			inventory[numCheese] = cheese;
 			numCheese++;
 		}
 	}
+
 	
 	public void describe() {
 		System.out.println("Welcome to \"" + name + "\"");
-		// write code here
+		// Finish code here, to print out the Shop inventory
 	}
 
 }
