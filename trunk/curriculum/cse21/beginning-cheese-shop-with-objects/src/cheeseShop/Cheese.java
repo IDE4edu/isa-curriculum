@@ -6,31 +6,28 @@ public class Cheese {
 	protected double price;
 	protected int amount;
 
-	public static int numCheese = 0;
 	
 	public Cheese() { // initialization 
 		name = "";
 		price = 0;
 		amount = 0;
-		numCheese++;
 	}
 
 	public Cheese(String name) { // Constructor with name input
 		this.name = name;
 		price = 0;
 		amount = 0;
-		numCheese++;
 	}
 
 	public Cheese(String name, double price) { // Constructor with 2 inputs
 		// Fill-in Code
 	}
 
-	public String getName() { 				// Accessor
+	public String getName() { // Accessor
 		return name;
 	}
 
-	public void setName(String newName) { 	// Mutator 
+	public void setName(String newName) { // Mutator 
 		name = newName;
 	}
 

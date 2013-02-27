@@ -16,7 +16,7 @@ public class Runner {
 			"Sharp Cheddar", "Extra sharp cheddar", "Painfully sharp cheddar",
 			"Stinky Pete", "Grilled", "String", "Array" };
 
-	static Random randGen = new Random();
+	static Random randGen = new Random(100);
 
 	public static void main(String[] args) {
 		
