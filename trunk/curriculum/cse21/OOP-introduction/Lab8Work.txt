@@ -1,0 +1,28 @@
+NAME: 
+TA: 
+
+Use this file to record your work.
+
+
+Q1: (card_v1/Card.java) Can you put the instance variable declarations at the 
+    bottom of a class, after the methods that refer to them?
+    
+
+    
+    
+Q2: (card_v1/Card.java) The Card constructor takes two arguments, 
+    a rankName (a String like "ace", "3", etc) and a suit name (a String
+    like "hearts" or "spades").  
+    	Would a  1-argument constructor make sense? Would a 0-argument 
+    constructor? Why or why not?
+
+
+
+    
+Q3: (card_v1/Card.java) Change line 12 in the constructor, where rankName
+    gets set, to
+                rankName = rankName;
+    Explain what happens and why it happens.
+    
+    
+  

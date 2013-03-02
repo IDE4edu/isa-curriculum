@@ -1,4 +1,4 @@
-package cheeseShop;
+package cheeseShopOOP;
 
 public class Cheese {
 
