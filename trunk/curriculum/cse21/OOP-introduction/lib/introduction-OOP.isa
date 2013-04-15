@@ -1,0 +1,45 @@
+<isa>
+	<name>An introduction to object oriented programming with playing cards</name>
+	<intro>In this assignment, you will work with a shop class that
+		contains objects from a Cheese class.
+	</intro>
+	<category>OOP</category>
+	<subcategory>Intro</subcategory>
+	<sortorder>5</sortorder>
+	<exercise>
+		<name>The Basics: Classes and Objects</name>
+		<type>html</type>
+		<source>/lib/content/intro.html</source>
+	</exercise>
+    <exercise>
+    	<name>The Card class</name>
+    	<type>code</type>
+    	<intro>Examine the card class</intro>
+    	<source>/src/card_v1/Card.java</source>
+    </exercise>
+    
+    <exercise>
+    	<name>Making Cards with the CardRunner class</name>
+    	<type>code</type>
+    	<intro>Run the CardRunner class to make some cards</intro>
+    	<source>/src/card_v1/CardRunner.java</source>
+    	<launch>/lib/RUN_CardRunner.launch</launch>
+    	<launchbuttonname>Run</launchbuttonname>
+    </exercise>
+    
+    <exercise>
+    	<name>Answer Q1, Q2, Q3</name>
+    	<type>code</type>
+    	<intro>Answer questions 1, 2, and 3</intro>
+    	<source>Lab8Work.txt</source>
+    </exercise>
+    
+    <exercise>
+    	<name>Write toString</name>
+    	<type>code</type>
+    	<intro></intro>
+    </exercise>
+    
+
+
+</isa>
