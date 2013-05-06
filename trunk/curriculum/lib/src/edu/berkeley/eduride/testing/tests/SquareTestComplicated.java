@@ -1,12 +1,10 @@
 package edu.berkeley.eduride.testing.tests;
+
 import static org.junit.Assert.*;
 
-import java.lang.annotation.*;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
-@RunWith(SquareTestRunner.class)
-public class SquareTestComplicated extends EduRideJunitTestClass{
+public class SquareTestComplicated extends edu.berkeley.eduride.EduRideTest{
 	
 	@Test
 	@MethodCall("new Square(5).area()")
@@ -39,7 +37,7 @@ public class SquareTestComplicated extends EduRideJunitTestClass{
 	@MethodCall("new Square(5).area()")
 	@hideWhenSuccessful
 	@Expected("25")
-	@Description("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse magna mauris, tincidunt sed mattis eu, tempus vitae lorem. In scelerisque justo nec sem gravida sed congue lacus hendrerit. Mauris non ligula at dui sagittis vulputate in et turpis. Maecenas vel diam lorem")
+	@Description("Hipster ipsum  Whatever thundercats high life chillwave scenester stumptown, put a bird on it ethnic tofu fingerstache american apparel")
 	public void testArea1() {
 		int obs = new Square(5).area();
 		assertEquals("testArea1 failed", 25, obs);
@@ -64,37 +62,4 @@ public class SquareTestComplicated extends EduRideJunitTestClass{
 		int obs = new Square(5).perimeter();
 		assertEquals("testPerimiter failed", 20, obs);
 	}
-
-	
-	// Anotations
-	@Target(ElementType.METHOD)
-	@Retention(RetentionPolicy.RUNTIME)
-	public @interface  hideWhenSuccessful {
-	}
-	
-	@Target(ElementType.METHOD)
-	@Retention(RetentionPolicy.RUNTIME)
-	public @interface  MethodCall {
-		public String value();
-	}
-
-	@Target({ElementType.METHOD})
-	@Retention(RetentionPolicy.RUNTIME)
-	public @interface  Expected {
-		public String value();
-	}
-	
-	// Java throws away local variuable annotations, ug.  not used
-	@Target({ElementType.METHOD, ElementType.LOCAL_VARIABLE})
-	@Retention(RetentionPolicy.RUNTIME)
-	public @interface  Observed {
-		public String value() default "<>";
-	}
-	
-	
-	@Retention(RetentionPolicy.RUNTIME)
-	public @interface  Description {
-		public String value();
-	}
-	
 }

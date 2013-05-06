@@ -1,4 +1,4 @@
-package edu.berkeley.eduride.testing.tests;
+package edu.berkeley.eduride.testing;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,13 +8,15 @@ import org.junit.runner.Runner;
 import org.junit.runner.notification.Failure;
 import org.junit.runner.notification.RunNotifier;
 
-public class SquareTestRunner extends Runner {
+import edu.berkeley.eduride.EduRideTest;
+
+public class EduRideRunner extends Runner {
 	List descriptions = new ArrayList();
-	private final Class<? extends EduRideJunitTestClass> testClass;
-	private final EduRideJunitTestClass testContainingInstance;
+	private final Class<? extends EduRideTest> testClass;
+	private final EduRideTest testContainingInstance;
 	private Description testSuiteDescription;
 
-	public SquareTestRunner(Class<? extends EduRideJunitTestClass> testClass) { 
+	public EduRideRunner(Class<? extends EduRideTest> testClass) { 
 		this.testClass = testClass;
 		System.out.println(testClass);
 		testContainingInstance = reflectMeATestContainingInstance(testClass);
@@ -48,7 +50,7 @@ public class SquareTestRunner extends Runner {
 
 	}
 
-	private EduRideJunitTestClass reflectMeATestContainingInstance(Class<? extends EduRideJunitTestClass> testClass) {
+	private EduRideTest reflectMeATestContainingInstance(Class<? extends EduRideTest> testClass) {
 		try {
 			return testClass.newInstance();
 		} catch (Exception e) {
