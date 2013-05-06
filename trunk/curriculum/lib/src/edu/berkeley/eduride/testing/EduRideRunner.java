@@ -37,7 +37,7 @@ public class EduRideRunner extends Runner {
 		for(Description description : testSuiteDescription.getChildren()) {
 			notifier.fireTestStarted(description);
 			try {
-				if(testContainingInstance.doStuff()) {
+				if(doStuff()) {
 					notifier.fireTestFinished(description);
 				}
 				else {
@@ -60,6 +60,19 @@ public class EduRideRunner extends Runner {
 
 	private Description createTestDescription(String description) {
 		return Description.createTestDescription(testClass, description);
+	}
+	
+	static int count = 0;
+	public boolean doStuff() {
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {}
+
+		count ++;
+
+		if(count % 2 == 0) { throw new RuntimeException("A Failure"); }
+
+		return !(count % 3 == 0);
 	}
 
 }

@@ -36,17 +36,4 @@ public class EduRideTest {
 	public @interface  Description {
 		public String value();
 	}
-	
-	static int count = 0;
-	public boolean doStuff() {
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {}
-
-		count ++;
-
-		if(count % 2 == 0) { throw new RuntimeException("A Failure"); }
-
-		return !(count % 3 == 0);
-	}
 }
