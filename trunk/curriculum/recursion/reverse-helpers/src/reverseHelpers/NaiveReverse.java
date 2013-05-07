@@ -4,6 +4,12 @@ package reverseHelpers;
  * Some naive solutions to reverse a string.
  * You should write reverse6 below.
  */
+
+/*
+ * Reminder: s.substring(n1,n2) returns the string that starts at position n1
+ * and ends at position n2-1.  For example, if s contains the string "abcde",
+ * s.substring(1,4) returns "bcd".
+ */
 public class NaiveReverse {
 
 	
