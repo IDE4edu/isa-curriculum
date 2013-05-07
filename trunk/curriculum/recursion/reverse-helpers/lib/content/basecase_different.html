@@ -14,6 +14,9 @@
 	<div class="title">The base case is different</div>
 	<div id="promptDiv">
 		<p>
+The call to <tt>reverse</tt> that we just examined produces a bunch of recursive calls:
+<tt>reverse("?krowsihtseo")</tt>, <tt>reverse("?krowsihtse")</tt>, and so on down to
+<tt>reverse("?")</tt>, attempting to handle each call identically.
 The error is that <tt>reverse("?")</tt> should be handled differently from <tt>reverse("doesthiswork?")</tt>.
 A one-character string in this situation is referred to as a <i>base case</i>.
 The <tt>reverse</tt> method should not make a recursive call when given a one-character string;

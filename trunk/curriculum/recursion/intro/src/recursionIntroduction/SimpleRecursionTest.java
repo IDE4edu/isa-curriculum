@@ -13,7 +13,7 @@ public class SimpleRecursionTest {
 
 	public static void recur(int k) {
 		System.out.println("Entering recur with k = " + k);
-		if (k <= 4) {
+		if (k <= 3) {
 			System.out.println("Recursing with k = " + k);
 			recur(k + 1);
 		}

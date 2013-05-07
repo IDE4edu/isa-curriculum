@@ -10,7 +10,7 @@
 		<source>/lib/content/introduction.html</source>
 	</exercise>
 	<exercise>
-		<name>Predicting a recursive program</name>
+		<name>Predicting the output of a recursive program</name>
 		<type>code</type>
 		<intro>Predict what will get printed and in what order.</intro>
 		<source>/src/recursionIntroduction/SimpleRecursionTest.java</source>
