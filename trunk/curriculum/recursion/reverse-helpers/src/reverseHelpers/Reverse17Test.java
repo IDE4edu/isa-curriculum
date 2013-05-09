@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class Reverse17Test {
+public class Reverse17Test extends edu.berkeley.eduride.EduRideTest {
 
 	class R16checker extends Reverse17 {
 		public boolean isCalled = false;
@@ -31,6 +31,8 @@ public class Reverse17Test {
 	}
 
 	@Test
+	@Name("Uses reverse16()")
+	@hideWhenSuccessful
 	public void calls_reverse16() {
 		R17checker r17 = new R17checker();
 		String s = "1234567890abcdefg";
@@ -53,6 +55,7 @@ public class Reverse17Test {
 	}
 
 	@Test
+	@SuccessMessage("Good job!")
 	public void reverses_correctly() {
 		Reverse17 r17 = new Reverse17();
 		assertEquals("failed with call reverse17(\"disinterestedness\")",

@@ -9,15 +9,14 @@ import java.lang.annotation.Target;
 import org.junit.Test;
 
 
-public class NaiveReverseTest {
+public class NaiveReverseTest extends edu.berkeley.eduride.EduRideTest{
 
 	
 	private String real_reverse(String s) {
 		return new StringBuffer(s).reverse().toString();
 	}	
 
-	
-	
+
 
 
 	// we'd like to ensure they don't have any loops, and no use of Java library reverse...
@@ -65,24 +64,6 @@ public class NaiveReverseTest {
 	
 	
 
-	// Anotations
-	@Target(ElementType.METHOD)
-	@Retention(RetentionPolicy.RUNTIME)
-	public @interface Name {
-		public String value();
-	}
-
-	@Target({ ElementType.METHOD, ElementType.LOCAL_VARIABLE })
-	@Retention(RetentionPolicy.RUNTIME)
-	public @interface Expected {
-		public String value() default "<>";
-	}
-
-	@Retention(RetentionPolicy.RUNTIME)
-	public @interface Description {
-		public String value();
-	}
-	
 
 	
 }
