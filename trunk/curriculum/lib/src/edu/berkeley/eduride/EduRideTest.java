@@ -15,7 +15,6 @@ public class EduRideTest {
 	///////////////////////////
 	// Annotations
 
-
 	
 	/**
 	 * Annotation for a @Test method to indicate that it should <b>not</b> be included
