@@ -49,7 +49,6 @@ public class SquareTestComplicated extends edu.berkeley.eduride.EduRideTest{
 	@Expected("25")
 	public void testArea2() {
 		int exp = 9;
-		@Observed
 		int obs = new Square(3).area();
 		assertEquals("testArea2 failed", exp, obs);
 	}
