@@ -15,8 +15,8 @@ public class SquareTestComplicated extends edu.berkeley.eduride.EduRideTest{
 	}
 
 	@Test
-	@MethodCall("new Square(5).area()")
-	@hideWhenSuccessful
+	@Name("new Square(5).area()")
+	@SuccessMessage("You got it right!")
 	@Description("BLAHBLAHBLAH")
 	public void testAssertArrayEquals() {
 		int[] x = {1,2,3,4,5,6,7,8,8,0};
@@ -45,6 +45,7 @@ public class SquareTestComplicated extends edu.berkeley.eduride.EduRideTest{
 	
 	@Test
 	@MethodCall("new Square(3).area()")
+	@SuccessMessage("You got it woot!")
 	@Expected("25")
 	public void testArea2() {
 		int exp = 9;
@@ -55,7 +56,7 @@ public class SquareTestComplicated extends edu.berkeley.eduride.EduRideTest{
 	
 	
 	@Test
-	@MethodCall("new Square(5).perimeter()")
+	@Name("new Square(5).perimeter()")
 	@hideWhenSuccessful
 	@Expected("25")
 	public void testPerimeter() {

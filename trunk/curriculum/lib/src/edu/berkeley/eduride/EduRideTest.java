@@ -12,6 +12,11 @@ public class EduRideTest {
 	public @interface  hideWhenSuccessful {
 	}
 	
+	@Retention(RetentionPolicy.RUNTIME)
+	public @interface  Name {
+		public String value();
+	}
+	
 	@Target(ElementType.METHOD)
 	@Retention(RetentionPolicy.RUNTIME)
 	public @interface  MethodCall {
@@ -36,4 +41,13 @@ public class EduRideTest {
 	public @interface  Description {
 		public String value();
 	}
+	
+	
+	@Retention(RetentionPolicy.RUNTIME)
+	public @interface SuccessMessage {
+		public String value();
+	}
+	
+	
+
 }
