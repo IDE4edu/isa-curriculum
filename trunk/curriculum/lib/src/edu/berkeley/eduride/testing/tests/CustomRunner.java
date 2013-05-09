@@ -97,4 +97,8 @@ public class CustomRunner extends BlockJUnit4ClassRunner {
 	}
 
 
+//	public class IgnoredDescription extends Description {
+//		
+//	}
+//	
 }

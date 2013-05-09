@@ -7,13 +7,17 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-@RunWith(CustomRunner.class)
+//@RunWith(CustomRunner.class)
 public class SquareTest extends edu.berkeley.eduride.EduRideTest {
 	// Nate: I didn't delete the annotations. I just put them in 
 	// SquareTestComplicated for now, cuz I wanted to test with a simple test case first
 	
+	
 	@Ignore
 	@Test
+	/**
+	 *  This a comment on the method
+	 */
 	public void ignoreThis() {
 		fail("THIS IS THE FAIL STRING yo");
 	}
