@@ -13,7 +13,7 @@
 </head>
 <body>
 	<!-- Edit below here to change content -->
-	<div class="title">Which recursion will make this output?</div>
+	<div class="title">Which recursion will produce this output?</div>
 	<div class="MultipleChoice" identifier="rev9helper">
 		<div id="interaction" hasinlinefeedback="true" maxchoices="1"
 			responseIdentifier="mc" shuffle="false">
@@ -38,7 +38,7 @@ count = 5</pre>
    	}
 }</pre>
 				</div>
-				<div class="feedback"></div>
+				<div class="feedback">No, that's not correct. What happens in the first recursive call?</div>
 			</div>
 			<div class="choice" identifier="c2">
 				<div class="text">
@@ -49,7 +49,7 @@ count = 5</pre>
    	 }
 }</pre>
 				</div>
-				<div class="feedback"></div>
+				<div class="feedback">No, that's not correct. What happens in the first recursive call?</div>
 			</div>
 			<div class="choice" identifier="c3">
 				<div class="text">
@@ -60,7 +60,7 @@ count = 5</pre>
    	 }
 }</pre>
 				</div>
-				<div class="feedback"></div>
+				<div class="feedback">That's correct!</div>
 
 			</div>
 			<div class="choice" identifier="c4">
@@ -72,18 +72,18 @@ count = 5</pre>
    	 }
 }</pre>
 				</div>
-				<div class="feedback"></div>
+				<div class="feedback">No, that's not correct. What is the last line printed?</div>
 			</div>
 			<div class="choice" identifier="c5">
 				<div class="text">
 					<pre>public static void recur (int k) {
-   	 if (k <= 5) {
+   	 if (k < 5) {
    		 System.out.println ("count = " + k);
    		 recur (k+1);
    	 }
 }</pre>
 				</div>
-				<div class="feedback"></div>
+				<div class="feedback">No, that's not correct. What is the last line printed?</div>
 			</div>
 		</div>
 		<div class="responseDeclaration" identifier="mc">

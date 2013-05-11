@@ -18,7 +18,7 @@
 		<launchbuttonname>Run</launchbuttonname>
 		</exercise>
 	<exercise>
-		<name>Which recursion made this output?</name>
+		<name>Which recursion produced this output?</name>
 		<type>selftest</type>
 		<source>/lib/content/whichrecursion.html</source>
 	    </exercise>
