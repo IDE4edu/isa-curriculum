@@ -2,13 +2,13 @@ package reverseHelpers;
 
 public class Reverse17 extends Reverse16 {
 
-	// assume there is a correct reverse16 method...
+	// Assume there is a correct reverse16() method...
 
 	
-	// WRITE reverse17 by using reverse16
+	// TODO Write reverse17() using the result of a call to reverse16()
 	public String reverse17 (String s) {
 
-		
+	
 
 	}
 	

@@ -8,8 +8,10 @@ import java.lang.annotation.Target;
 
 import org.junit.Test;
 
+import edu.berkeley.eduride.EduRideTest.Expected;
 
-public class NaiveReverseTest extends edu.berkeley.eduride.EduRideTest{
+
+public class NaiveReverseTest extends edu.berkeley.eduride.EduRideTest {
 
 	
 	private String real_reverse(String s) {
@@ -25,37 +27,40 @@ public class NaiveReverseTest extends edu.berkeley.eduride.EduRideTest{
 	
 
 	@Test
-	@Name("Test on 'abcdef'")
+	@Name("Reverse6(\"abcdef\")")
+	@Description("This test runs your <tt>reverse6</tt> on the string \"abcdef\" and checks if it properly returns \"fedcba\".")
 	public void reverse_abcdef() {
 		String tst = "abcdef";
 		
 		NaiveReverse nr = new NaiveReverse();
 		String obs = nr.reverse6(tst);
 		String exp = real_reverse(tst);
-		assertEquals("reverse6(\""+tst+"\")", exp, obs);
+		assertEquals(exp, obs);
 	}
 	
 	@Test
-	@Name("Test on 'abcdef'")
-	@Description("This test runs your <tt>reverse6</tt> on a string that looks at what it returns.  If it is failing...")
+	@Name("Reverse6(\"lolwtf\")")
+	@Description("This test runs your <tt>reverse6</tt> on the string \"lolwtf\" and checks if it properly returns \"ftwlol\".")
 	public void reverse_lolwtf() {
 		String tst = "lolwtf";
 		
 		NaiveReverse nr = new NaiveReverse();
 		String obs = nr.reverse6(tst);
 		String exp = real_reverse(tst);
-		assertEquals("reverse6(\""+tst+"\")", exp, obs);
+		assertEquals(exp, obs);
 	}
 	
 	
 	@Test
+	@Name("Mystery test")
+	@Expected("???")
+	@Description("This test runs your <tt>reverse6</tt> on the 6 character string (that we won't reveal) and checks if it properly returns.")
 	public void reverse_hidden1() {
 		String tst = "yefcZu";
 		NaiveReverse nr = new NaiveReverse();
 		String obs = nr.reverse6(tst);
 		String exp = real_reverse(tst);
-		assertTrue("reverse6 on a mystery String" ,
-			 	obs.equals(exp));
+		assertTrue(obs.equals(exp));
 	}
 	
 

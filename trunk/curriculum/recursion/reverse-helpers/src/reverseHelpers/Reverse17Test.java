@@ -55,16 +55,17 @@ public class Reverse17Test extends edu.berkeley.eduride.EduRideTest {
 	}
 
 	@Test
+	@Name("Correctly reverses")
 	@SuccessMessage("Good job!")
 	public void reverses_correctly() {
 		Reverse17 r17 = new Reverse17();
-		assertEquals("failed with call reverse17(\"disinterestedness\")",
+		assertEquals("reverse17(\"disinterestedness\") failed!",
 				real_reverse("disinterestedness"),
 				r17.reverse17("disinterestedness"));
-		assertEquals("failed with call reverse17(\"uniformitarianism\")",
+		assertEquals("reverse17(\"uniformitarianism\") failed!",
 				real_reverse("uniformitarianism"),
 				r17.reverse17("uniformitarianism"));
-		assertEquals("failed with call reverse17(\"pseudohydrophobia\")",
+		assertEquals("reverse17(\"pseudohydrophobia\") failed!",
 				real_reverse("pseudohydrophobia"),
 				r17.reverse17("pseudohydrophobia"));
 	}

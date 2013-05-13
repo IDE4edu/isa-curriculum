@@ -10,22 +10,21 @@
 		<source>/lib/content/intro.html</source>
 	</exercise>
 	<exercise>
-		<name>Writing reverse with helpers</name>
+		<name>Write reverse6() naively</name>
 		<type>code</type>
-		<intro>Intro for writing reverse with helpers</intro>
 		<source>/src/reverseHelpers/NaiveReverse.java</source>
 		<launch>/lib/NaiveReverseTest.launch</launch>
 		<testclass>reverse.NaiveReverseTest</testclass>
 		</exercise>
 	<exercise>
-		<name>Will this reverse9 work?</name>
+		<name>Will this reverse9() work?</name>
 		<type>selftest</type>
 		<source>/lib/content/rev9helper.html</source>
 	    </exercise>	
 	<exercise>
-		<name>Write reverse17</name>
+		<name>Write reverse17()</name>
 		<type>code</type>
-		<intro>Write reverse17 using the reverse16 method</intro>
+		<intro>Write reverse17() using the reverse16() method</intro>
 		<source>/src/reverseHelpers/Reverse17.java</source>
 		<launch>/lib/Reverse17Test.launch</launch>
 		<testclass>reverse.Reverse17Test</testclass>
