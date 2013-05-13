@@ -3,7 +3,7 @@ package countingDigits;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-public class HalvedTest {
+public class HalvedTest extends edu.berkeley.eduride.EduRideTest {
 
 
 
@@ -41,6 +41,8 @@ public class HalvedTest {
 	
 	
 	@Test
+	@Name("Uses recursion")
+	@hideWhenSuccessful
 	public void uses_recursion() {
 		HRecursionTest hp = new HRecursionTest();
 		hp.halved(30);
@@ -51,32 +53,38 @@ public class HalvedTest {
 	}
 	
 	@Test
+	@Name("halved(\"0\")")
 	public void halved_called_with_0() {
 		Halved h = new Halved();
-		assertEquals("Incorrect; called halved(0), and result was wrong", 0, h.halved(0));
+		assertEquals("halved(0) failed", 0, h.halved(0));
 	}
 	
 	@Test
+	@Name("halved(\"1\")")
 	public void halved_called_with_1() {
 		Halved h = new Halved();
-		assertEquals("Incorrect; called halved(1), and result was wrong", 0, h.halved(1));
+		assertEquals("halved(1) failed", 0, h.halved(1));
 	}
 	
 	@Test
+	@Name("halved(\"2\")")
 	public void halved_called_with_2() {
 		Halved h = new Halved();
-		assertEquals("Incorrect; called halved(2), and result was wrong", 1, h.halved(2));
+		assertEquals("halved(2) failed", 1, h.halved(2));
 	}
 	
 	@Test
+	@Name("halved(\"5\")")
 	public void halved_called_with_5() {
 		Halved h = new Halved();
-		assertEquals("Incorrect; called halved(5), and result was wrong", 2, h.halved(5));
+		assertEquals("halved(5) failed", 2, h.halved(5));
 	}
 
 	@Test
+	@Name("halved(\"9999\")")
+	@SuccessMessage("Good job!")
 	public void halved_called_with_9999() {
 		Halved h = new Halved();
-		assertEquals("Incorrect; called halved(9999), and result was wrong", 4999, h.halved(9999));
+		assertEquals("halved(9999) failed", 4999, h.halved(9999));
 	}
 }
