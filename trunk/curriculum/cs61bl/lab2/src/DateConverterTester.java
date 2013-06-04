@@ -15,17 +15,23 @@ public class DateConverterTester {
 	
 	
 	
-	// Don't worry about this code -- it helps catch infinite loop bugs
+	/////////////////////////////////
+	// Don't worry about the code below
+	//
+	// this code helps catch infinite loop bugs
+	static final int tooManyLoops = 3000;
+	static final long maxDuration = 1000;  // one second
 	static int counter = 0;
-	static int previousInfiniteLoopValue=-1;
-	public static void checkInfiniteLoop(int value) {
-		if (previousInfiniteLoopValue == value) {
-			if (counter++ > 1000) {
-				throw new RuntimeException("infinite loop detected!!");
+	static long originalTime = System.currentTimeMillis();
+	public static void checkForInfiniteLoop() {
+		long currentTime = System.currentTimeMillis();
+		if (currentTime < originalTime + maxDuration) {
+			if (counter++ > tooManyLoops) {
+				throw new RuntimeException("Infinite loop detected !!");
 			}
 		} else {
 			counter=0;
-			previousInfiniteLoopValue = value;
+			originalTime = currentTime;
 		}
 	}
 

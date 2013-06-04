@@ -18,7 +18,9 @@ public class DateConverter  {
 		month = 1;
 		daysInMonth = 31;
 		while (dayOfYear > daysInMonth) {
+			
 			// *** Here is one possible place to put assignment statements.
+			
 			if (month == 2) {
 				daysInMonth = 29;
 			} else if (month == 4 || month == 6 || month == 9 || month == 11) {
@@ -26,9 +28,10 @@ public class DateConverter  {
 			} else {
 				daysInMonth = 31;
 			}
+			
 			// *** Here is another possible place to put assignment statements.
 
-			DateConverterTester.checkInfiniteLoop(dayOfYear);
+			DateConverterTester.checkForInfiniteLoop(); // code to catch inifite loop bugs
 		}
 		dateInMonth = dayOfYear;
 		System.out.println("Day number " + input +  " is " + month + "/" + dateInMonth);
