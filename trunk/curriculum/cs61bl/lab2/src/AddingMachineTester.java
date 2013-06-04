@@ -46,12 +46,13 @@ public class AddingMachineTester {
 	
 	public static void finishTest() {
 		try {
-		InputStream is = new ByteArrayInputStream(buf.toString().getBytes());
-		AddingMachine.scanner = new Scanner(is);
-		String[] args = {};
-		AddingMachine.main(args);
+			InputStream is = new ByteArrayInputStream(buf.toString().getBytes());
+			AddingMachine.scanner = new Scanner(is);
+			String[] args = {};
+			AddingMachine.main(args);
 		} catch (java.util.NoSuchElementException e) {
-			System.err.println("Error: You're AddingMachine was expecting more input when finishedTest() was called.");
+			System.err
+					.println("Error: You're AddingMachine was expecting more input when finishedTest() was called.");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
