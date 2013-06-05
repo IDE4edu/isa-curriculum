@@ -22,16 +22,17 @@ public class AddingMachineTester {
 		input(8);
 		input(0);
 		input(0);
-		finishTest();
 		// should print total = 19
+		finishTest();
+
 		
 		// add more tests here.
 	}
 	
 	
 	
-	//////////////////////  Testing framework
-	//////////////////////  below here there be dragons.
+	//////////////////////  Testing framework, don't worry about this
+	// Hic sunt dracones.
 	
 	public static StringBuffer buf = new StringBuffer();
 	public static void startTest(String testname) {
@@ -52,7 +53,7 @@ public class AddingMachineTester {
 			AddingMachine.main(args);
 		} catch (java.util.NoSuchElementException e) {
 			System.err
-					.println("Error: You're AddingMachine was expecting more input when finishedTest() was called.");
+					.println("Error: You're AddingMachine was expecting more input when finishTest() was called.");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
