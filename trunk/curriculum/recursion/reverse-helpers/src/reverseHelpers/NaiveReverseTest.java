@@ -5,6 +5,7 @@ import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
+import java.util.Random;
 
 import org.junit.Test;
 
@@ -56,11 +57,13 @@ public class NaiveReverseTest extends edu.berkeley.eduride.EduRideTest {
 	@Expected("???")
 	@Description("This test runs your <tt>reverse6</tt> on the 6 character string (that we won't reveal) and checks if it properly returns.")
 	public void reverse_hidden1() {
-		String tst = "yefcZu";
+		String[] tsts = {"yefcZu", "floc23","4lfic9","jsp32s","l29dhf","kw8css","ls8f6d", "ls8wsw","sud86q","ww4rsf","9rejf7"};
+		Random r = new Random();
+		String tst = tsts[r.nextInt(tsts.length)];
 		NaiveReverse nr = new NaiveReverse();
 		String obs = nr.reverse6(tst);
 		String exp = real_reverse(tst);
-		assertTrue(obs.equals(exp));
+		assertTrue("The mystery string was not correctly reversed", obs.equals(exp));
 	}
 	
 
