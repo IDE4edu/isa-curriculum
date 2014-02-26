@@ -1,0 +1,19 @@
+<isa>
+	<name>Test1</name>
+	<intro>Some testing #1.</intro>
+	<category>TEsting</category>
+	<subcategory>Introduction</subcategory>
+	<sortorder>5</sortorder>
+	
+	<exercise>
+		<name>Square one</name>
+		<type>code</type>
+		<intro>Square square square.</intro>
+		<source>/src/square/Square.java</source>
+		<testclass>square.SquareTest</testclass>
+		</exercise>
+
+
+
+
+</isa>

@@ -1,0 +1,48 @@
+<isa>
+	<name>Reversing with Recursion NEW</name>
+	<intro>In this activity, you will learn the basics of recursion as you work on a method to reverse a string.</intro>
+	<category>Recursion</category>
+	<subcategory>Introduction</subcategory>
+	<sortorder>3</sortorder>
+	<exercise>
+		<name>Understanding recursion through helper methods</name>
+		<type>html</type>
+		<source>/lib/content/intro.html</source>
+	</exercise>
+	<exercise>
+		<name>Write reverse6() naively</name>
+		<type>code</type>
+		<source>/src/reverseHelpers/NaiveReverse.java</source>
+		<testclass>reverseHelpers.NaiveReverseTest</testclass>
+		</exercise>
+	<exercise>
+		<name>Will this reverse9() work?</name>
+		<type>selftest</type>
+		<source>/lib/content/rev9helper.html</source>
+	    </exercise>	
+	<exercise>
+		<name>Write reverse17()</name>
+		<type>code</type>
+		<intro>Write reverse17() using the reverse16() method</intro>
+		<source>/src/reverseHelpers/Reverse17.java</source>
+		<testclass>reverseHelpers.Reverse17Test</testclass>
+		</exercise>
+	<exercise>
+		<name>Notice the pattern</name>
+		<type>selftest</type>
+		<source>/lib/content/notice_pattern.html</source>
+	    </exercise>
+   	<exercise>
+		<name>The base case is different</name>
+		<type>html</type>
+		<source>/lib/content/basecase_different.html</source>
+	    </exercise>
+	<exercise>
+		<name>Writing reverse recursively</name>
+		<type>code</type>
+		<intro>Write reverse for any length string.</intro>
+		<source>/src/reverseHelpers/Reverse.java</source>
+
+		<testclass>reverseHelpers.ReverseTest
+		</exercise>
+</isa>

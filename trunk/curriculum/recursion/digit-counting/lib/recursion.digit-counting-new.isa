@@ -9,8 +9,7 @@
 		<type>code</type>
 		<intro>Fill in the conditional to correct the method.</intro>
 		<source>/src/countingDigits/Halved.java</source>
-		<launch>/lib/HalvedTest.launch</launch>
-		<launchbuttonname>Test</launchbuttonname>
+		<testclass>countingDigits.HalvedTest</testclass>
 		</exercise>
 	<exercise>
 		<name>Recursive cases must move towards a base case</name>
@@ -22,7 +21,6 @@
 		<type>selftest</type>
 		<source>/lib/content/what_returned.html</source>
 	    </exercise>
-	
 	<exercise>
 		<name>For which arguments will it return the correct amount?</name>
 		<type>selftest</type>
@@ -33,7 +31,7 @@
 		<type>code</type>
 		<intro>Fix the bug in digitCount, changing only one line of code.</intro>
 		<source>/src/countingDigits/DigitCount.java</source>
-		<launch>/lib/DigitCountTest.launch</launch>
+		<testclass>countingDigits.DigitCountTest</testclass>
 		</exercise>
 	<exercise>
 		<name>Take a survey (before you leave for the day)</name>
