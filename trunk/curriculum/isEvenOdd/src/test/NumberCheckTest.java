@@ -1,5 +1,5 @@
-package src.test;
-import src.NumberCheck;
+package test;
+import number.NumberCheck;
 import static org.junit.Assert.*;
 import org.junit.Test;
 

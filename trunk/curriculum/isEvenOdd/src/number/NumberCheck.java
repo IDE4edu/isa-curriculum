@@ -4,7 +4,7 @@
  * num is even, and false otherwise. isOdd() should return true if the variable
  * num is odd, and false otherwise.
  */
-package src;
+package number;
 
 public class NumberCheck {
 
