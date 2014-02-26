@@ -74,6 +74,7 @@ public class EduRideTest {
 	 *
 	 * @Param description 
 	 */
+	@Target({ElementType.METHOD, ElementType.TYPE})
 	@Retention(RetentionPolicy.RUNTIME)
 	public @interface  Description {
 		public String value();
