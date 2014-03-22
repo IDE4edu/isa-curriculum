@@ -10,36 +10,56 @@ import edu.berkeley.eduride.EduRideTest.*;
 
 @Description("Tests for Square.java")
 public class SquareTest extends edu.berkeley.eduride.EduRideTest {
-	// Nate: I didn't delete the annotations. I just put them in 
-	// SquareTestComplicated for now, cuz I wanted to test with a simple test case first
 	
-
-
-
-	@Test
-	@Name("Test Area (using assertTrue)")
-	@SuccessMessage("You got it right!")
-	@Description("BLAHBLAHBLAH")
-	public void testAssertAreaTrue () {
-		int obs = new Square(5).area();
-		assertTrue("assertTrue failed", 25 == obs);
-
-	}
 	
 	@Test
-	@MethodCall("area(5)")
+	@Name("Tests of 'area'")
 	public void testArea() {
-		int obs = new Square(5).area();
-		assertEquals("testArea failed", 25, obs);
+		int obs5 = new Square(5).area();
+		assertEquals("A square with sides of 5 didn't calculate area correctly", 25, obs5);
+		int obs0 = new Square(0).area();
+		assertEquals("A square with sides of 0 didn't calculate area correctly", 0, obs0);
+		int obs100 = new Square(5).area();
+		assertEquals("A square with sides of 5 didn't calculate area correctly", 10000, obs100);
+	}
+	
+
+	// Maybe there should be a name and no fail message instead?
+	@Test
+	@hideWhenSuccessful
+	public void testConstructor() {
+		try {
+			new Square(-1);
+			new Square(10000);
+			new Square (0);
+		} catch (Exception e) {
+			fail("The Square class threw an exception when constructed!");
+		}
+	}
+	
+	
+	@Test
+	@MethodCall("perimeter(5)")
+	public void testPerimeter5() {
+		assertEquals(20, new Square(5).perimeter());
 	}
 	
 
 	
 	@Test
-	public void testPerimeter() {
-		int obs = new Square(5).perimeter();
-		assertEquals("testPerimiter failed", 20, obs);
+	@MethodCall("perimeter(100)")
+	public void testPerimeter100() {
+		assertEquals(400, new Square(100).perimeter());
 	}
+	
+	
+	
+	@Test
+	@MethodCall("perimeter(0)")
+	public void testPerimeter0() {
+		assertEquals(0, new Square(0).perimeter());
+	}
+	
 	
 	
 	
@@ -50,19 +70,10 @@ public class SquareTest extends edu.berkeley.eduride.EduRideTest {
 	 *  This a comment on the method
 	 */
 	public void ignoreThis() {
-		Square sq = new Square(5);
-		fail("This is the fail string, also a square of 5:" + sq);
+		fail("This test should be ignored");
 	}
 	
-	
-	@Test
-	public void testAssertArrayEquals() {
-		int[] x = {1,2,3,4,5,6,7,8,8,0};
-		int[] y = {1,2,3,4,5,6,7,8,9,0};
-		assertArrayEquals("assertArrayEquals failed", x,y);
-	}
-	
-	
+
 	
 	
 }

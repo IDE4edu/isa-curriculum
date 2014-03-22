@@ -1,18 +1,24 @@
 <isa>
 	<name>Test1</name>
 	<intro>Some testing #1.</intro>
-	<category>TEsting</category>
-	<subcategory>Introduction</subcategory>
-	<sortorder>5</sortorder>
+
 	
 	<exercise>
-		<name>Square one</name>
+		<name>Square</name>
 		<type>code</type>
-		<intro>Square square square.</intro>
+		<intro>Testing permimeter and area methods of Square</intro>
 		<source>/src/square/Square.java</source>
 		<testclass>square.SquareTest</testclass>
 		</exercise>
 
+	
+	<exercise>
+		<name>Looping</name>
+		<type>code</type>
+		<intro>Looping reverse stuff</intro>
+		<source>/src/one/Looping.java</source>
+		<testclass>tests.TestsOnLooping</testclass>
+		</exercise>
 
 
 
