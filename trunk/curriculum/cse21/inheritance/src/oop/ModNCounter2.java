@@ -11,15 +11,15 @@ package oop;
  * when increment() is called 7 times, have an internal value of 7 but
  * value() will return 2.
  */
-public class CyclicCounter2  extends Counter { 
+public class ModNCounter2  extends Counter { 
 
 
     private int cycleLength; 
 
-    public CyclicCounter2 (int n) { 
+    public ModNCounter2 (int n) { 
     	cycleLength = n; 
     } 
-
+ 
     
     public int value ( ) { 
     	// fill in this method with the correct value

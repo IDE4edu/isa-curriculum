@@ -1,6 +1,6 @@
 package oop;
 
-public class DecrementalCounter extends Counter {
+public class DecrementableCounter extends Counter {
 
 	
 	public void decrement() {
@@ -15,8 +15,11 @@ public class DecrementalCounter extends Counter {
 		reset();
 		for (int i=0 ; i < (originalValue - 1) ; i++) {
 			increment();
-		}
-		
+		}	
+		  
+	}
+	
+	public void increment() {
 		
 	}
 	
