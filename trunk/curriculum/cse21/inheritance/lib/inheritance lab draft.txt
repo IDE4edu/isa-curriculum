@@ -1,25 +1,22 @@
 Draft of first inheritance lab
 ------------------------------
-
-(1) Should we explain inheritance to them? If so, we can use the following examples:
-	superclass Refillable, subclass SoftDrinkMachine, subclass CandyJar
-	superclass Shape, subclass Rectangle
 	
-	
-	
-(2a) Show them the Counter class, 
-(2b) create a Counter instance that holds value of 3
-(2c) make a Counter and use 7 reset() or increment() statements to end
+(1a) Show them the Counter class, introduce Runner.  
+(1b) where is the constructor?  
+(1c) create a Counter instance that holds value of 3
+(1d) make a Counter and use 7 reset() or increment() statements to end
     up with value = 3.  
 
 
-(3)
-Now have them define the CyclicCounter class,
+(2) Update eclipse, look at new Feedback view
+
+
+(3)Now have them define the ModNCounter class,
 overriding the value method to make it work.
 
 (3b)Now have them override the increment method to make it work.
 
-(3c) fill in DecrementalCounter.decrement()
+(3c) fill in DecrementableCounter.decrement()
 
 
 

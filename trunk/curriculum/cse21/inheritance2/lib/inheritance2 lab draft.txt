@@ -1,0 +1,11 @@
+Draft of 2nd inheritance lab
+------------------------------
+
+
+
+
+
+
+**************
+The next activity is something we used on an exam last summer.
+The idea is to keep track of how long the ArrayList gets.

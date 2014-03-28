@@ -1,6 +1,6 @@
 package oop;
 
-public class SeasonCounter extends CyclicCounter {
+public class SeasonCounter extends ModNCounter {
 
 	
 	private static String[] names =  {"spring", "summer", "fall", "winter"};
@@ -16,5 +16,5 @@ public class SeasonCounter extends CyclicCounter {
 		return names[value()];
 	}
 	
-	
+ 	
 }

@@ -8,14 +8,14 @@ package oop;
  * e.g., A (new) CyclicCounter with a cycleLength (maximum) of 5 will,
  * when increment() is called 7 times, have an internal value of 2
  */
-public class CyclicCounter  extends Counter { 
+public class ModNCounter  extends Counter { 
 
 
     private int cycleLength; 
 
-    public CyclicCounter (int n) { 
+    public ModNCounter (int n) { 
     	cycleLength = n; 
-    } 
+    }  
 
     
     public void increment ( ) { 
