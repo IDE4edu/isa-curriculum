@@ -10,6 +10,7 @@ class TracedArrayList<E> extends ArrayList<E> {
 		return myLongestLengthSoFar;
 	}
 	
+	
 	public boolean add (E e) {
 		super.add (e);
 		if (size ( ) > myLongestLengthSoFar) {

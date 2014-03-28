@@ -24,7 +24,7 @@ public class Runner {
 	
 	public static void testCounter7Statements() {
 		Counter c = new Counter();
-		// include 7 increment and reset statements below
+		// include exactly 7 increment() and reset() statements below
 
 		
 		// check if the value is 3

@@ -15,7 +15,7 @@ public class CyclicCounter  extends Counter {
 
     public CyclicCounter (int n) { 
     	cycleLength = n; 
-    } 
+    }
 
     
     public void increment ( ) { 

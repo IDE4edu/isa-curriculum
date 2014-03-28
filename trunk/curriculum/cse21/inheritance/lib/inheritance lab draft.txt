@@ -7,13 +7,15 @@ Draft of first inheritance lab
 	
 	
 	
-(2a) Show them the Counter class, 
+(2a) Show them the Counter class, introduce Runner.  
+(2aa) where is the constructor?  
 (2b) create a Counter instance that holds value of 3
 (2c) make a Counter and use 7 reset() or increment() statements to end
     up with value = 3.  
 
 
 (3)
+TODO - rename to ModNCounter
 Now have them define the CyclicCounter class,
 overriding the value method to make it work.
 
