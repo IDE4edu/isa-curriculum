@@ -1,0 +1,85 @@
+<h3>Draft of first inheritance lab</h3>
+<p>
+Consider the following class.  It represents a counter that can be initialized and reset to 0,
+incremented by 1, and asked for its current value.
+</p>
+<pre>
+public class Counter {
+
+	private int myCount = 0;
+	
+	public void increment ( ) {
+		myCount++;
+	}
+	
+	public int value ( ) {
+		return myCount;
+	}
+	
+	public void reset ( ) {
+		myCount = 0;
+	}
+}
+</pre>
+<p>
+It doesn't have a <tt>main</tt> method; we'll use a <tt>Runner</tt> class to run it.
+</p>
+<h3>Exercises, part 1</h3>
+<ol type="a">
+<li>The class doesn't have a constructor. Why doesn't it need one?</li>
+<li>Using the provided <tt>Runner</tt> class, along with calls to <tt>Counter</tt> methods,
+create a counter whose value is 3.</li>
+<li>Create another counter that uses exactly seven calls to the <tt>reset</tt> and <tt>increment</tt>
+methods to end up with a value of 3.</li>
+</ol>
+<p>
+<b>Nate provides something here.</b>
+(2) Update eclipse, look at new Feedback view
+</p>
+<p>
+The remainder of this lab will involve designing and testing classes that inherit from <tt>Counter</tt>
+or one of its subclasses.
+</p>
+<h3>Background for "mod N" counters</h3>
+<p>
+<p>&quot;Mod N&quot; counters count up to a specified amount (the &quot;N&quot;), 
+and then cycle back to zero, for example: 0, 1, 2, 0, 1, 2, 0, ... 
+(This is a &quot;mod N&quot; counter with N = 3.)</p>
+<p>A mod N counter has an extra instance variable&mdash;a good name for it is <tt>myN</tt>&mdash;and 
+is initialized with a 1-argument constructor whose argument is the intended <tt>myN</tt> value. 
+Thus the code </p>
+<pre>
+	ModNCounter c = new ModNCounter (2);
+	System.out.println (c.value ( )); 
+	c.increment ( );
+	System.out.println (c.value ( ));
+	c.increment ( );
+	System.out.println (c.value ( ));
+	c.increment ( );
+</pre>
+<p> 
+should print 0, then 1, then 0. 
+</p>
+<h3>Exercises, part 2</h3>
+<ol type="a">
+<li>
+Define two versions of a <tt>ModNCounter</tt> class that inherits from <tt>Counter</tt>.
+In the first version, override the <tt>value</tt> method and making no other changes
+to produce the desired behavior.
+In the second version, override the <tt>value</tt> method and making no other changes
+to produce the desired behavior.</li>
+<li>
+One might wish for a counter that allows decrementing its value as well as incrementing it.
+Define a class <tt>DecrementableCounter</tt> that inherits from <tt>Counter</tt>
+and provides a <tt>decrement</tt> method.
+If the counter's value is 0, a call to <tt>decrement</tt> should have no effect.
+Otherwise, it should reduce the counter's value by 1.
+Don't change the <tt>Counter</tt> class to implement <tt>decrement</tt>.
+</li>
+<li>
+Defiine a <tt>SeasonCounter</tt> class that cycles through the four seasons.
+It will inherit from <tt>ModNCounter</tt>, overriding the <tt>toString</tt> method
+to return "spring", "summer", "fall", or "winter",
+depending on whether the current value is 0, 1, 2, or 3.
+</li>
+</ol>
