@@ -16,5 +16,5 @@ public class SeasonCounter extends ModNCounter {
 		return names[value()];
 	}
 	
- 	
+  	
 }

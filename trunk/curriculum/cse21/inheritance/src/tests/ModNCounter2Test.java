@@ -24,13 +24,13 @@ public class ModNCounter2Test {
 	public void testIncrementing() {
 		ModNCounter2 ctr = new ModNCounter2(3);
 		ctr.increment();
-		assertEquals ("wrong value after one increment", 1, ctr.value());
+		assertEquals ("Wrong value after one increment", 1, ctr.value());
 		ctr.increment();
-		assertEquals ("wrong value after two increments", 2, ctr.value());
+		assertEquals ("Wrong value after two increments", 2, ctr.value());
 		ctr.increment();
-		assertEquals ("wrong value after three increments", 0, ctr.value());
+		assertEquals ("Wrong value after three increments", 0, ctr.value());
 		ctr.increment();
-		assertEquals ("wrong value after four increments", 1, ctr.value());
+		assertEquals ("Wrong value after four increments", 1, ctr.value());
 	}
 	
 	
@@ -42,13 +42,13 @@ public class ModNCounter2Test {
 			ctr.increment();
 		}
 		ctr.reset();
-		assertEquals ("wrong value for incremented counter after reset", 0, ctr.value());
+		assertEquals ("Wrong value for incremented counter after reset", 0, ctr.value());
 		ctr.increment();
-		assertEquals ("wrong value after one increment", 1, ctr.value());
+		assertEquals ("Wrong value after one increment", 1, ctr.value());
 		ctr.increment();
-		assertEquals ("wrong value after two increments", 2, ctr.value());
+		assertEquals ("Wrong value after two increments", 2, ctr.value());
 		ctr.increment();
-		assertEquals ("wrong value after three increments", 0, ctr.value());
+		assertEquals ("Wrong value after three increments", 0, ctr.value());
 	}
 
 }

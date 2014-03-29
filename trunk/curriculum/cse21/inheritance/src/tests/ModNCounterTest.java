@@ -20,35 +20,35 @@ public class ModNCounterTest {
 	}
 	
 	@Test
-	@Name("incrementing")
+	@Name("Incrementing")
 	public void testIncrementing() {
 		ModNCounter ctr = new ModNCounter(3);
 		ctr.increment();
-		assertEquals ("wrong value after one increment", 1, ctr.value());
+		assertEquals ("Wrong value after one increment", 1, ctr.value());
 		ctr.increment();
-		assertEquals ("wrong value after two increments", 2, ctr.value());
+		assertEquals ("Wrong value after two increments", 2, ctr.value());
 		ctr.increment();
-		assertEquals ("wrong value after three increments", 0, ctr.value());
+		assertEquals ("Wrong value after three increments", 0, ctr.value());
 		ctr.increment();
-		assertEquals ("wrong value after four increments", 1, ctr.value());
+		assertEquals ("Wrong value after four increments", 1, ctr.value());
 	}
 	
 	
 	@Test
-	@Name("resetting")
+	@Name("Resetting")
 	public void testResetting() {
 		ModNCounter ctr = new ModNCounter(3);
 		for (int i=1; i<7; i++) {
 			ctr.increment();
 		}
 		ctr.reset();
-		assertEquals ("wrong value for incremented counter after reset", 0, ctr.value());
+		assertEquals ("Wrong value for incremented counter after reset", 0, ctr.value());
 		ctr.increment();
-		assertEquals ("wrong value after one increment", 1, ctr.value());
+		assertEquals ("Wrong value after one increment", 1, ctr.value());
 		ctr.increment();
-		assertEquals ("wrong value after two increments", 2, ctr.value());
+		assertEquals ("Wrong value after two increments", 2, ctr.value());
 		ctr.increment();
-		assertEquals ("wrong value after three increments", 0, ctr.value());
+		assertEquals ("Wrong value after three increments", 0, ctr.value());
 	}
 
 }

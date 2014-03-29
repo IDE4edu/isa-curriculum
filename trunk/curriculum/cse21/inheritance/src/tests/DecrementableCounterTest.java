@@ -13,7 +13,7 @@ import edu.berkeley.eduride.EduRideTest.hideWhenSuccessful;
 public class DecrementableCounterTest {
 
 	@Test
-	@Name("initial values")
+	@Name("Initial values")
 	public void testInitialValues () {
 		DecrementableCounter ctr;
 		ctr = new DecrementableCounter();
@@ -27,36 +27,36 @@ public class DecrementableCounterTest {
 			
 	@Test
 	@hideWhenSuccessful
-	@Name("increment")
+	@Name("Increment")
 	public void testIncrement () {
 		DecrementableCounter ctr = new DecrementableCounter();
 		
 		ctr.increment();
-		assertEquals ("wrong value after one increments", 1, ctr.value());
+		assertEquals ("Wrong value after one increments", 1, ctr.value());
 		ctr.increment();
-		assertEquals ("wrong value after two increments", 2, ctr.value());	
+		assertEquals ("Wrong value after two increments", 2, ctr.value());	
 	}
 	
 	
 	@Test
-	@Name("decrement")
+	@Name("Decrement")
 	public void testDecrement () {
 		DecrementableCounter ctr;
 		ctr = new DecrementableCounter();
 		ctr.increment();
 		ctr.increment();
 		ctr.decrement();
-		assertEquals ("wrong value after two increments and a decrement", 1, ctr.value());
+		assertEquals ("Wrong value after two increments and a decrement", 1, ctr.value());
 		ctr.decrement();
-		assertEquals ("wrong value after two increments and two decrements", 0, ctr.value());
+		assertEquals ("Wrong value after two increments and two decrements", 0, ctr.value());
 		ctr.decrement();
-		assertEquals ("wrong value after two increments and three decrements", 0, ctr.value());
+		assertEquals ("Wrong value after two increments and three decrements", 0, ctr.value());
 	}
 	
 	
 	
 	@Test
-	@Name("resetting")
+	@Name("Resetting")
 	public void testResetting () {
 		DecrementableCounter ctr;
 		ctr = new DecrementableCounter();
@@ -68,11 +68,11 @@ public class DecrementableCounterTest {
 		ctr.increment();
 		ctr.increment();
 		ctr.decrement();
-		assertEquals ("wrong value after restting, two increments, and a decrement", 1, ctr.value());
+		assertEquals ("Wrong value after restting, two increments, and a decrement", 1, ctr.value());
 		ctr.decrement();
-		assertEquals ("wrong value after restting, two increments, and two decrements", 0, ctr.value());
+		assertEquals ("Wrong value after restting, two increments, and two decrements", 0, ctr.value());
 		ctr.decrement();
-		assertEquals ("wrong value after restting, two increments, and three decrements", 0, ctr.value());
+		assertEquals ("Wrong value after restting, two increments, and three decrements", 0, ctr.value());
 	}
 	
 	
