@@ -5,39 +5,28 @@ public class Runner {
 	public static void main(String[] args) {
 		testCounter();
 
-		// testCyclicCounter();
+		testCounter7Statements();
+
+		// testModNCounter();
 	}
 
-	
 	
 	public static void testCounter() {
-		
-		Counter c = new Counter ( );
-		c.increment ( );
-		System.out.println (c.value ( ));
 
-		
+		Counter c = new Counter();
+		c.increment();
+		System.out.println(c.value());
+
 	}
+
 	
-	
-	
-	
+	// Use this method to complete exercise 1c
 	public static void testCounter7Statements() {
 		Counter c = new Counter();
+		System.out.println("-- testing 7 statements");
 		// include exactly 7 increment() and reset() statements below
 
-		
-		// check if the value is 3
-		if (c.value() == 3) {
-			System.out.println("Value is 3, good job");
-		} else {
-			System.out.println("Value should be 3, but it is" + c.value());
-		}
+		System.out.println("current value: " + c.value());
 	}
-	
-
-	
-	
-	
 
 }

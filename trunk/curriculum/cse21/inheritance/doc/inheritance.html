@@ -1,4 +1,16 @@
-<h3>Draft of first inheritance lab</h3>
+<h1>CSE21 Lab 9: Inheritance</h1>
+
+<p>The project for this lab is available at XXX; install it in the usual way.  The classes 
+you'll work with are in the <code>oop</code> package (the <code>src/oop</code> folder).  
+This writeup is in the <code>doc</code> folder.  
+</p>
+<p>
+We'll be adding new tools to Eclipse for some of these activities.
+</p>
+
+
+
+<h3><code>Counter.java</code></h3>
 <p>
 Consider the following class.  It represents a counter that can be initialized and reset to 0,
 incremented by 1, and asked for its current value.
@@ -22,7 +34,8 @@ public class Counter {
 }
 </pre>
 <p>
-It doesn't have a <tt>main</tt> method; we'll use a <tt>Runner</tt> class to run it.
+It doesn't have a <tt>main</tt> method; we'll use the class <tt>Runner</tt>  to run 
+and manipulate it.
 </p>
 <h3>Exercises, part 1</h3>
 <ol type="a">
@@ -33,15 +46,20 @@ create a counter whose value is 3.</li>
 methods to end up with a value of 3.</li>
 </ol>
 <p>
-<b>Nate provides something here.</b>
-(2) Update eclipse, look at new Feedback view
-</p>
+<h3>Installing new Eclipse Tools</h3>
+(draft.  should this move to a separate document?)
+
+<ul>
+<li>Update eclipse, lots of steps</li>
+<li>Show Feedback view, (move to bottom?)  look at Counter.java</li>
+</ul>
+
+
+<h3>Inheriting from <code>Counter</code></h3>
 <p>
 The remainder of this lab will involve designing and testing classes that inherit from <tt>Counter</tt>
 or one of its subclasses.
 </p>
-<h3>Background for "mod N" counters</h3>
-<p>
 <p>&quot;Mod N&quot; counters count up to a specified amount (the &quot;N&quot;), 
 and then cycle back to zero, for example: 0, 1, 2, 0, 1, 2, 0, ... 
 (This is a &quot;mod N&quot; counter with N = 3.)</p>
@@ -61,6 +79,10 @@ Thus the code </p>
 should print 0, then 1, then 0. 
 </p>
 <h3>Exercises, part 2</h3>
+
+<p>For each of the classes below, there is a starter file in the <code>oop</code> package
+and testing code that will give you feedback on your solution.
+</p>
 <ol type="a">
 <li>
 Define two versions of a <tt>ModNCounter</tt> class that inherits from <tt>Counter</tt>.
@@ -77,7 +99,7 @@ Otherwise, it should reduce the counter's value by 1.
 Don't change the <tt>Counter</tt> class to implement <tt>decrement</tt>.
 </li>
 <li>
-Defiine a <tt>SeasonCounter</tt> class that cycles through the four seasons.
+Define a <tt>SeasonCounter</tt> class that cycles through the four seasons.
 It will inherit from <tt>ModNCounter</tt>, overriding the <tt>toString</tt> method
 to return "spring", "summer", "fall", or "winter",
 depending on whether the current value is 0, 1, 2, or 3.
