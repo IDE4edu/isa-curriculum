@@ -1,4 +1,4 @@
-package countingDigits;
+package recursion;
 
 public class DigitCount {
 
@@ -13,5 +13,5 @@ public class DigitCount {
 		} else {
 			return 1 + digitCount(value/10);
 		} 
-	}
+	} 
 }

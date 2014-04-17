@@ -1,4 +1,4 @@
-package reverseHelpers;
+package recursion;
 
 /* Some naive solutions to reverse a string.     You should write reverse6 below.
  *
@@ -28,9 +28,9 @@ public class NaiveReverse {
 	// WRITE reverse6, which takes a String of length 6 and returns its reverse
 	// Don't use while or for loops!
 	public String reverse6 (String s) {
+		return "abcdefg";
 		
-		return "";
-	
+		
 	}
 	
 	// ... and more could go here... reverse612() would be awfully long...	

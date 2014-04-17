@@ -43,6 +43,6 @@
 		<intro>Write reverse for any length string.</intro>
 		<source>/src/reverseHelpers/Reverse.java</source>
 
-		<testclass>reverseHelpers.ReverseTest
+		<testclass>reverseHelpers.ReverseTest</testclass>
 		</exercise>
 </isa>

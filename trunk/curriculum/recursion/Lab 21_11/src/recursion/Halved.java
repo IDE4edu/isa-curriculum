@@ -1,4 +1,4 @@
-package countingDigits;
+package recursion;
 
 public class Halved {
 
@@ -9,9 +9,7 @@ public class Halved {
 	public int halved (int n) {
 		// fill in the test for the conditional below,
 		//  but don't change anything else!
-		if (          ) {
-			
-			
+		if (	false	) {
 			return 0;
 		} else {
 			return (1 + halved(n-2));
