@@ -18,9 +18,20 @@ public class MatrixMultiply {
 	
 	public static int[][] readMatrix(String filename) {
 		int [][] mat = null;
-		
-		// Fill-in
-
+		try {
+			Scanner file = new Scanner ( new FileReader(filename) );
+			int row = file.nextInt();
+			int column = file.nextInt();
+			mat = new int[row][column];
+			for (int i = 0; i < row; i++)
+				for (int j = 0; j < column; j++)
+					mat[i][j] = file.nextInt();
+			file.close();
+		} catch (NoSuchElementException e) {
+			System.out.println(e);
+		} catch (FileNotFoundException e) {
+			System.out.println(e);
+		}
 		return mat;
 	}
 
