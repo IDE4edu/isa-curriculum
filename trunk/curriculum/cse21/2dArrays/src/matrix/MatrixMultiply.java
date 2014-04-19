@@ -1,4 +1,4 @@
-package io;
+package matrix;
 
 import java.util.*;
 import java.io.*;
@@ -17,6 +17,7 @@ public class MatrixMultiply {
 	
 	
 	public static int[][] readMatrix(String filename) {
+		// MIKE STOLE  THIS
 		int [][] mat = null;
 		try {
 			Scanner file = new Scanner ( new FileReader(filename) );
@@ -35,6 +36,18 @@ public class MatrixMultiply {
 		return mat;
 	}
 
+
+	
+	
+	// writes a matrix to the file
+	public static void writeMatrix(int[][] matrix, String filename) {
+
+		// Fill-in
+		
+	}
+	
+	
+	
 	
 	// returns the multiplied matrix
 	public static int[][] multiply(int[][] m1, int[][] m2) {
@@ -54,15 +67,10 @@ public class MatrixMultiply {
 		return result;
 	}
 
-	
-	// writes a matrix to the file
-	public static void writeMatrix(int[][] matrix, String filename) {
 
-		// Fill-in
-		
-	}
 	
 	
+	// prints a matrix
 	public static void printMatrix(int[][] matrix) {
 		int rows = matrix.length;
 		int cols = matrix[0].length;
@@ -70,28 +78,14 @@ public class MatrixMultiply {
 			for (int j=0; j<cols; j++) {
 				// 'format' will print 5 spaces no matter what, which will 
 				// help line things up.
-				System.out.format("%05d", matrix[i][j]);
+				System.out.format("%5d ", matrix[i][j]);
 			}
 			System.out.println();
 		}
 	}
 	
 	
-	public static String defaultOutputFile = "data/matrixOutput.txt";
-	
-	public static void multiplyInteractive() {
-		int[][] m1 = readMatrix();
-		System.out.println("Matrix 1: ");
-		printMatrix(m1);
-		int[][] m2 = readMatrix();
-		System.out.println("Matrix 2: ");
-		printMatrix(m2);
-		int[][] mult = multiply(m1, m2);
-		System.out.println("Multipled matrix: ");
-		printMatrix(mult);
-		writeMatrix(mult, defaultOutputFile);
-		
-	}
+
 	
 
 }

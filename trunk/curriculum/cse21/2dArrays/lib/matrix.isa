@@ -1,0 +1,16 @@
+<isa>
+	<name>Input Output</name>
+	<intro>Input output exercises (Person, matrix writing and reading).</intro>
+
+	
+	<exercise>
+		<name>ModNCounter</name>
+		<type>code</type>
+		<intro>ModNCounter: Write a cyclic counter class</intro>
+		<source>/src/oop/ModNCounter.java</source>
+		<testclass>tests.ModNCounterTest</testclass>
+		</exercise>
+
+	
+
+</isa>
