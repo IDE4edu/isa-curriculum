@@ -42,9 +42,7 @@ public class People {
 	
 	public void printPeople(ArrayList<Person> people) {
 		for (Person p : people) {
-			System.out.println(p.getName() + 
-					" at" + p.getLocation() + 
-					" is " + p.getAge() + " years old.");
+			System.out.println(p);
 		}
 	}
 	

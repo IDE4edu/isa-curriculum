@@ -12,13 +12,14 @@ import matrix.MatrixMultiply;
 
 import org.junit.Test;
 
+import edu.berkeley.eduride.EduRideTest;
 import edu.berkeley.eduride.EduRideTest.Description;
 import edu.berkeley.eduride.EduRideTest.Name;
 
 // CONTAINS SOLUTIONS -- JAR THIS
 
 @Description("Tests for writing and reading matrices")
-public class MatrixMultiplyTest {
+public class MatrixMultiplyTest extends EduRideTest{
 
 	
 	

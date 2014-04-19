@@ -40,5 +40,17 @@ public class Person {
 		//	Fix
 		return "";
 	}
+	
+	
+	// every object in java has a toString method.  The @Override line
+	// is an annotation telling Java that the definition below should 
+	// replace the default method.
+	// Fill in the definition below such that it returns a String that
+	// describes a particular Person.
+	@Override
+	public String toString() {
+		// fix
+		return "a person";
+	}
 
 }
