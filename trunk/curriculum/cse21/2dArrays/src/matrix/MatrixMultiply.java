@@ -15,9 +15,8 @@ public class MatrixMultiply {
 		return (readMatrix(filename));
 	}
 	
-	
+	// NOTE: They had to write this.
 	public static int[][] readMatrix(String filename) {
-		// MIKE STOLE  THIS
 		int [][] mat = null;
 		try {
 			Scanner file = new Scanner ( new FileReader(filename) );

@@ -4,8 +4,6 @@ import java.util.*;
 import java.io.*;
 
 public class People {
-
-	
 	
 	public ArrayList<Person> readFile() {
 		// this version asks for the file
@@ -26,8 +24,12 @@ public class People {
 				
 				/*
 				 * Fill-in .. Do not touch the rest of the code
-				 */
-				
+				 */ 
+				String line = input.nextLine();
+				String [ ] fields = line.split ("\t");
+				Person p = new Person (fields[0], Integer.parseInt(fields[1]), fields[2]);
+				people.add(p);
+				// end of code to be filled in
 			} 
 			input.close();
 		} catch ( NoSuchElementException e){

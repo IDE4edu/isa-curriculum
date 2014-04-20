@@ -1,5 +1,6 @@
 package io;
 
+// CONTAINS SOLUTIONS -- JAR THIS
 
 public class Person {
 	private String name;
@@ -13,32 +14,41 @@ public class Person {
 	}
 	public Person(String name, int age, String location) {
 		// Fill-in
+		this.name = name;
+		this.age = age;
+		this.location = location;
 	}
 
 	public void setName(String name) {
 		// Fill-in
+		this.name = name;
 	}
 
 	public String getName() {
 		// Fix
-		return "";
+		// return "";
+		return this.name;
 	}
 
 	public void setAge(int age) {
 		// Fill-in
+		this.age = age;
 	}
 
 	public int getAge() {
 		//		Fix	
-		return 0;
+		// return 0;
+		return this.age;
 	}
 	public void setLocation(String location) {
 		// Fill-in
+		this.location = location;
 	}
 
 	public String getLocation() {
 		//	Fix
-		return "";
+		// return "";
+		return this.location;
 	}
 	
 	
@@ -50,7 +60,8 @@ public class Person {
 	@Override
 	public String toString() {
 		// fix
-		return "a person";
+		// return "a person";
+		return this.name + '\t' + this.age + '\t' + this.location;
 	}
 
 }
