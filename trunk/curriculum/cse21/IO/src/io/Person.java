@@ -27,7 +27,7 @@ public class Person {
 	public String getName() {
 		// Fix
 		// return "";
-		return this.name;
+		return this.name;  
 	}
 
 	public void setAge(int age) {

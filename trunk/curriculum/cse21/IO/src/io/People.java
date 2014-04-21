@@ -26,14 +26,14 @@ public class People {
 				 * Fill-in .. Do not touch the rest of the code
 				 */ 
 				String line = input.nextLine();
-				String [ ] fields = line.split ("\t");
+				String [ ] fields = line.split ("\t"); 
 				Person p = new Person (fields[0], Integer.parseInt(fields[1]), fields[2]);
 				people.add(p);
 				// end of code to be filled in
 			} 
 			input.close();
 		} catch ( NoSuchElementException e){
-			System.out.println(e);
+			System.out.println(e); 
 			
 		} catch (FileNotFoundException e) {
 			System.out.println(e);

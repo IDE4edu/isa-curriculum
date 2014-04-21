@@ -1,16 +1,16 @@
-package io;
+package tests;
 
 import static org.junit.Assert.*;
-
+import io.Person;
 import org.junit.Test;
-
 import edu.berkeley.eduride.EduRideTest;
+import edu.berkeley.eduride.EduRideTest.Description;
 
-// @Description("Tests for building and modifying Persons")
-
+@Description("Tests for building and modifying Person instances")
 public class PersonTest extends EduRideTest {
 
 	@Test
+	@Name("Building and inspecting Person")
 	public void test() {
 		Person p = new Person ("Obama", 52, "Washington, DC");
 		for (int k=0; k<2; k++) {
