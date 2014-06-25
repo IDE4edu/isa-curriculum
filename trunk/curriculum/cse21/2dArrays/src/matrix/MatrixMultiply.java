@@ -9,14 +9,22 @@ public class MatrixMultiply {
 	public static int[][] readMatrix() {
 		Scanner input = new Scanner(System.in);
 		
-		System.out.print("Enter the First file name: ");
+		System.out.print("Enter the file name: ");
 		String filename = input.next();
 		
-		return (readMatrix(filename));
+		return readMatrix(filename);
+		
 	}
 	
-	// NOTE: They had to write this.
+	
+	
+	
+	
+
 	public static int[][] readMatrix(String filename) {
+		
+		// Fill-in
+		
 		int [][] mat = null;
 		try {
 			Scanner file = new Scanner ( new FileReader(filename) );
@@ -28,12 +36,12 @@ public class MatrixMultiply {
 					mat[i][j] = file.nextInt();
 			file.close();
 		} catch (NoSuchElementException e) {
-			System.out.println(e);
+			System.err.println(e);
 		} catch (FileNotFoundException e) {
-			System.out.println(e);
+			System.err.println(e);
 		}
 		return mat;
-	}
+	} 
 
 
 	
@@ -42,6 +50,29 @@ public class MatrixMultiply {
 	public static void writeMatrix(int[][] matrix, String filename) {
 
 		// Fill-in
+		
+		try {
+			FileWriter fw = new FileWriter(filename);
+			BufferedWriter bw = new BufferedWriter(fw);
+			String header = "" + matrix.length + " " + matrix[0].length;
+			bw.write(header);
+			bw.newLine();
+			for (int r=0; r<matrix.length; r++) {
+				String line = "";
+				for (int c=0; c<matrix[0].length; c++) {
+					line += matrix[r][c] + " ";
+				}
+				bw.write(line); 
+				bw.newLine();
+			}
+			bw.close();
+			fw.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			System.err.println(e);
+		}
+		
+		
 		
 	}
 	

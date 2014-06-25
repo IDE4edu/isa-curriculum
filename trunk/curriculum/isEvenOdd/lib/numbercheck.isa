@@ -1,3 +1,4 @@
+<eduride>
 <isa>
 	<name>NumberCheck</name>
 	<intro>Some testing #1.</intro>
@@ -12,8 +13,39 @@
 		<source>/src/number/NumberCheck.java</source>
 		<testclass>test.NumberCheckTest</testclass>
 		</exercise>
-
-
-
-
 </isa>
+<isa>
+	<name>NumberCheck2</name>
+	<intro>Some testing #2.</intro>
+	<category>TEsting2</category>
+	<subcategory>Introduction2</subcategory>
+	<sortorder>2</sortorder>
+	
+	<exercise>
+		<name>isevenodd2</name>
+		<type>code</type>
+		<intro>Square square square.2</intro>
+		<source>/src/number/NumberCheck2.java</source>
+		<testclass>test.NumberCheckTest2</testclass>
+		</exercise>
+</isa>
+
+<eduridefile>
+	<source>/src/number/NumberCheck.java</source>
+	<box>
+	    <type>inline</type>
+		<name>Blah</name>
+		<start>234</start>
+		<stop>24234</stop>
+	</box>
+	<box>
+	    <type>multiline</type>
+		<name>Blah23</name>
+		<start>2343</start>
+		<stop>2423324</stop>
+	</box>
+	<base64>SOMEBASE64STUFF</base64> 
+
+
+	</eduridefile>
+</eduride>

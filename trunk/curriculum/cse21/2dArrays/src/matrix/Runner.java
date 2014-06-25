@@ -8,14 +8,14 @@ public class Runner {
 
 	
 	public static void main(String[] args) {
-		// edit as necessary
+		
 		testMatrix();
 		
 	}
 	
 
 
-	
+	// enter filenames such as "data/matrix1.txt"
 	public static void testMatrix() {
 		int[][] mat1 = readMatrix();
 		printMatrix(mat1);

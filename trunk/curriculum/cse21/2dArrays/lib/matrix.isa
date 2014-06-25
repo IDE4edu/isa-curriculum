@@ -1,14 +1,14 @@
 <isa>
-	<name>Input Output</name>
-	<intro>Input output exercises (Person, matrix writing and reading).</intro>
+	<name>Matrices and IO</name>
+	<intro>Input output with matrices (matrix writing and reading).</intro>
 
 	
 	<exercise>
-		<name>ModNCounter</name>
+		<name>Multiplying matrices</name>
 		<type>code</type>
-		<intro>ModNCounter: Write a cyclic counter class</intro>
-		<source>/src/oop/ModNCounter.java</source>
-		<testclass>tests.ModNCounterTest</testclass>
+		<intro>Multiplying matrices</intro>
+		<source>/src/matrix/MatrixMultiply.java</source>
+		<testclass>tests.MatrixMultiplyTest</testclass>
 		</exercise>
 
 	
